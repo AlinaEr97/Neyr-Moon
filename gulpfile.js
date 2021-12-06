@@ -40,13 +40,18 @@ function images () {
 function sсripts () {
 	return src([
 		'node_modules/jquery/dist/jquery.js',
-		'app/js/main.js'
+		'app/js/menu.js',
+		'app/js/catalog-bar.js',
+		'app/js/sliders.js',
+		'app/js/catalog.js',
+		'app/js/goods.js',
+		'app/js/main.js',
 	])
+
 	.pipe(concat('main.min.js'))
 	.pipe(uglify())
 	.pipe(dest('app/js'))
 	.pipe(browserSync.stream())
-	
 }
 	
 
