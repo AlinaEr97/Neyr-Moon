@@ -2,7 +2,6 @@ const { src, dest, watch, parallel, series } = require('gulp');
 const scss  = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
-const uglify = require('gulp-uglify-es').default; 
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
@@ -43,22 +42,21 @@ function sсripts () {
 		'app/js/menu.js',
 		'app/js/catalog-bar.js',
 		'app/js/sliders.js',
+		'app/js/search.js',
 		'app/js/catalog.js',
 		'app/js/goods.js',
-		'app/js/main.js',
+		'app/js/general.js',
 	])
 
-	.pipe(concat('main.min.js'))
-	.pipe(uglify())
+	.pipe(concat('main.js'))
 	.pipe(dest('app/js'))
 	.pipe(browserSync.stream())
 }
-	
 
 function styles () {
 return src('app/scss/style.scss')
-	.pipe(scss({outputStyle: 'compressed'}))
-	.pipe(concat('style.min.css'))
+	.pipe(scss({outputStyle: 'expanded'}))
+	.pipe(concat('style.css'))
 	.pipe(autoprefixer({
 		overrideBrowsersList: ['last 10 version'],
 		grid: true
@@ -70,9 +68,9 @@ return src('app/scss/style.scss')
 
 function build() {
 	return src ([
-	'app/css/style.min.css',
+	'app/css/style.css',
 	'app/fonts/**/*',
-	'app/js/main.min.js',
+	'app/js/main.js',
 	'app/*.html'
 	], {base: 'app'})
 	.pipe(dest('dist'))
@@ -81,7 +79,7 @@ function build() {
 
 function watching() {
 	watch(['app/scss/**/*.scss'], styles);
-	watch(['app/js/**/*.js','!app/js/main.min.js'], sсripts);
+	watch(['app/js/**/*.js','!app/js/main.js'], sсripts);
 	watch(['app/*.html']).on('change', browserSync.reload)
 }
 	
