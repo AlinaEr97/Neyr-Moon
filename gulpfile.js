@@ -1,10 +1,9 @@
-const { src, dest, watch, parallel, series } = require('gulp');
+const { src, dest, watch, parallel} = require('gulp');
 const scss  = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
-const del = require('del');
 
 function browsersync () {
 	browserSync.init({
@@ -12,10 +11,6 @@ function browsersync () {
 			baseDir: 'app/'
 		}
 	});
-}
-
-function cleanDist() {
-	return del('dist');
 }
 
 	
@@ -32,13 +27,13 @@ function images () {
 			]
 		})
 	]))
-	.pipe(dest('dist/img'))
+	.pipe(dest('app/img'))
 }
 	
 
 function sсripts () {
 	return src([
-		'node_modules/jquery/dist/jquery.js',
+		'node_modules/jquery/app/jquery.js',
 		'app/js/menu.js',
 		'app/js/catalog-bar.js',
 		'app/js/sliders.js',
@@ -66,17 +61,6 @@ return src('app/scss/style.scss')
 	.pipe(browserSync.stream()) 
 }
 
-function build() {
-	return src ([
-	'app/css/style.css',
-	'app/fonts/**/*',
-	'app/js/main.js',
-	'app/*.html'
-	], {base: 'app'})
-	.pipe(dest('dist'))
-}
-	
-
 function watching() {
 	watch(['app/scss/**/*.scss'], styles);
 	watch(['app/js/**/*.js','!app/js/main.js'], sсripts);
@@ -88,7 +72,5 @@ exports.watching = watching;
 exports.browsersync = browsersync;
 exports.sсripts = sсripts;
 exports.images = images;
-exports.cleanDist = cleanDist;
-exports.build = series(cleanDist, images, build); 
 
 exports.default = parallel(sсripts, browsersync, watching);
