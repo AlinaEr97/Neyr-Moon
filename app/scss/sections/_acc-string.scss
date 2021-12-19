@@ -1,0 +1,296 @@
+/*Строка аккаунта*/
+
+.acc-string {
+	padding: 170px 0 20px;
+	background-color: rgb(112, 152, 163);
+
+	@media (max-width: 1300px) {
+		padding-top: 150px;
+	}
+	@media (max-width: 1200px) {
+		padding-top: 140px;
+	}
+	@media (max-width: 1100px) {
+		padding-top: 160px;
+	}
+	@media (max-width: 1000px) {
+		padding-top: 150px;
+	}
+	@media (max-width: 900px) {
+		padding-top: 130px;
+	}
+	@media (max-width: 850px) {
+		padding-top: 120px;
+	}
+	@media (max-width: 650px) {
+		padding-top: 110px;
+	}
+	@media (max-width: 530px) {
+		padding: 100px 0 15px;
+	}
+	@media (max-width: 500px) {
+		padding-top: 85px;
+	}
+	@media (max-width: 450px) {
+		padding-top: 80px;
+	}
+	@media (max-width: 430px) {
+		padding-top: 90px;
+	}
+	@media (max-width: 400px) {
+		padding-top: 80px;
+	}
+	@media (max-width: 350px) {
+		padding-top: 65px;
+	}
+	@media (max-width: 320px) {
+		padding-top: 80px;
+	}
+
+	&__block {
+		padding: 0 10px;
+		margin: auto;
+		width: 95%;
+		display: flex;
+		justify-content: space-around;
+		font-size: 24px;
+
+		@media (max-width: 1200px) {
+			font-size: 20px;
+		}
+		@media (max-width: 800px) {
+			font-size: 17px;
+		}
+		@media (max-width: 650px) {
+			font-size: 15px;
+		}
+		@media (max-width: 600px) {
+			font-size: 13px;
+		}
+		@media (max-width: 500px) {
+			font-size: 11px;
+		}
+		@media (max-width: 450px) {
+			font-size: 10px;
+		}
+	}
+
+	&__login {
+		position: relative;
+		cursor: pointer;
+		&::before {
+			content: '';
+			width: 32px;
+			height: 32px;
+			position: absolute;
+			z-index: 0;
+			top: -5px;
+			left: -37px;
+			background: url('../img/acc-string/login.png');
+
+			@media (max-width: 800px) {
+				width: 26px;
+				height: 26px;
+				left: -32px;
+				background-size: cover;
+			}
+			@media (max-width: 600px) {
+				width: 22px;
+				height: 22px;
+				left: -26px;
+			}
+			@media (max-width: 450px) {
+				width: 18px;
+				height: 18px;
+				left: -21px;
+			}
+		}
+	}
+
+	&__registration {
+		position: relative;
+		cursor: pointer;
+		&::before {
+			content: '';
+			width: 32px;
+			height: 32px;
+			position: absolute;
+			z-index: 0;
+			top: -5px;
+			left: -37px;
+			background: url('../img/acc-string/register.png');
+
+			@media (max-width: 800px) {
+				width: 26px;
+				height: 26px;
+				left: -32px;
+				background-size: cover;
+			}
+			@media (max-width: 600px) {
+				width: 22px;
+				height: 22px;
+				left: -26px;
+			}
+			@media (max-width: 450px) {
+				width: 18px;
+				height: 18px;
+				left: -21px;
+			}
+		}
+	}
+
+	&__back-call {
+		position: relative;
+		cursor: pointer;
+		&::before {
+			content: '';
+			width: 32px;
+			height: 32px;
+			position: absolute;
+			z-index: 0;
+			top: -5px;
+			left: -37px;
+			background: url('../img/acc-string/call.png');
+
+			@media (max-width: 800px) {
+				width: 26px;
+				height: 26px;
+				top: -3px;
+				left: -32px;
+				background-size: cover;
+			}
+			@media (max-width: 600px) {
+				width: 22px;
+				height: 22px;
+				left: -26px;
+			}
+			@media (max-width: 450px) {
+				width: 18px;
+				height: 18px;
+				left: -21px;
+			}
+		}
+	}
+
+	&__working-time {
+		position: relative;
+		cursor: pointer;
+		&::before {
+			content: '';
+			width: 32px;
+			height: 32px;
+			position: absolute;
+			z-index: 0;
+			top: 0px;
+			left: -37px;
+			background: url('../img/acc-string/calendar.png');
+
+			@media (max-width: 800px) {
+				width: 26px;
+				height: 26px;
+				left: -32px;
+				background-size: cover;
+			}
+			@media (max-width: 600px) {
+				width: 22px;
+				height: 22px;
+				left: -26px;
+			}
+			@media (max-width: 450px) {
+				width: 18px;
+				height: 18px;
+				left: -21px;
+			}
+		}
+
+		@media (max-width: 400px) {
+			display: none;
+		}
+	}
+
+	&__basket {
+		position: relative;
+		cursor: pointer;
+		&::before {
+			content: '';
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			z-index: 0;
+			top: -15px;
+			left: -30px;
+			background: url('../img/acc-string/carts.png');
+			background-size: cover;
+			
+			@media (max-width: 1200px) {
+				width: 40px;
+				height: 40px;
+				top: -10px;
+			}
+			@media (max-width: 800px) {
+				width: 32px;
+				height: 32px;
+				left: -32px;
+				background-size: cover;
+			}
+			@media (max-width: 600px) {
+				width: 27px;
+				height: 27px;
+				top: -7px;
+			}
+			@media (max-width: 450px) {
+				width: 23px;
+				height: 23px;
+				top: -5px;
+				left: -25px;
+			}
+		}
+		&::after {
+			content: '0';
+			padding-left: 7px;
+			position: absolute;
+			width: 28px;
+			height: 25px;
+			top: -23px;
+			left: 10px;
+			font-size: 22px;
+			font-weight: bold;
+			color: rgb(243, 221, 125);
+			border-radius: 50%;
+			background-color: rgb(255, 38, 0);
+
+			@media (max-width: 1200px) {
+				padding-left: 6px;
+				width: 25px;
+				height: 23px;
+				top: -20px;
+				left: 2px;
+				font-size: 21px;
+			}
+			@media (max-width: 800px) {
+				padding-left: 5px;
+				width: 21px;
+				height: 21px;
+				top: -20px;
+				left: -7px;
+				font-size: 19px;
+			}
+			@media (max-width: 600px) {
+				padding-left: 4px;
+				width: 19px;
+				height: 18px;
+				top: -15px;
+				left: -10px;
+				font-size: 16px;
+			}
+			@media (max-width: 450px) {
+				padding-left: 3px;
+				width: 14px;
+				height: 14px;
+				top: -11px;
+				left: -6px;
+				font-size: 13px;
+			}
+		}
+	}
+}

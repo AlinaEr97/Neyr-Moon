@@ -11218,7 +11218,7 @@ const catalog = [
 		brend: 'LED TUBE',
 		material: 'Пластик',
 		classes: 'floor distance',
-		img: 'img/goods/good18.png',
+		img: '../img/goods/good18.png',
 		type: 'Торшер',
 		name: 'Угловой',
 		old_price: 6000,

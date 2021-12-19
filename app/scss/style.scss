@@ -1,0 +1,40 @@
+//Обнуление
+@import "general/null";
+
+//Шрифты
+@import "general/fonts";
+
+//Общие стили для body
+@import "general/body";
+
+//Шапка
+@import "sections/header";
+
+//Строка аккаунта
+@import "sections/acc-string";
+
+//Каталог товаров
+@import "sections/catalog";
+
+//Колонка с акциями
+@import "sections/sales";
+
+//Строка поиска
+@import "sections/search";
+
+//Главный рекламный блок
+@import "sections/hero";
+
+//Список товаров
+@import "sections/goods";
+
+//Список брендов
+@import "sections/brends";
+
+//О магазине
+@import "sections/about";
+
+//Подвал 
+@import "general/footer";
+
+

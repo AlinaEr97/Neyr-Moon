@@ -1,0 +1,103 @@
+.brends {
+	width: 100%;
+	padding: 0 20px;
+
+	&__title {
+		margin-bottom: 30px;
+		font-size: 24px;
+		color: white;
+		text-indent: 25px;
+
+		@media (max-width: 750px) {
+			margin-bottom: 15px;
+			font-size: 22px;
+		}
+		@media (max-width: 550px) {
+			font-size: 20px;
+		}
+		@media (max-width: 400px) {
+			font-size: 16px;
+		}
+	}
+
+	&__navigation {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		margin: auto;
+	}
+
+	&__button {
+		position: absolute;
+		top: -80px;
+		width: 25px;
+		height: 25px;
+		transform: rotate(45deg);
+		border: 2px solid rgb(248, 235, 160);
+		background-color: transparent;
+		
+		@media (max-width: 1200px) {
+			top: -70px;
+		}
+		@media (max-width: 1000px) {
+			width: 20px;
+			height: 20px;
+			top: -65px;
+		}
+		@media (max-width: 800px) {
+			width: 15px;
+			height: 15px;
+			top: -55px;
+		}
+		@media (max-width: 700px) {
+			top: -48px;
+		}
+		@media (max-width: 600px) {
+			width: 10px;
+			height: 10px;
+			top: -45px;
+		}
+		@media (max-width: 500px) {
+			top: -40px;
+		}
+		@media (max-width: 400px) {
+			width: 5px;
+			height: 5px;
+			top: -33px;
+		}
+		
+		&_prev {
+			left: 0;
+			border-right: none;
+			border-top: none;
+		}
+
+		&_next {
+			right: 0;
+			border-left: none;
+			border-bottom: none;
+		}
+	}
+}
+
+.brends-slider {
+	margin: 0 auto 20px;
+	width: 90%;
+	overflow: hidden;
+
+	&__item {
+		margin: 10px;
+
+		@media (max-width: 800px) {
+			margin: 5px;
+		}
+		@media (max-width: 500px) {
+			margin: 1px;
+		}
+	}
+
+	&__image {
+		width: 100%;
+	}
+}
+
