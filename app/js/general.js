@@ -152,22 +152,4 @@ $(function() {
 	});
 });
 
-//Эффект при наведении 
-/*let hide = document.querySelectorAll('.hide-text');
-
-for (let all_good of all_goods) {
-	all_good.addEventListener('mouseover', function(e) {
-		for (let j = 0; j < hide.length; j++) {
-			hide[j].style.left = '0%';
-		}
-	
-	});
-	all_good.addEventListener('mouseout', function(e){
-		for (let j = 0; j < hide.length; j++) {
-			hide[j].style.left = '-100%';
-		}
-		
-	});
-	
-}*/
 

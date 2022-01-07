@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Neyr Moon</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../favicons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../favicons/favicon-16x16.png">
+		<link rel="manifest" href="../favicons/site.webmanifest">
+		<link rel="mask-icon" href="../favicons/safari-pinned-tab.svg" color="#e0962f">
+		<meta name="msapplication-TileColor" content="#ffc40d">
+		<meta name="theme-color" content="#ffffff">
+
+	</head>
+
+	<body>
+
+		<div class="wrapper">
+		
+			<header class="header">
+					
+				<div class="header__block">
+
+					<div class="menu">
+
+						<div class="menu__container">
+
+							<nav class="menu__nav">
+								<a href="#about_app" class="menu__link">Бренды</a>
+								<a href="#plans" class="menu__link">Распродажа</a>
+								<a href="#comments" class="menu__link">Доставка</a>
+								<a href="#help" class="menu__link">Гарантия</a>
+								<a href="#footer" class="menu__link">Оплата</a>
+								<a href="#footer" class="menu__link">Контакты</a>
+							</nav>
+							<!-- /.menu__nav -->
+
+						</div>
+							<!-- /.menu__container -->
+
+					</div>
+					<!-- /.menu -->
+
+					<a href="#menu" class="header__menu-burger menu-burger">
+						<span class="menu-burger__line"></span>
+						<span class="menu-burger__line"></span>
+						<span class="menu-burger__line"></span>
+					</a>
+					<!-- /.menu-burger -->
+
+					<nav class="header__nav header-nav">
+
+						<div class="header-nav__link-box">
+							<a href="" class="header-nav__link">Бренды</a>
+							<a href="" class="header-nav__link">Распродажа</a>
+							<a href="" class="header-nav__link">Доставка</a>
+						</div>
+
+						<div class="header-nav__link-box">
+							<a href="" class="header-nav__link">Гарантия</a>
+							<a href="" class="header-nav__link">Оплата</a>
+							<a href="" class="header-nav__link">Контакты</a>
+
+						</div>
+					</nav>
+					<!-- /.header-nav -->
+
+					<div class="header-logo logo">
+						<img class="logo__image" src="img/header/logo.png" alt="">
+						<div class="logo__text">Интернет-магазин оригинальных ночников</div>
+					</div>
+					<!-- /.logo -->
+
+					<div class="header__phone header-phone">
+
+						<div class="header-phone__item">
+							<p class="header-phone__text">Санкт-Петербург:</p>
+							<p class="header-phone__number">+7 (927) 700-81-45</p>
+						</div>
+						<div class="header-phone__item">
+							<p class="header-phone__text">По России:</p>
+							<p class="header-phone__number">+7 (800) 123-45-67</p>
+						</div>
+
+					</div>
+					<!-- /.header-phone -->
+					
+				</div>
+				<!-- /.header__block -->
+
+			</header>
+			<!-- /.header -->
+
+			<div class="acc-string">
+
+				<div class="acc-string__block">
+					
+					<div class="acc-string__login">Вход</div>
+
+					<div class="acc-string__registration">Регистрация</div>
+					
+					<div class="acc-string__back-call">Обратный звонок</div>
+
+					<div class="acc-string__working-time">Пн-Вс: 9:00-21:00</div>
+
+					<div class="acc-string__basket"></div>
+
+				</div>
+
+			</div>
+			<!-- /.acc-string -->
+
+			<section class="navigation">
+
+				<div class="search search_item">
+
+					<span class="search__icon"></span>
+					<input type="text" class="search__input search__input_item" id="search" autocomplete="off">
+					<input type="button" value="Поиск" class="search__button search__button_item">
+
+				</div>
+				<!-- /.search -->
+
+				<section class="goods-list">
+
+					<div class="catalog catalog_item">
+
+						<div class="catalog__open-list">
+							<h3 class="catalog__title catalog__title_item">Каталог товаров</h3>
+							<span class="catalog__arrow catalog__arrow-item"></span>
+						</div>
+						<!-- /.catalog__open-list -->
+
+						<ul class="catalog__list catalog__list-item">
+
+							<li class="catalog__item catalog__item_item">
+								<input type="radio" name="menus" id="all" class="catalog__radio-btn catalog__radio-btn_item" checked> 
+								<label class="catalog__radio catalog__radio_item" for="all">Все</label> 
+							</li>
+							<li class="catalog__item catalog__item_item">
+								<input type="radio" name="menus" id="three_d" class="catalog__radio-btn catalog__radio-btn_item"> 
+								<label class="catalog__radio catalog__radio_item" for="three_d">3D-ночники</label> 
+							</li>
+							<li class="catalog__item catalog__item_item">
+								<input type="radio" name="menus" id="lamp" class="catalog__radio-btn catalog__radio-btn_item"> 
+								<label class="catalog__radio catalog__radio_item" for="lamp">Абажурные</label> 
+							</li>
+							<li class="catalog__item catalog__item_item">
+								<input type="radio" name="menus" id="baby" class="catalog__radio-btn catalog__radio-btn_item"> 
+								<label class="catalog__radio catalog__radio_item" for="baby">Детские</label> 
+							</li>
+							<li class="catalog__item catalog__item_item">
+								<input type="radio" name="menus" id="lava" class="catalog__radio-btn catalog__radio-btn_item"> 
+								<label class="catalog__radio catalog__radio_item" for="lava">Лава-лампы</label> 
+							</li>
+							<li class="catalog__item catalog__item_item">
+								<input type="radio" name="menus" id="neon" class="catalog__radio-btn catalog__radio-btn_item"> 
+								<label class="catalog__radio catalog__radio_item" for="neon">Неоновые</label> 
+							</li>
+							<li class="catalog__item catalog__item_item">
+								<input type="radio" name="menus" id="socket" class="catalog__radio-btn catalog__radio-btn_item"> 
+								<label class="catalog__radio catalog__radio_item" for="socket">Розеточные</label> 
+							</li>
+							<li class="catalog__item catalog__item_item">
+								<input type="radio" name="menus" id="portable" class="catalog__radio-btn catalog__radio-btn_item"> 
+								<label class="catalog__radio catalog__radio_item" for="portable">Переносные</label> 
+							</li>
+							<li class="catalog__item catalog__item_item">
+								<input type="radio" name="menus" id="projector" class="catalog__radio-btn catalog__radio-btn_item"> 
+								<label class="catalog__radio catalog__radio_item" for="projector">Проекторные</label> 
+							</li>
+							<li class="catalog__item catalog__item_item">
+								<input type="radio" name="menus" id="salt" class="catalog__radio-btn catalog__radio-btn_item"> 
+								<label class="catalog__radio catalog__radio_item" for="salt">Солевые лампы</label> 
+							</li>
+							<li class="catalog__item catalog__item_item">
+								<input type="radio" name="menus" id="distance" class="catalog__radio-btn catalog__radio-btn_item"> 
+								<label class="catalog__radio catalog__radio_item" for="distance">С пультом управления</label> 
+							</li>
+							<li class="catalog__item catalog__item_item">
+								<input type="radio" name="menus" id="candles" class="catalog__radio-btn catalog__radio-btn_item"> 
+								<label class="catalog__radio catalog__radio_item" for="candles">Свечи</label> 
+							</li>
+							<li class="catalog__item catalog__item_item">
+								<input type="radio" name="menus" id="floor" class="catalog__radio-btn catalog__radio-btn_item"> 
+								<label class="catalog__radio catalog__radio_item" for="floor">Торшеры</label> 
+							</li>
+							<li class="catalog__item catalog__item_item">
+								<input type="radio" name="menus" id="usb" class="catalog__radio-btn catalog__radio-btn_item"> 
+								<label class="catalog__radio catalog__radio_item" for="usb">С портом USB</label> 
+							</li>
+							
+						</ul>
+						<!-- /.catalog__list -->
+
+					</div>
+					<!-- /.catalog -->
+
+					<div class="filter">
+
+						<ul class="filter__list">
+
+							<li class="filter__item">
+								<span class="filter__button">Настольные</span>
+								<ul class="filter__links">
+									<li class="filter__link">
+										<span class="filter__link-button">3D-ночники</span>
+									</li>
+									<li class="filter__link">
+										<span class="filter__link-button">Абажурные</span>
+									</li>
+									<li class="filter__link">
+										<span class="filter__link-button">Детские</span>
+									</li>
+									<li class="filter__link">
+										<span class="filter__link-button">Лава-лампы</span>
+									</li>
+									<li class="filter__link">
+										<span class="filter__link-button">Неоновые</span>
+									</li>
+									<li class="filter__link">
+										<span class="filter__link-button">Переносные</span>
+									</li>
+									<li class="filter__link">
+										<span class="filter__link-button">Проекторные</span>
+									</li>
+									<li class="filter__link">
+										<span class="filter__link-button">Солевые лампы</span>
+									</li>
+									<li class="filter__link">
+										<span class="filter__link-button">С пультом управления</span>
+									</li>
+									<li class="filter__link">
+										<span class="filter__link-button">С портом USB</span>
+									</li>
+								</ul>
+							</li>
+
+							<li class="filter__item">
+								<span class="filter__button">Торшеры</span>
+								<ul class="filter__links">
+									<li class="filter__link">
+										<span class="filter__link-button">Абажурные</span>
+									</li>
+									<li class="filter__link">
+										<span class="filter__link-button">Детские</span>
+									</li>
+									<li class="filter__link">
+										<span class="filter__link-button">Неоновые</span>
+									</li>
+									<li class="filter__link">
+										<span class="filter__link-button">Переносные</span>
+									</li>
+									<li class="filter__link">
+										<span class="filter__link-button">С пультом управления</span>
+									</li>
+								</ul>
+							</li>
+
+							<li class="filter__item">
+								<span class="filter__button">Бра</span>
+								<ul class="filter__links">
+									<li class="filter__link">
+										<span class="filter__link-button">Абажурные</span>
+									</li>
+									<li class="filter__link">
+										<span class="filter__link-button">Детские</span>
+									</li>
+									<li class="filter__link">
+										<span class="filter__link-button">Неоновые</span>
+									</li>
+									<li class="filter__link">
+										<span class="filter__link-button">С пультом управления</span>
+									</li>
+								</ul>
+							</li>
+
+							<li class="filter__item">
+								<span class="filter__button">Свечи</span>
+								<ul class="filter__links">
+									<li class="filter__link">
+										<span class="filter__link-button">Восковые</span>
+									</li>
+									<li class="filter__link">
+										<span class="filter__link-button">Насыпные</span>
+									</li>
+									<li class="filter__link">
+										<span class="filter__link-button">Парафиновые</span>
+									</li>
+								</ul>
+							</li>
+
+							<li class="filter__item">
+								<span class="filter__button">Лампочки</span>
+							</li>
+
+						</ul>
+						<!-- /.filter__list -->
+
+					</div>
+					<!-- /.filter -->
+
+				</section>
+				<!-- /.goods-list -->
+
+				<nav class="breadcrumbs">
+					<ul class="breadcrumbs__nav">
+						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link" href="#">Каталог товаров</a></li>
+						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link" href="#">Настольные</a></li>
+						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link current" href="#">Ночник</a></li>
+					</ul>
+				</nav>
+				<!-- /.breadcrumbs -->
+
+			</section>
+			<!-- /.navigation -->
+
+			<main>
+
+				<div class="item-wrapper">
+
+					<section class="card" id="card">
+
+						<div class="card__offer card-offer">
+
+							<div class="card-offer__pictures card-pictures">
+
+								<img src="img/goods/good1.png" alt="#" class="card-pictures__image">
+								
+								<div class="card-slider swiper-container">
+
+									<div class="card-slider__wrapper swiper-wrapper">
+			
+										<div class="card-slider__slide swiper-slide">
+											<div class="card-slider__item">
+												<img class="card-slider__image" src="img/goods/good1-1.png" alt="item">
+											</div>
+										</div>
+			
+										<div class="card-slider__slide swiper-slide">
+											<div class="card-slider__item">
+												<img class="card-slider__image" src="img/goods/good1-2.png" alt="item">
+											</div>
+										</div>
+			
+										<div class="card-slider__slide swiper-slide">
+											<div class="card-slider__item">
+												<img class="card-slider__image" src="img/goods/good1.png" alt="item">
+											</div>
+										</div>
+			
+									</div>
+									<!-- /.swiper-wrapper -->
+			
+								</div> 
+								<!-- /.swiper-container -->
+
+							</div>
+							<!-- /.card-pictures -->
+
+							<div class="card-offer__container details">
+								
+								<h2 class="details__title">Настольный ночник <br> Солевая лампа "Кристалл"</h2>
+								<div class="details__feedback feedback">
+									<img src="img/pages/item/icons/star.png" alt="star" class="feedback__icon">
+									<img src="img/pages/item/icons/star.png" alt="star" class="feedback__icon">
+									<img src="img/pages/item/icons/star.png" alt="star" class="feedback__icon">
+									<img src="img/pages/item/icons/star.png" alt="star" class="feedback__icon">
+									<img src="img/pages/item/icons/star.png" alt="star" class="feedback__icon">
+									<a href="#feedbacks" class="feedback__link">0.0 / 0 отзывов</a>
+								</div>
+								<div class="details__box details-box">
+									<div class="details-box__pricing pricing">
+										<p class="pricing__old-price">1599</p>
+										<p class="pricing__new-price">899</p>
+										<img src="img/brends/brend1.jpg" alt="brend-name" class="pricing__brend">
+									</div>
+									<div class="details-box__buying buying">
+										<button class="buying__add">В корзину</button>
+										<p class="buying__availability">Товар в наличии</p>
+										<img src="img/pages/item/icons/delivery.png" alt="delivery" class="buying__delivery">
+									</div>
+								</div>
+								<p class="details__description">Соляная лампа SL-35 (3-5 кг) - это светильник созданный самой природой из 100% натуральной гималайской соли. Гималайская соль обладает лечебными свойствами, является прекрасным ионизатором и очистителем воздуха, оказывает успокаивающее действие. Такая настольная лампа поможет погрузиться в глубокий расслабляющий сон ночью и с легкостью проснуться даже ранним утром. Будет отличным подарком, который украсит любой интерьер детской, спальни или гостиной комнаты. Ночник оснащен диммером, что позволяет регулировать яркость свечения лампы. Исходящий теплый, мягкий янтарный свет создаст уютную и комфортную обстановку в вашей комнате. Каждая лампа создана вручную, именно поэтому его форма, вес, цвет и рельеф уникальны. Патрон с цоколем Е14 легко вынимается из плафона, и замена лампочки происходит быстро и безопасно. В комплект поставки входит лампочка, инструкция по использованию на русском языке. Имеет Сертификат Соответствия ЕЭС.</p>
+
+							</div>
+							<!-- /.card-offer__container -->
+
+						</div>
+						<!-- /.card-offer -->
+
+						<div class="card__characteristics characteristics">
+
+							<h3 class="characteristics__title">Основные характеристики:</h3>
+
+							<ul class="characteristics__list">
+
+								<li class="characteristics__item">
+									<span class="characteristics__text">Гарантийный срок:</span>
+									<span class="characteristics__info">1 год</span>
+								</li>
+								<li class="characteristics__item">
+									<span class="characteristics__text">Длина кабеля:</span>
+									<span class="characteristics__info">160 см</span>
+								</li>
+								<li class="characteristics__item">
+									<span class="characteristics__text">Материал:</span>
+									<span class="characteristics__info">Дерево, пластик, гималайская соль</span>
+								</li>
+								<li class="characteristics__item">
+									<span class="characteristics__text">Напряжение:</span>
+									<span class="characteristics__info">230 В</span>
+								</li>
+								<li class="characteristics__item">
+									<span class="characteristics__text">Питание:</span>
+									<span class="characteristics__info">От сети 220 - 230 В 50 Гц</span>
+								</li>
+								<li class="characteristics__item">
+									<span class="characteristics__text">Вес:</span>
+									<span class="characteristics__info">4 кг</span>
+								</li>
+								<li class="characteristics__item">
+									<span class="characteristics__text">Высота:</span>
+									<span class="characteristics__info">22,5 см</span>
+								</li>
+								<li class="characteristics__item">
+									<span class="characteristics__text">Тип светильника:</span>
+									<span class="characteristics__info">Солевая лампа, Настольный ночник</span>
+								</li>
+								<li class="characteristics__item">
+									<span class="characteristics__text">Страна производителя:</span>
+									<span class="characteristics__info">Пакистан</span>
+								</li>
+								<li class="characteristics__item">
+									<span class="characteristics__text">Комплектация:</span>
+									<span class="characteristics__info">Инструкция; Солевая лампа; Лампочка Е14 15 Вт; <br> Патрон для лампы с сетевым проводом</span>
+								</li>
+
+							</ul>
+
+						</div>
+
+						<div class="card__feedbacks feedbacks" id="feedbacks">
+
+							<h3 class="feedbacks__title">Отзывы</h3>
+							<p class="feedbacks__text">На этот товар ещё не поступало отзывов</p>
+
+						</div>
+
+					</section>
+					<!-- /.card -->
+
+					<section class="similar">
+						<h2 class="similar__title">Похожие товары</h2>
+					</section>
+				
+				</div>
+				<!-- /.item-wrapper -->
+
+			</main>
+			<!-- /.main -->
+
+			<footer class="footer">
+
+				<div class="footer__main-block">
+
+					<div class="footer__item">
+						<div class="footer__title">Интернет-магазин <br> Neyr Moon</div>
+						<a href="#" class="footer__link">Бра</a>
+						<a href="#" class="footer__link">Настольные</a>
+						<a href="#" class="footer__link">Розеточные</a>
+						<a href="#" class="footer__link">Торшеры</a>
+						<a href="#" class="footer__link">Свечи</a>
+					</div>
+
+					<div class="footer__item">
+						<div class="footer__title">Присоединяйтесь</div>
+						<div class="footer__massangers">
+							<a href="https://vk.com/" class="footer__networks">
+								<img src="img/footer/vk.svg" alt="vkontakte" class="footer__networks-img">
+							</a>
+							<a href="https://www.instagram.com/" class="footer__networks">
+							<img src="img/footer/insta.svg" alt="instagram" class="footer__networks-img">
+							</a>
+							<a href="https://ru-ru.facebook.com/" class="footer__networks">
+								<img src="img/footer/fb.svg" alt="facebook" class="footer__networks-img">
+							</a>
+						</div>
+						<div class="footer__title">Мой кабинет</div>
+						<a href="#" class="footer__link">Авторизация</a>
+						<a href="#" class="footer__link">Мои заказы</a>
+					</div>
+
+					<div class="footer__item">
+						<div class="footer__title">Информация</div>
+						<a href="#" class="footer__link">Доставка в СПб</a>
+						<a href="#" class="footer__link">Доставка по России</a>
+						<a href="#" class="footer__link">Самовывоз</a>
+						<a href="#" class="footer__link">Возврат товара</a>
+						<a href="#" class="footer__link">Способы оплаты</a>
+						<a href="#" class="footer__link">О нас</a>
+						<a href="#" class="footer__link">Политика <br> конфиденциальности</a>
+					</div>
+
+					<div class="footer__item">
+						<div class="footer__title">Контакты</div>
+						<a href="#" class="footer__link">info@neyr-moon.ru</a>
+						<a href="#" class="footer__link">Neyr Moon</a>
+						<a href="#" class="footer__link">+7 (927) 700-81-45</a>
+						<a href="#" class="footer__link">+7 (800) 123-45-67</a>
+						<div class="footer__cards"></div>
+						<a href="#" class="footer__back-call">Заказать обратный звонок</a>
+					</div>
+
+				</div>
+				<!-- /.footer__main-block -->
+				
+			</footer>
+			<!-- /.footer -->
+
+		</div>
+		<!-- /.wrapper -->
+
+		<script type="text/javascript" src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+		<!-- Подключение слайдера Swiper -->
+		<script src="js/item/item.js"></script>
+
+	</body>
+
+</html>

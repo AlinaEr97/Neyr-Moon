@@ -13,12 +13,12 @@ class Goods {
 								<br> ${brend}</p>
 								<p class="hide-text__item search-good"><span class="hide-text__item_titles">Материал:</span> 
 								<br>${material}</p>
-								<a class="hide-text__item_about" href='#'>Подробнее >></a>
+								<a class="hide-text__item_about" href='item.html'>Подробнее >></a>
 								<a class="hide-text__item_add" href='#'></a>
 							</div>
 							<!-- /.hide-text -->
 
-							<div class="goods-offer__container kitchen-offer__container">
+							<div class="goods-offer__container">
 								<div class="goods-offer__text">
 									<p class="goods-offer__type search-good">${type}</p>
 									<p class="goods-offer__name search-good">${name}</p>

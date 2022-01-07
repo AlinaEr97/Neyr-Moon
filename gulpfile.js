@@ -48,6 +48,24 @@ function sсripts () {
 	.pipe(browserSync.stream())
 }
 
+function item_sсripts () {
+	return src([
+		'node_modules/jquery/app/jquery.js',
+		'app/js/menu.js',
+		'app/js/item/catalog-bar.js',
+		'app/js/search.js',
+		'app/js/catalog.js',
+		'app/js/general.js',
+		'app/js/item/okzoom.js',
+		'app/js/item/zoom.js',
+		'app/js/item/sliders.js',
+	])
+
+	.pipe(concat('item.js'))
+	.pipe(dest('app/js/item'))
+	.pipe(browserSync.stream())
+}
+
 function styles () {
 return src('app/scss/style.scss')
 	.pipe(scss({outputStyle: 'expanded'}))
@@ -63,14 +81,16 @@ return src('app/scss/style.scss')
 
 function watching() {
 	watch(['app/scss/**/*.scss'], styles);
-	watch(['app/js/**/*.js','!app/js/main.js'], sсripts);
+	watch(['app/js/*.js','!app/js/main.js'], sсripts);
+	watch(['app/js/item/*.js', '!app/js/item/item.js'], item_sсripts);
 	watch(['app/*.html']).on('change', browserSync.reload)
 }
 	
 exports.styles = styles;
 exports.watching = watching;
 exports.browsersync = browsersync;
+exports.item_sсripts = item_sсripts;
 exports.sсripts = sсripts;
 exports.images = images;
 
-exports.default = parallel(sсripts, browsersync, watching);
+exports.default = parallel(item_sсripts, sсripts, browsersync, watching);
