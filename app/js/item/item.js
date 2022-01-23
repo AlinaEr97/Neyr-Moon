@@ -10966,380 +10966,540 @@ document.querySelector("#search").oninput = function Searching() {
 
 const catalog = [
 	{
-		id: 'good1',
+		id: 'salt1',
+		path: 'Настольные',
 		classes: 'salt',
 		brend: 'Saltway',
+		brend_img: 'img/brends/brend1.jpg',
 		material: 'Дерево, пластик, гималайская соль',
 		img: 'img/goods/good1.png',
 		img1: 'img/goods/good1-1.png',
 		img2: 'img/goods/good1-2.png',
 		img3: 'img/goods/good1.png',
 		img4: 'img/goods/good1-2.png',
+		group: 'Настольный светильник',
 		type: 'Солевая лампа',
 		name: 'Кристалл',
-		item: 'Настольный ночник',
 		old_price: 1599,
 		new_price: 899,
 		description: 'Соляная лампа SL-35 (3-5 кг) - это светильник созданный самой природой из 100% натуральной гималайской соли. Гималайская соль обладает лечебными свойствами, является прекрасным ионизатором и очистителем воздуха, оказывает успокаивающее действие. Такая настольная лампа поможет погрузиться в глубокий расслабляющий сон ночью и с легкостью проснуться даже ранним утром. Будет отличным подарком, который украсит любой интерьер детской, спальни или гостиной комнаты. Ночник оснащен диммером, что позволяет регулировать яркость свечения лампы. Исходящий теплый, мягкий янтарный свет создаст уютную и комфортную обстановку в вашей комнате. Каждая лампа создана вручную, именно поэтому его форма, вес, цвет и рельеф уникальны. Патрон с цоколем Е14 легко вынимается из плафона, и замена лампочки происходит быстро и безопасно. В комплект поставки входит лампочка, инструкция по использованию на русском языке. Имеет Сертификат Соответствия ЕЭС.',
 	},
 
 	{
-		id: 'good2',
+		id: 'distanceusb2',
+		path: 'Настольные',
 		brend: 'My Smart Home',
+		brend_img: 'img/brends/brend2.jpg',
 		material: 'ABS-пластик, медь, фольгированное покрытие',
 		classes: 'distance usb',
 		img: 'img/goods/good2.png',
+		img1: 'img/goods/good2-1.png',
+		img2: 'img/goods/good2-2.png',
+		img3: 'img/goods/good2.png',
+		img4: 'img/goods/good2-2.png',
+		group: 'Настольный светильник',
 		type: 'Декоративный',
 		name: 'Дерево',
 		old_price: 3699,
 		new_price: 1794,
+		description: 'Соляная лампа SL-35 (3-5 кг) - это светильник созданный самой природой из 100% натуральной гималайской соли. Гималайская соль обладает лечебными свойствами, является прекрасным ионизатором и очистителем воздуха, оказывает успокаивающее действие. Такая настольная лампа поможет погрузиться в глубокий расслабляющий сон ночью и с легкостью проснуться даже ранним утром. Будет отличным подарком, который украсит любой интерьер детской, спальни или гостиной комнаты. Ночник оснащен диммером, что позволяет регулировать яркость свечения лампы. Исходящий теплый, мягкий янтарный свет создаст уютную и комфортную обстановку в вашей комнате. Каждая лампа создана вручную, именно поэтому его форма, вес, цвет и рельеф уникальны. Патрон с цоколем Е14 легко вынимается из плафона, и замена лампочки происходит быстро и безопасно. В комплект поставки входит лампочка, инструкция по использованию на русском языке. Имеет Сертификат Соответствия ЕЭС.',
 	},
 
 	{
-		id: 'good3',
+		id: 'babythreeddistanceusb3',
+		path: 'Настольные',
 		brend: 'UNIHIT',
+		brend_img: 'img/brends/brend3.jpg',
 		material: 'Пластик',
-		classes: 'baby three_d distance usb',
+		classes: 'baby threed distance usb',
 		img: 'img/goods/good3.png',
+		img1: 'img/goods/good3-1.png',
+		img2: 'img/goods/good3-2.png',
+		img3: 'img/goods/good3.png',
+		img4: 'img/goods/good3-2.png',
+		group: 'Настольный светильник',
 		type: '3D-ночник',
 		name: 'Луна',
 		old_price: 1335,
 		new_price: 870,
+		description: 'Соляная лампа SL-35 (3-5 кг) - это светильник созданный самой природой из 100% натуральной гималайской соли. Гималайская соль обладает лечебными свойствами, является прекрасным ионизатором и очистителем воздуха, оказывает успокаивающее действие. Такая настольная лампа поможет погрузиться в глубокий расслабляющий сон ночью и с легкостью проснуться даже ранним утром. Будет отличным подарком, который украсит любой интерьер детской, спальни или гостиной комнаты. Ночник оснащен диммером, что позволяет регулировать яркость свечения лампы. Исходящий теплый, мягкий янтарный свет создаст уютную и комфортную обстановку в вашей комнате. Каждая лампа создана вручную, именно поэтому его форма, вес, цвет и рельеф уникальны. Патрон с цоколем Е14 легко вынимается из плафона, и замена лампочки происходит быстро и безопасно. В комплект поставки входит лампочка, инструкция по использованию на русском языке. Имеет Сертификат Соответствия ЕЭС.',
 	},
 
 	{
-		id: 'good4',
+		id: 'projectorusb4',
+		path: 'Настольные',
 		brend: 'Le Romarin',
+		brend_img: 'img/brends/brend4.jpg',
 		material: 'ABS-пластик',
 		classes: 'projector usb',
 		img: 'img/goods/good4.png',
+		img1: 'img/goods/good4-1.png',
+		img2: 'img/goods/good4-2.png',
+		img3: 'img/goods/good4.png',
+		img4: 'img/goods/good4-2.png',
+		group: 'Настольный светильник',
 		type: 'Проектор',
 		name: 'Ночное небо',
 		old_price: 5309,
 		new_price: 2410,
+		description: 'Соляная лампа SL-35 (3-5 кг) - это светильник созданный самой природой из 100% натуральной гималайской соли. Гималайская соль обладает лечебными свойствами, является прекрасным ионизатором и очистителем воздуха, оказывает успокаивающее действие. Такая настольная лампа поможет погрузиться в глубокий расслабляющий сон ночью и с легкостью проснуться даже ранним утром. Будет отличным подарком, который украсит любой интерьер детской, спальни или гостиной комнаты. Ночник оснащен диммером, что позволяет регулировать яркость свечения лампы. Исходящий теплый, мягкий янтарный свет создаст уютную и комфортную обстановку в вашей комнате. Каждая лампа создана вручную, именно поэтому его форма, вес, цвет и рельеф уникальны. Патрон с цоколем Е14 легко вынимается из плафона, и замена лампочки происходит быстро и безопасно. В комплект поставки входит лампочка, инструкция по использованию на русском языке. Имеет Сертификат Соответствия ЕЭС.',
 	},
 
 	{
-		id: 'good5',
+		id: 'portable5',
+		path: 'Настольные',
 		brend: 'Neon-Night',
+		brend_img: 'img/brends/brend5.jpg',
 		material: 'ПВХ',
 		classes: 'portable',
 		img: 'img/goods/good5.png',
+		img1: 'img/goods/good5-1.png',
+		img2: 'img/goods/good5-2.png',
+		img3: 'img/goods/good5.png',
+		img4: 'img/goods/good5-2.png',
+		group: 'Настольный светильник',
 		type: 'Декоративный',
 		name: 'Фонарь',
 		old_price: 1814,
 		new_price: 598,
+		description: 'Соляная лампа SL-35 (3-5 кг) - это светильник созданный самой природой из 100% натуральной гималайской соли. Гималайская соль обладает лечебными свойствами, является прекрасным ионизатором и очистителем воздуха, оказывает успокаивающее действие. Такая настольная лампа поможет погрузиться в глубокий расслабляющий сон ночью и с легкостью проснуться даже ранним утром. Будет отличным подарком, который украсит любой интерьер детской, спальни или гостиной комнаты. Ночник оснащен диммером, что позволяет регулировать яркость свечения лампы. Исходящий теплый, мягкий янтарный свет создаст уютную и комфортную обстановку в вашей комнате. Каждая лампа создана вручную, именно поэтому его форма, вес, цвет и рельеф уникальны. Патрон с цоколем Е14 легко вынимается из плафона, и замена лампочки происходит быстро и безопасно. В комплект поставки входит лампочка, инструкция по использованию на русском языке. Имеет Сертификат Соответствия ЕЭС.',
 	},
 
 	{
-		id: 'good6',
+		id: 'babysocket6',
+		path: 'Бра',
 		brend: 'Rexant',
+		brend_img: 'img/brends/brend6.jpg',
 		material: 'Пластик, светодиоды',
-		classes: 'socket',
+		classes: 'baby socket',
 		img: 'img/goods/good6.png',
+		img1: 'img/goods/good6-1.png',
+		img2: 'img/goods/good6.png',
+		img3: 'img/goods/good6-1.png',
+		img4: 'img/goods/good6.png',
+		group: 'Бра',
 		type: 'Розеточный',
 		name: 'Бабочка',
 		old_price: 302,
 		new_price: 182,
+		description: 'Соляная лампа SL-35 (3-5 кг) - это светильник созданный самой природой из 100% натуральной гималайской соли. Гималайская соль обладает лечебными свойствами, является прекрасным ионизатором и очистителем воздуха, оказывает успокаивающее действие. Такая настольная лампа поможет погрузиться в глубокий расслабляющий сон ночью и с легкостью проснуться даже ранним утром. Будет отличным подарком, который украсит любой интерьер детской, спальни или гостиной комнаты. Ночник оснащен диммером, что позволяет регулировать яркость свечения лампы. Исходящий теплый, мягкий янтарный свет создаст уютную и комфортную обстановку в вашей комнате. Каждая лампа создана вручную, именно поэтому его форма, вес, цвет и рельеф уникальны. Патрон с цоколем Е14 легко вынимается из плафона, и замена лампочки происходит быстро и безопасно. В комплект поставки входит лампочка, инструкция по использованию на русском языке. Имеет Сертификат Соответствия ЕЭС.',
 	},
 
 	{
-		id: 'good7',
-		brend: 'Мир удивительных товаров',
+		id: 'threeddistance7',
+		path: 'Настольные',
+		brend: 'AlexMax',
+		brend_img: 'img/brends/brend7.jpg',
 		material: 'Стекло, ABS-пластик',
-		classes: 'three_d distance',
+		classes: 'threed distance',
 		img: 'img/goods/good7.png',
+		img1: 'img/goods/good7-1.png',
+		img2: 'img/goods/good7-2.png',
+		img3: 'img/goods/good7.png',
+		img4: 'img/goods/good7-2.png',
+		group: 'Настольный светильник',
 		type: 'Декоративный',
 		name: 'Сфера',
 		old_price: 1990,
 		new_price: 1094,
+		description: 'Соляная лампа SL-35 (3-5 кг) - это светильник созданный самой природой из 100% натуральной гималайской соли. Гималайская соль обладает лечебными свойствами, является прекрасным ионизатором и очистителем воздуха, оказывает успокаивающее действие. Такая настольная лампа поможет погрузиться в глубокий расслабляющий сон ночью и с легкостью проснуться даже ранним утром. Будет отличным подарком, который украсит любой интерьер детской, спальни или гостиной комнаты. Ночник оснащен диммером, что позволяет регулировать яркость свечения лампы. Исходящий теплый, мягкий янтарный свет создаст уютную и комфортную обстановку в вашей комнате. Каждая лампа создана вручную, именно поэтому его форма, вес, цвет и рельеф уникальны. Патрон с цоколем Е14 легко вынимается из плафона, и замена лампочки происходит быстро и безопасно. В комплект поставки входит лампочка, инструкция по использованию на русском языке. Имеет Сертификат Соответствия ЕЭС.',
 	},
 
 	{
-		id: 'good8',
+		id: 'babydistanceusb8',
+		path: 'Настольные',
 		brend: 'BeForYou',
+		brend_img: 'img/brends/brend8.jpg',
 		material: 'Силикон; ABS-пластик',
 		classes: 'baby distance usb',
 		img: 'img/goods/good8.png',
+		img1: 'img/goods/good8-1.png',
+		img2: 'img/goods/good8-2.png',
+		img3: 'img/goods/good8.png',
+		img4: 'img/goods/good8-3.png',
+		group: 'Настольный светильник',
 		type: 'Детский',
 		name: 'Зайчик',
 		old_price: 1500,
 		new_price: 1071,
+		description: 'Соляная лампа SL-35 (3-5 кг) - это светильник созданный самой природой из 100% натуральной гималайской соли. Гималайская соль обладает лечебными свойствами, является прекрасным ионизатором и очистителем воздуха, оказывает успокаивающее действие. Такая настольная лампа поможет погрузиться в глубокий расслабляющий сон ночью и с легкостью проснуться даже ранним утром. Будет отличным подарком, который украсит любой интерьер детской, спальни или гостиной комнаты. Ночник оснащен диммером, что позволяет регулировать яркость свечения лампы. Исходящий теплый, мягкий янтарный свет создаст уютную и комфортную обстановку в вашей комнате. Каждая лампа создана вручную, именно поэтому его форма, вес, цвет и рельеф уникальны. Патрон с цоколем Е14 легко вынимается из плафона, и замена лампочки происходит быстро и безопасно. В комплект поставки входит лампочка, инструкция по использованию на русском языке. Имеет Сертификат Соответствия ЕЭС.',
 	},
 
 	{
-		id: 'good9',
+		id: 'babyneondistance9',
+		path: 'Настольные',
 		brend: 'Artandwood',
+		brend_img: 'img/brends/brend9.jpg',
 		material: 'Акрил',
 		classes: 'baby neon distance',
 		img: 'img/goods/good9.png',
+		img1: 'img/goods/good9-1.png',
+		img2: 'img/goods/good9-2.png',
+		img3: 'img/goods/good9.png',
+		img4: 'img/goods/good9-3.png',
+		group: 'Настольный светильник',
 		type: 'Неоновый',
 		name: 'Ловец снов',
 		old_price: 2050,
 		new_price: 1230,
+		description: 'Соляная лампа SL-35 (3-5 кг) - это светильник созданный самой природой из 100% натуральной гималайской соли. Гималайская соль обладает лечебными свойствами, является прекрасным ионизатором и очистителем воздуха, оказывает успокаивающее действие. Такая настольная лампа поможет погрузиться в глубокий расслабляющий сон ночью и с легкостью проснуться даже ранним утром. Будет отличным подарком, который украсит любой интерьер детской, спальни или гостиной комнаты. Ночник оснащен диммером, что позволяет регулировать яркость свечения лампы. Исходящий теплый, мягкий янтарный свет создаст уютную и комфортную обстановку в вашей комнате. Каждая лампа создана вручную, именно поэтому его форма, вес, цвет и рельеф уникальны. Патрон с цоколем Е14 легко вынимается из плафона, и замена лампочки происходит быстро и безопасно. В комплект поставки входит лампочка, инструкция по использованию на русском языке. Имеет Сертификат Соответствия ЕЭС.',
 	},
 
 	{
-		id: 'good10',
+		id: 'lamp10',
+		path: 'Настольные',
 		brend: 'Lucia',
+		brend_img: 'img/brends/brend10.jpg',
 		material: 'Дерево, текстиль',
 		classes: 'lamp',
 		img: 'img/goods/good10.png',
+		img1: 'img/goods/good10-1.png',
+		img2: 'img/goods/good10-2.png',
+		img3: 'img/goods/good10.png',
+		img4: 'img/goods/good10-2.png',
+		group: 'Настольный светильник',
 		type: 'Абажур',
 		name: 'Онтарио',
 		old_price: 2590,
 		new_price: 1049,
+		description: 'Соляная лампа SL-35 (3-5 кг) - это светильник созданный самой природой из 100% натуральной гималайской соли. Гималайская соль обладает лечебными свойствами, является прекрасным ионизатором и очистителем воздуха, оказывает успокаивающее действие. Такая настольная лампа поможет погрузиться в глубокий расслабляющий сон ночью и с легкостью проснуться даже ранним утром. Будет отличным подарком, который украсит любой интерьер детской, спальни или гостиной комнаты. Ночник оснащен диммером, что позволяет регулировать яркость свечения лампы. Исходящий теплый, мягкий янтарный свет создаст уютную и комфортную обстановку в вашей комнате. Каждая лампа создана вручную, именно поэтому его форма, вес, цвет и рельеф уникальны. Патрон с цоколем Е14 легко вынимается из плафона, и замена лампочки происходит быстро и безопасно. В комплект поставки входит лампочка, инструкция по использованию на русском языке. Имеет Сертификат Соответствия ЕЭС.',
 	},
 
 	{
-		id: 'good11',
+		id: 'candles11',
+		path: 'Свечи',
 		brend: 'Apeyron',
+		brend_img: 'img/brends/brend11.jpg',
 		material: 'Пластик',
 		classes: 'candles',
 		img: 'img/goods/good11.png',
+		img1: 'img/goods/good11-1.png',
+		img2: 'img/goods/good11-2.png',
+		img3: 'img/goods/good11.png',
+		img4: 'img/goods/good11-2.png',
+		group: 'Свечи',
 		type: 'Светодиодные',
 		name: 'Свечи',
 		old_price: 468,
 		new_price: 257,
+		description: 'Соляная лампа SL-35 (3-5 кг) - это светильник созданный самой природой из 100% натуральной гималайской соли. Гималайская соль обладает лечебными свойствами, является прекрасным ионизатором и очистителем воздуха, оказывает успокаивающее действие. Такая настольная лампа поможет погрузиться в глубокий расслабляющий сон ночью и с легкостью проснуться даже ранним утром. Будет отличным подарком, который украсит любой интерьер детской, спальни или гостиной комнаты. Ночник оснащен диммером, что позволяет регулировать яркость свечения лампы. Исходящий теплый, мягкий янтарный свет создаст уютную и комфортную обстановку в вашей комнате. Каждая лампа создана вручную, именно поэтому его форма, вес, цвет и рельеф уникальны. Патрон с цоколем Е14 легко вынимается из плафона, и замена лампочки происходит быстро и безопасно. В комплект поставки входит лампочка, инструкция по использованию на русском языке. Имеет Сертификат Соответствия ЕЭС.',
 	},
 
 	{
-		id: 'good12',
+		id: 'salt12',
+		path: 'Настольные',
 		brend: 'Saltway',
+		brend_img: 'img/brends/brend1.jpg',
 		material: 'Дерево, пластик, гималайская соль',
 		classes: 'salt',
 		img: 'img/goods/good12.png',
+		img1: 'img/goods/good12-1.png',
+		img2: 'img/goods/good12-2.png',
+		img3: 'img/goods/good12.png',
+		img4: 'img/goods/good12-2.png',
+		group: 'Настольный светильник',
 		type: 'Солевая лампа',
 		name: 'Угли',
 		old_price: 3716,
 		new_price: 2126,
+		description: 'Соляная лампа SL-35 (3-5 кг) - это светильник созданный самой природой из 100% натуральной гималайской соли. Гималайская соль обладает лечебными свойствами, является прекрасным ионизатором и очистителем воздуха, оказывает успокаивающее действие. Такая настольная лампа поможет погрузиться в глубокий расслабляющий сон ночью и с легкостью проснуться даже ранним утром. Будет отличным подарком, который украсит любой интерьер детской, спальни или гостиной комнаты. Ночник оснащен диммером, что позволяет регулировать яркость свечения лампы. Исходящий теплый, мягкий янтарный свет создаст уютную и комфортную обстановку в вашей комнате. Каждая лампа создана вручную, именно поэтому его форма, вес, цвет и рельеф уникальны. Патрон с цоколем Е14 легко вынимается из плафона, и замена лампочки происходит быстро и безопасно. В комплект поставки входит лампочка, инструкция по использованию на русском языке. Имеет Сертификат Соответствия ЕЭС.',
 	},
 
 	{
-		id: 'good13',
+		id: 'threedbabyprojectordistance13',
+		path: 'Настольные',
 		brend: 'TimeToCreate',
+		brend_img: 'img/brends/brend12.jpg',
 		material: 'Пластик',
-		classes: 'three_d baby projector distance',
+		classes: 'threed baby projector distance',
 		img: 'img/goods/good13.png',
+		img1: 'img/goods/good13-1.png',
+		img2: 'img/goods/good13-2.png',
+		img3: 'img/goods/good13.png',
+		img4: 'img/goods/good13-2.png',
+		group: 'Настольный светильник',
 		type: 'Проектор',
 		name: 'Новогодний',
 		old_price: 4000,
 		new_price: 1760,
+		description: 'Соляная лампа SL-35 (3-5 кг) - это светильник созданный самой природой из 100% натуральной гималайской соли. Гималайская соль обладает лечебными свойствами, является прекрасным ионизатором и очистителем воздуха, оказывает успокаивающее действие. Такая настольная лампа поможет погрузиться в глубокий расслабляющий сон ночью и с легкостью проснуться даже ранним утром. Будет отличным подарком, который украсит любой интерьер детской, спальни или гостиной комнаты. Ночник оснащен диммером, что позволяет регулировать яркость свечения лампы. Исходящий теплый, мягкий янтарный свет создаст уютную и комфортную обстановку в вашей комнате. Каждая лампа создана вручную, именно поэтому его форма, вес, цвет и рельеф уникальны. Патрон с цоколем Е14 легко вынимается из плафона, и замена лампочки происходит быстро и безопасно. В комплект поставки входит лампочка, инструкция по использованию на русском языке. Имеет Сертификат Соответствия ЕЭС.',
 	},
 
 	{
-		id: 'good14',
+		id: 'threeddistance14',
+		path: 'Настольные',
 		brend: 'Hasbender',
+		brend_img: 'img/brends/brend13.jpg',
 		material: 'Стекло',
-		classes: 'three_d distance',
+		classes: 'threed distance',
 		img: 'img/goods/good14.png',
+		img1: 'img/goods/good14-1.png',
+		img2: 'img/goods/good14-2.png',
+		img3: 'img/goods/good14.png',
+		img4: 'img/goods/good14-2.png',
+		group: 'Настольный светильник',
 		type: '3D-ночник',
 		name: 'Зеркальная ваза',
 		old_price: 5200,
 		new_price: 2744,
+		description: 'Соляная лампа SL-35 (3-5 кг) - это светильник созданный самой природой из 100% натуральной гималайской соли. Гималайская соль обладает лечебными свойствами, является прекрасным ионизатором и очистителем воздуха, оказывает успокаивающее действие. Такая настольная лампа поможет погрузиться в глубокий расслабляющий сон ночью и с легкостью проснуться даже ранним утром. Будет отличным подарком, который украсит любой интерьер детской, спальни или гостиной комнаты. Ночник оснащен диммером, что позволяет регулировать яркость свечения лампы. Исходящий теплый, мягкий янтарный свет создаст уютную и комфортную обстановку в вашей комнате. Каждая лампа создана вручную, именно поэтому его форма, вес, цвет и рельеф уникальны. Патрон с цоколем Е14 легко вынимается из плафона, и замена лампочки происходит быстро и безопасно. В комплект поставки входит лампочка, инструкция по использованию на русском языке. Имеет Сертификат Соответствия ЕЭС.',
 	},
 
 	{
-		id: 'good15',
+		id: 'candles15',
+		path: 'Свечи',
 		brend: 'Organika',
+		brend_img: 'img/brends/brend14.jpg',
 		material: 'Гранулированный воск',
 		classes: 'candles',
 		img: 'img/goods/good15.png',
+		img1: 'img/goods/good15-1.png',
+		img2: 'img/goods/good15-2.png',
+		img3: 'img/goods/good15.png',
+		img4: 'img/goods/good15-3.png',
+		group: 'Свечи',
 		type: 'Насыпные',
 		name: 'Свечи',
 		old_price: 3852,
 		new_price: 1943,
+		description: 'Соляная лампа SL-35 (3-5 кг) - это светильник созданный самой природой из 100% натуральной гималайской соли. Гималайская соль обладает лечебными свойствами, является прекрасным ионизатором и очистителем воздуха, оказывает успокаивающее действие. Такая настольная лампа поможет погрузиться в глубокий расслабляющий сон ночью и с легкостью проснуться даже ранним утром. Будет отличным подарком, который украсит любой интерьер детской, спальни или гостиной комнаты. Ночник оснащен диммером, что позволяет регулировать яркость свечения лампы. Исходящий теплый, мягкий янтарный свет создаст уютную и комфортную обстановку в вашей комнате. Каждая лампа создана вручную, именно поэтому его форма, вес, цвет и рельеф уникальны. Патрон с цоколем Е14 легко вынимается из плафона, и замена лампочки происходит быстро и безопасно. В комплект поставки входит лампочка, инструкция по использованию на русском языке. Имеет Сертификат Соответствия ЕЭС.',
 	},
 
 	{
-		id: 'good16',
+		id: 'threedlava16',
+		path: 'Настольные',
 		brend: 'LaLava',
+		brend_img: 'img/brends/brend15.jpg',
 		material: 'Стекло',
-		classes: 'lava',
+		classes: 'threed lava',
 		img: 'img/goods/good16.png',
+		img1: 'img/goods/good16-1.png',
+		img2: 'img/goods/good16.png',
+		img3: 'img/goods/good16-1.png',
+		img4: 'img/goods/good16.png',
+		group: 'Настольный светильник',
 		type: 'Лава-лампа',
 		name: 'Сосулька',
 		old_price: 2990,
 		new_price: 1992,
+		description: 'Соляная лампа SL-35 (3-5 кг) - это светильник созданный самой природой из 100% натуральной гималайской соли. Гималайская соль обладает лечебными свойствами, является прекрасным ионизатором и очистителем воздуха, оказывает успокаивающее действие. Такая настольная лампа поможет погрузиться в глубокий расслабляющий сон ночью и с легкостью проснуться даже ранним утром. Будет отличным подарком, который украсит любой интерьер детской, спальни или гостиной комнаты. Ночник оснащен диммером, что позволяет регулировать яркость свечения лампы. Исходящий теплый, мягкий янтарный свет создаст уютную и комфортную обстановку в вашей комнате. Каждая лампа создана вручную, именно поэтому его форма, вес, цвет и рельеф уникальны. Патрон с цоколем Е14 легко вынимается из плафона, и замена лампочки происходит быстро и безопасно. В комплект поставки входит лампочка, инструкция по использованию на русском языке. Имеет Сертификат Соответствия ЕЭС.',
 	},
 
 	{
-		id: 'good17',
+		id: 'projectordistance17',
+		path: 'Настольные',
 		brend: 'MullerHaus',
+		brend_img: 'img/brends/brend16.jpg',
 		material: 'Сплав алюминия',
 		classes: 'projector distance',
 		img: 'img/goods/good17.png',
+		img1: 'img/goods/good17-1.png',
+		img2: 'img/goods/good17-2.png',
+		img3: 'img/goods/good17.png',
+		img4: 'img/goods/good17-2.png',
+		group: 'Настольный светильник',
 		type: 'Проектор',
 		name: 'Закат',
 		old_price: 3572,
 		new_price: 3291,
+		description: 'Соляная лампа SL-35 (3-5 кг) - это светильник созданный самой природой из 100% натуральной гималайской соли. Гималайская соль обладает лечебными свойствами, является прекрасным ионизатором и очистителем воздуха, оказывает успокаивающее действие. Такая настольная лампа поможет погрузиться в глубокий расслабляющий сон ночью и с легкостью проснуться даже ранним утром. Будет отличным подарком, который украсит любой интерьер детской, спальни или гостиной комнаты. Ночник оснащен диммером, что позволяет регулировать яркость свечения лампы. Исходящий теплый, мягкий янтарный свет создаст уютную и комфортную обстановку в вашей комнате. Каждая лампа создана вручную, именно поэтому его форма, вес, цвет и рельеф уникальны. Патрон с цоколем Е14 легко вынимается из плафона, и замена лампочки происходит быстро и безопасно. В комплект поставки входит лампочка, инструкция по использованию на русском языке. Имеет Сертификат Соответствия ЕЭС.',
 	},
 
 	{
-		id: 'good18',
+		id: 'floordistance18',
+		path: 'Торшеры',
 		brend: 'LED TUBE',
+		brend_img: 'img/brends/brend17.jpg',
 		material: 'Пластик',
 		classes: 'floor distance',
 		img: 'img/goods/good18.png',
+		img1: 'img/goods/good18-1.png',
+		img2: 'img/goods/good18-2.png',
+		img3: 'img/goods/good18.png',
+		img4: 'img/goods/good18-2.png',
+		group: 'Напольный светильник',
 		type: 'Торшер',
 		name: 'Угловой',
 		old_price: 6000,
 		new_price: 2881,
+		description: 'Соляная лампа SL-35 (3-5 кг) - это светильник созданный самой природой из 100% натуральной гималайской соли. Гималайская соль обладает лечебными свойствами, является прекрасным ионизатором и очистителем воздуха, оказывает успокаивающее действие. Такая настольная лампа поможет погрузиться в глубокий расслабляющий сон ночью и с легкостью проснуться даже ранним утром. Будет отличным подарком, который украсит любой интерьер детской, спальни или гостиной комнаты. Ночник оснащен диммером, что позволяет регулировать яркость свечения лампы. Исходящий теплый, мягкий янтарный свет создаст уютную и комфортную обстановку в вашей комнате. Каждая лампа создана вручную, именно поэтому его форма, вес, цвет и рельеф уникальны. Патрон с цоколем Е14 легко вынимается из плафона, и замена лампочки происходит быстро и безопасно. В комплект поставки входит лампочка, инструкция по использованию на русском языке. Имеет Сертификат Соответствия ЕЭС.',
 	},
 ]
-let three_d = document.querySelectorAll('.three_d');
-let lamp = document.querySelectorAll('.lamp');
-let baby = document.querySelectorAll('.baby');
-let lava = document.querySelectorAll('.lava');
-let neon = document.querySelectorAll('.neon');
-let socket = document.querySelectorAll('.socket');
-let portable = document.querySelectorAll('.portable');
-let projector = document.querySelectorAll('.projector');
-let salt = document.querySelectorAll('.salt');
-let distance = document.querySelectorAll('.distance');
-let candles = document.querySelectorAll('.candles');
-let floor = document.querySelectorAll('.floor');
-let usb = document.querySelectorAll('.usb');
-let all_goods = document.querySelectorAll('.goods-offer');
+let item_wrapper = document.querySelector(".popup__content");
 
-//Фильтр поиска товаров
-$(function() {
-	$('#three_d').on("click", function() {
-		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
-		}
-		for (let i = 0; i < three_d.length; i++) {
-			three_d[i].style.display = 'block';
-		}
-	});
-});
-$(function() {
-	$('#lamp').on("click", function() {
-		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
-		}
-		for (let i = 0; i < lamp.length; i++) {
-			lamp[i].style.display = 'block';
-		}
-	});
-});
-$(function() {
-	$('#baby').on("click", function() {
-		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
-		}
-		for (let i = 0; i < baby.length; i++) {
-			baby[i].style.display = 'block';
-		}
-	});
-});
-$(function() {
-	$('#lava').on("click", function() {
-		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
-		}
-		for (let i = 0; i < lava.length; i++) {
-			lava[i].style.display = 'block';
-		}
-	});
-});
-$(function() {
-	$('#neon').on("click", function() {
-		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
-		}
-		for (let i = 0; i < neon.length; i++) {
-			neon[i].style.display = 'block';
-		}
-	});
-});
-$(function() {
-	$('#socket').on("click", function() {
-		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
-		}
-		for (let i = 0; i < socket.length; i++) {
-			socket[i].style.display = 'block';
-		}
-	});
-});
-$(function() {
-	$('#portable').on("click", function() {
-		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
-		}
-		for (let i = 0; i < portable.length; i++) {
-			portable[i].style.display = 'block';
-		}
-	});
-});
-$(function() {
-	$('#projector').on("click", function() {
-		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
-		}
-		for (let i = 0; i < projector.length; i++) {
-			projector[i].style.display = 'block';
-		}
-	});
-});
-$(function() {
-	$('#salt').on("click", function() {
-		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
-		}
-		for (let i = 0; i < salt.length; i++) {
-			salt[i].style.display = 'block';
-		}
-	});
-});
-$(function() {
-	$('#distance').on("click", function() {
-		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
-		}
-		for (let i = 0; i < distance.length; i++) {
-			distance[i].style.display = 'block';
-		}
-	});
-});
-$(function() {
-	$('#candles').on("click", function() {
-		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
-		}
-		for (let i = 0; i < candles.length; i++) {
-			candles[i].style.display = 'block';
-		}
-	});
-});
-$(function() {
-	$('#floor').on("click", function() {
-		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
-		}
-		for (let i = 0; i < floor.length; i++) {
-			floor[i].style.display = 'block';
-		}
-	});
-});
-$(function() {
-	$('#usb').on("click", function() {
-		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
-		}
-		for (let i = 0; i < usb.length; i++) {
-			usb[i].style.display = 'block';
-		}
-	});
-});
-$(function() {
-	$('#all').on("click", function() {
-		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'block';
-		}
-	});
-});
+class Item {
+	render() {
+		let ItemCatalog = '';
+		catalog.forEach(({id, classes, path, group, brend_img, material, img, img1, img2, img3, type, name, old_price, new_price, description}) => {
+			ItemCatalog += `
+			<div class="popup__group popup__group" id="${id}">
+
+				<nav class="breadcrumbs">
+					<ul class="breadcrumbs__nav" id="breadcrumbs">
+						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link" href="#">Каталог товаров</a></li>
+						<li class="breadcrumbs__crumb breadcrumbs__crumb_path"><a class="breadcrumbs__link" href="#">${path}</a></li>
+						<li class="breadcrumbs__crumb breadcrumbs__crumb_good"><a class="breadcrumbs__link current" href="#">${type} "${name}"</a></li>
+					</ul>
+				</nav>
+				<!-- /.breadcrumbs -->
+
+				<div class="popup__box">
+				
+					<section class="card">
+				
+						<div class="card__offer card-offer">
+
+							<div class="card-offer__pictures card-pictures">
+
+								<img src="${img}" alt="item" class="card-pictures__image">
+							
+								<div class="card-slider swiper-container">
+
+									<div class="card-slider__wrapper swiper-wrapper">
+
+										<div class="card-slider__slide swiper-slide">
+											<div class="card-slider__item">
+												<img class="card-slider__image" src="${img1}" alt="item">
+											</div>
+										</div>
+
+										<div class="card-slider__slide swiper-slide">
+											<div class="card-slider__item">
+												<img class="card-slider__image" src="${img2}" alt="item">
+											</div>
+										</div>
+
+										<div class="card-slider__slide swiper-slide">
+											<div class="card-slider__item">
+												<img class="card-slider__image" src="${img3}" alt="item">
+											</div>
+										</div>
+
+									</div>
+									<!-- /.swiper-wrapper -->
+
+								</div> 
+								<!-- /.swiper-container -->
+
+							</div>
+							<!-- /.card-pictures -->
+
+							<div class="card-offer__container details">
+							
+									<h2 class="details__title">${group} <br> ${type} "${name}"</h2>
+								<div class="details__feedback feedback">
+									<img src="img/pages/item/icons/star.png" alt="star" class="feedback__icon">
+									<img src="img/pages/item/icons/star.png" alt="star" class="feedback__icon">
+									<img src="img/pages/item/icons/star.png" alt="star" class="feedback__icon">
+									<img src="img/pages/item/icons/star.png" alt="star" class="feedback__icon">
+									<img src="img/pages/item/icons/star.png" alt="star" class="feedback__icon">
+									<a href="#feedbacks" class="feedback__link">0.0 / 0 отзывов</a>
+								</div>
+								<div class="details__box details-box">
+									<div class="details-box__pricing pricing">
+										<p class="pricing__old-price">${old_price}</p>
+										<p class="pricing__new-price">${new_price}</p>
+										<img src="${brend_img}" alt="brend-name" class="pricing__brend">
+									</div>
+									<div class="details-box__buying buying">
+										<button class="buying__add">В корзину</button>
+										<p class="buying__availability">Товар в наличии</p>
+										<img src="img/pages/item/icons/delivery.png" alt="delivery" class="buying__delivery">
+									</div>
+								</div>
+								<p class="details__description">${description}</p>
+
+							</div>
+							<!-- /.details -->
+
+						</div>
+						<!-- /.card-offer -->
+
+						<div class="card__characteristics characteristics">
+
+							<h3 class="characteristics__title">Основные характеристики:</h3>
+
+							<ul class="characteristics__list">
+
+								<li class="characteristics__item">
+									<span class="characteristics__text">Гарантийный срок:</span>
+									<span class="characteristics__info">1 год</span>
+								</li>
+								<li class="characteristics__item">
+									<span class="characteristics__text">Длина кабеля:</span>
+									<span class="characteristics__info">160 см</span>
+								</li>
+								<li class="characteristics__item">
+									<span class="characteristics__text">Материал:</span>
+									<span class="characteristics__info">${material}</span>
+								</li>
+								<li class="characteristics__item">
+									<span class="characteristics__text">Напряжение:</span>
+									<span class="characteristics__info">230 В</span>
+								</li>
+								<li class="characteristics__item">
+									<span class="characteristics__text">Питание:</span>
+									<span class="characteristics__info">От сети 220 - 230 В 50 Гц</span>
+								</li>
+								<li class="characteristics__item">
+									<span class="characteristics__text">Вес:</span>
+									<span class="characteristics__info">4 кг</span>
+								</li>
+								<li class="characteristics__item">
+									<span class="characteristics__text">Высота:</span>
+									<span class="characteristics__info">22,5 см</span>
+								</li>
+								<li class="characteristics__item">
+									<span class="characteristics__text">Тип светильника:</span>
+									<span class="characteristics__info">Солевая лампа, Настольный ночник</span>
+								</li>
+								<li class="characteristics__item">
+									<span class="characteristics__text">Страна производителя:</span>
+									<span class="characteristics__info">Пакистан</span>
+								</li>
+								<li class="characteristics__item">
+									<span class="characteristics__text">Комплектация:</span>
+									<span class="characteristics__info">Инструкция; Солевая лампа; Лампочка Е14 15 Вт; <br> Патрон для лампы с сетевым проводом</span>
+								</li>
+
+							</ul>
+
+						</div>
+
+						<div class="card__feedbacks feedbacks" id="feedbacks">
+
+							<h3 class="feedbacks__title">Отзывы</h3>
+							<p class="feedbacks__text">На этот товар ещё не поступало отзывов</p>
+
+						</div>
+
+					</section>
+					<!-- /.card -->
+
+					<section class="similar">
+
+						<h2 class="similar__title">Похожие товары</h2>
+
+						<div class="similar__wrapper">
+						</div>
+
+					</section>
+					<!-- /.similar -->
+
+				</div>
+
+			</div>
+			`;
+		});
+
+		item_wrapper.innerHTML += ItemCatalog;
+	}
+}
+
+const itemPage = new Item();
+itemPage.render();
+
 
 
 
@@ -11577,13 +11737,252 @@ new Swiper (".card-slider", {
 	effect: 'slide',
 });
 
-let main_image = document.querySelector(".card-pictures__image");
+let main_image = document.querySelectorAll(".card-pictures__image");
 let chosen_image = document.querySelectorAll(".card-slider__image");
 
 $(function() {
 	for (let i = 0; i < chosen_image.length; i++) {
 		$(chosen_image[i]).on("click", function() {
-			$(main_image).attr('src', $(this).attr('src'));
+			for (let j = 0; j < main_image.length; j++) {
+				$(main_image[j]).attr('src', $(this).attr('src'));
+			}
 		});
 	}
 });
+let similar_wrapper = document.querySelectorAll(".similar__wrapper");
+
+class Similar {
+	render() {
+		let similarCatalog = '';
+		catalog.forEach(({id, classes, brend, material, img, type, name, old_price, new_price}) => {
+			similarCatalog += `
+					<div class="goods__offer goods-offer similar__offer goods-offer_${classes}">
+
+							<img src="${img}" alt="#" class="goods-offer__image">
+
+							<div class="goods-offer__hide hide-text similar__hide-text">
+								<p class="hide-text__item similar__hide-item search-good"><span class="hide-text__item_titles similar__hide-item_titles">Бренд:</span>
+								<br> ${brend}</p>
+								<p class="hide-text__item similar__hide-item search-good"><span class="hide-text__item_titles similar__hide-item_titles">Материал:</span> 
+								<br>${material}</p>
+								<a class="hide-text__item_about similar__hide-item_about" href="item.html#${id}" target="_blank">Подробнее >></a>
+								<a class="hide-text__item_add similar__hide-item_add" href='#'></a>
+							</div>
+							<!-- /.hide-text -->
+
+							<div class="goods-offer__container similar__container">
+								<div class="goods-offer__text">
+									<p class="goods-offer__type similar__type search-good">${type}</p>
+									<p class="goods-offer__name similar__name search-good">${name}</p>
+								</div>
+								<div class="goods-offer__price">
+									<p class="goods-offer__old-price similar__old-price">&nbsp;${old_price}</p>
+									<p class="goods-offer__new-price similar__new-price">&nbsp;${new_price}</p>
+								</div>
+							</div>
+							<!-- /.goods-offer__container -->
+
+					</div>
+					<!-- /.goods-offer -->	
+			`;
+		});
+
+		for (let i = 0; i < similar_wrapper.length; i++) {
+			similar_wrapper[i].innerHTML += similarCatalog;
+		}
+	}
+}
+
+const similarPage = new Similar();
+similarPage.render();
+
+
+
+let similar_salt = document.querySelectorAll(".goods-offer_salt");
+let similar_threed = document.querySelectorAll(".goods-offer_threed");
+let similar_distance = document.querySelectorAll(".goods-offer_distance");
+let similar_distance2 = document.querySelectorAll(".distance");
+let similar_baby = document.querySelectorAll(".goods-offer_baby");
+let similar_baby2 = document.querySelectorAll(".baby");
+let similar_projector = document.querySelectorAll(".goods-offer_projector");
+let similar_projector2 = document.querySelectorAll(".projector");
+let similar_usb = document.querySelectorAll(".usb");
+let similar_candles = document.querySelectorAll(".goods-offer_candles");
+let similar_floor = document.querySelectorAll(".goods-offer_floor");
+let similar_portable = document.querySelectorAll(".goods-offer_portable");
+let similar_lamp = document.querySelectorAll(".goods-offer_lamp");
+
+if (document.location.hash.indexOf('salt') == 1) {
+	for (let i = 0; i < similar_salt.length; i++) {
+		similar_salt[i].style.display = "block";
+	}
+	for (let i = 0; i < similar_portable.length; i++) {
+		similar_portable[i].style.display = "block";
+	}
+	for (let i = 0; i < similar_lamp.length; i++) {
+		similar_lamp[i].style.display = "block";
+	}
+	for (let i = 0; i < similar_candles.length; i++) {
+		similar_candles[i].style.display = "block";
+	}
+}
+
+if (document.location.hash.indexOf('threed') == 1) {
+	for (let i = 0; i < similar_threed.length; i++) {
+		similar_threed[i].style.display = "block";
+	}
+	for (let j = 0; j < similar_distance.length; j++) {
+		similar_distance[j].style.display = "block";
+	}
+	for (let k = 0; k < similar_distance2.length; k++) {
+		similar_distance2[k].style.display = "block";
+	}
+}
+
+if (document.location.hash.indexOf('baby') == 1) {
+	for (let i = 0; i < similar_baby.length; i++) {
+		similar_baby[i].style.display = "block";
+	}
+	for (let j = 0; j < similar_baby2.length; j++) {
+		similar_baby2[j].style.display = "block";
+	}
+	for (let k = 0; k < similar_threed.length; k++) {
+		similar_threed[k].style.display = "block";
+	}
+	for (let l = 0; l < similar_distance2.length; l++) {
+		similar_distance2[l].style.display = "block";
+	}
+}
+
+if (document.location.hash.indexOf('projector') == 1) {
+	for (let i = 0; i < similar_projector.length; i++) {
+		similar_projector[i].style.display = "block";
+	}
+	for (let j = 0; j < similar_projector2.length; j++) {
+		similar_projector2[j].style.display = "block";
+	}
+}
+
+if (document.location.hash.indexOf('distance') == 1 || document.location.hash.indexOf('usb') == 1) {
+	for (let i = 0; i < similar_distance.length; i++) {
+		similar_distance[i].style.display = "block";
+	}
+	for (let j = 0; j < similar_distance2.length; j++) {
+		similar_distance2[j].style.display = "block";
+	}
+	for (let k = 0; k < similar_usb.length; k++) {
+		similar_usb[k].style.display = "block";
+	}
+	for (let l = 0; l < similar_threed.length; l++) {
+		similar_threed[l].style.display = "block";
+	}
+}
+
+if (document.location.hash.indexOf('candles') == 1) {
+	for (let i = 0; i < similar_candles.length; i++) {
+		similar_candles[i].style.display = "block";
+	}
+}
+
+if (document.location.hash.indexOf('distanceusb2') == 1) {
+	for (let i = 0; i < similar_salt.length; i++) {
+		similar_salt[i].style.display = "block";
+	}
+	for (let j = 0; j < similar_lamp.length; j++) {
+		similar_lamp[j].style.display = "block";
+	}
+	for (let k = 0; k < similar_portable.length; k++) {
+		similar_portable[k].style.display = "block";
+	}
+	for (let l = 0; l < similar_baby.length; l++) {
+		similar_baby[l].style.display = "none";
+	}
+	for (let m = 0; m < similar_baby2.length; m++) {
+		similar_baby2[m].style.display = "none";
+	}
+	for (let n = 0; n < similar_projector.length; n++) {
+		similar_projector[n].style.display = "none";
+	}
+}
+
+if (document.location.hash.indexOf('portable5') == 1) {
+	for (let i = 0; i < similar_salt.length; i++) {
+		similar_salt[i].style.display = "block";
+	}
+	for (let i = 0; i < similar_lamp.length; i++) {
+		similar_lamp[i].style.display = "block";
+	}
+	for (let i = 0; i < similar_candles.length; i++) {
+		similar_candles[i].style.display = "block";
+	}
+}
+
+if (document.location.hash.indexOf('babydistanceusb8') == 1) {
+	for (let i = 0; i < similar_floor.length; i++) {
+		similar_floor[i].style.display = "none";
+	}
+}
+
+if (document.location.hash.indexOf('babyneondistance9') == 1) {
+	for (let i = 0; i < document.querySelectorAll(".socket").length; i++) {
+		document.querySelectorAll(".socket")[i].style.display = "none";
+	}
+}
+
+if (document.location.hash.indexOf('lamp10') == 1) {
+	for (let i = 0; i < similar_salt.length; i++) {
+		similar_salt[i].style.display = "block";
+	}
+	for (let j = 0; j < similar_portable.length; j++) {
+		similar_portable[j].style.display = "block";
+	}
+	for (let k = 0; k < similar_candles.length; k++) {
+		similar_candles[k].style.display = "block";
+	}
+}
+
+if (document.location.hash.indexOf('threedbabyprojectordistance13') == 1 || document.location.hash.indexOf('threeddistance14')){
+	for (let i = 0; i < similar_floor.length; i++) {
+		similar_floor[i].style.display = "none";
+	}
+	for (let j = 0; j < similar_distance.length; j++) {
+		similar_distance[j].style.display = "none";
+	}
+}
+
+if (document.location.hash.indexOf('threedlava16') == 1) {
+	for (let i = 0; i < similar_baby.length; i++) {
+		similar_baby[i].style.display = "none";
+	}
+	for (let j = 0; j < similar_baby2.length; j++) {
+		similar_baby2[j].style.display = "none";
+	}
+	for (let k = 0; k < similar_projector1.length; k++) {
+		similar_projector1[k].style.display = "none";
+	}
+}
+
+if (document.location.hash.indexOf('floordistance18') == 1) {
+	for (let i = 0; i < similar_distance.length; i++) {
+		similar_distance[i].style.display = "block";
+	}
+	for (let j = 0; j < similar_distance2.length; j++) {
+		similar_distance2[j].style.display = "block";
+	}
+	for (let k = 0; k < similar_baby.length; k++) {
+		similar_baby[k].style.display = "none";
+	}
+	for (let l = 0; l < similar_baby2.length; l++) {
+		similar_baby2[l].style.display = "none";
+	}
+	for (let l = 0; l < similar_usb.length; l++) {
+		similar_usb[l].style.display = "none";
+	}
+}
+
+
+	
+
+
+
+

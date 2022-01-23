@@ -41,6 +41,7 @@ function sсripts () {
 		'app/js/catalog.js',
 		'app/js/goods.js',
 		'app/js/general.js',
+		'app/js/item/card.js',
 	])
 
 	.pipe(concat('main.js'))
@@ -55,10 +56,11 @@ function item_sсripts () {
 		'app/js/item/catalog-bar.js',
 		'app/js/search.js',
 		'app/js/catalog.js',
-		'app/js/general.js',
+		'app/js/item/card.js',
 		'app/js/item/okzoom.js',
 		'app/js/item/zoom.js',
 		'app/js/item/sliders.js',
+		'app/js/item/similar.js',
 	])
 
 	.pipe(concat('item.js'))
@@ -81,7 +83,7 @@ return src('app/scss/style.scss')
 
 function watching() {
 	watch(['app/scss/**/*.scss'], styles);
-	watch(['app/js/*.js','!app/js/main.js'], sсripts);
+	watch(['app/js/*.js','app/js/item/card.js','!app/js/main.js'], sсripts);
 	watch(['app/js/item/*.js', '!app/js/item/item.js'], item_sсripts);
 	watch(['app/*.html']).on('change', browserSync.reload)
 }

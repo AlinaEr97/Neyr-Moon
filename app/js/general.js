@@ -1,4 +1,4 @@
-let three_d = document.querySelectorAll('.three_d');
+let threed = document.querySelectorAll('.threed');
 let lamp = document.querySelectorAll('.lamp');
 let baby = document.querySelectorAll('.baby');
 let lava = document.querySelectorAll('.lava');
@@ -14,18 +14,18 @@ let usb = document.querySelectorAll('.usb');
 let all_goods = document.querySelectorAll('.goods-offer');
 
 //Фильтр поиска товаров
-$(function() {
-	$('#three_d').on("click", function() {
+$(function () {
+	$('#threed').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
 			all_goods[j].style.display = 'none';
 		}
-		for (let i = 0; i < three_d.length; i++) {
-			three_d[i].style.display = 'block';
+		for (let i = 0; i < threed.length; i++) {
+			threed[i].style.display = 'block';
 		}
 	});
 });
-$(function() {
-	$('#lamp').on("click", function() {
+$(function () {
+	$('#lamp').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
 			all_goods[j].style.display = 'none';
 		}
@@ -34,8 +34,8 @@ $(function() {
 		}
 	});
 });
-$(function() {
-	$('#baby').on("click", function() {
+$(function () {
+	$('#baby').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
 			all_goods[j].style.display = 'none';
 		}
@@ -44,8 +44,8 @@ $(function() {
 		}
 	});
 });
-$(function() {
-	$('#lava').on("click", function() {
+$(function () {
+	$('#lava').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
 			all_goods[j].style.display = 'none';
 		}
@@ -54,8 +54,8 @@ $(function() {
 		}
 	});
 });
-$(function() {
-	$('#neon').on("click", function() {
+$(function () {
+	$('#neon').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
 			all_goods[j].style.display = 'none';
 		}
@@ -64,8 +64,8 @@ $(function() {
 		}
 	});
 });
-$(function() {
-	$('#socket').on("click", function() {
+$(function () {
+	$('#socket').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
 			all_goods[j].style.display = 'none';
 		}
@@ -74,8 +74,8 @@ $(function() {
 		}
 	});
 });
-$(function() {
-	$('#portable').on("click", function() {
+$(function () {
+	$('#portable').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
 			all_goods[j].style.display = 'none';
 		}
@@ -84,8 +84,8 @@ $(function() {
 		}
 	});
 });
-$(function() {
-	$('#projector').on("click", function() {
+$(function () {
+	$('#projector').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
 			all_goods[j].style.display = 'none';
 		}
@@ -94,8 +94,8 @@ $(function() {
 		}
 	});
 });
-$(function() {
-	$('#salt').on("click", function() {
+$(function () {
+	$('#salt').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
 			all_goods[j].style.display = 'none';
 		}
@@ -104,8 +104,8 @@ $(function() {
 		}
 	});
 });
-$(function() {
-	$('#distance').on("click", function() {
+$(function () {
+	$('#distance').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
 			all_goods[j].style.display = 'none';
 		}
@@ -114,8 +114,8 @@ $(function() {
 		}
 	});
 });
-$(function() {
-	$('#candles').on("click", function() {
+$(function () {
+	$('#candles').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
 			all_goods[j].style.display = 'none';
 		}
@@ -124,8 +124,8 @@ $(function() {
 		}
 	});
 });
-$(function() {
-	$('#floor').on("click", function() {
+$(function () {
+	$('#floor').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
 			all_goods[j].style.display = 'none';
 		}
@@ -134,8 +134,8 @@ $(function() {
 		}
 	});
 });
-$(function() {
-	$('#usb').on("click", function() {
+$(function () {
+	$('#usb').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
 			all_goods[j].style.display = 'none';
 		}
@@ -144,8 +144,8 @@ $(function() {
 		}
 	});
 });
-$(function() {
-	$('#all').on("click", function() {
+$(function () {
+	$('#all').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
 			all_goods[j].style.display = 'block';
 		}

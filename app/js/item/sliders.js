@@ -45,13 +45,15 @@ new Swiper (".card-slider", {
 	effect: 'slide',
 });
 
-let main_image = document.querySelector(".card-pictures__image");
+let main_image = document.querySelectorAll(".card-pictures__image");
 let chosen_image = document.querySelectorAll(".card-slider__image");
 
 $(function() {
 	for (let i = 0; i < chosen_image.length; i++) {
 		$(chosen_image[i]).on("click", function() {
-			$(main_image).attr('src', $(this).attr('src'));
+			for (let j = 0; j < main_image.length; j++) {
+				$(main_image[j]).attr('src', $(this).attr('src'));
+			}
 		});
 	}
 });
