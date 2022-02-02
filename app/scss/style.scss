@@ -1,43 +1,57 @@
-//Обнуление
+// Обнуление
 @import "general/null";
 
-//Шрифты
+// Шрифты
 @import "general/fonts";
 
-//Общие стили для body
+// Общие стили для body
 @import "general/body";
 
-//Шапка
-@import "sections/header";
+// Хедер
+@import "general/header";
 
-//Строка аккаунта
-@import "sections/acc-string";
+// Стили для общих блоков, кроме хедера и футера
+@import "general/common-blocks";
 
-//Каталог товаров
-@import "sections/catalog";
+// Футер
+@import "general/footer";
 
-//Колонка с акциями
-@import "sections/sales";
+// Колонка каталога товаров
+@import "main-sections/catalog-bar";
 
-//Строка поиска
-@import "sections/search";
+// Колонка с акциями
+@import "main-sections/sales";
 
-//Главный рекламный блок
-@import "sections/hero";
+// Строка поиска
+@import "main-sections/search";
 
-//Список товаров
-@import "sections/goods";
+// Главный рекламный блок
+@import "main-sections/hero";
 
-//Список брендов
-@import "sections/brends";
+// Список товаров
+@import "main-sections/goods";
 
-//О магазине
-@import "sections/about";
+// Список брендов
+@import "main-sections/brends";
 
-//Карточка товара
+// О магазине
+@import "main-sections/about";
+
+// Карточка товара
 @import "pages/item";
 
-//Подвал 
-@import "general/footer";
+// Страница каталога товаров
+@import "pages/catalog";
+
+// Страница акций
+@import "pages/sales";
+
+// Страница об оплате
+@import "pages/payment";
+
+// Страница о доставке
+@import "pages/delivery";
+
+
 
 

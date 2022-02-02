@@ -171,5 +171,6 @@ $(function($){
     base.listener.style.display = "none";
     document.body.style.cursor = "auto";
   };
-
 });
+
+// Настройка OKZoom

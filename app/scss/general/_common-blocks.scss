@@ -1,4 +1,4 @@
-/*Строка аккаунта*/
+/* Строка аккаунта */
 
 .acc-string {
 	padding: 170px 0 20px;
@@ -109,7 +109,8 @@
 
 	&__registration {
 		position: relative;
-		cursor: pointer;
+		display: block;
+		color:#000409;
 		&::before {
 			content: '';
 			width: 32px;
@@ -291,6 +292,45 @@
 				left: -6px;
 				font-size: 13px;
 			}
+		}
+	}
+}
+
+
+/* Блок с ссылками на быстрый переход к каталогу, оплате и доставке */
+
+.transfer {
+	margin: 30px 0;
+	text-indent: 25px;
+
+	@media (max-width: 700px) {
+		margin: 20px 0;
+		text-indent: 20px;
+	}
+	@media (max-width: 450px) {
+		margin: 10px 0 20px;
+		text-indent: 15px;
+	}
+	
+	&__link {
+		margin-bottom: 10px;
+		display: block;
+		font-size: 20px;
+		color: white;
+		text-decoration: underline;
+		&:hover {
+			color: rgb(238, 238, 170);
+		}
+		&:active {
+			color: orange;
+		}
+
+		@media (max-width: 700px) {
+			font-size: 16px;
+		}
+		@media (max-width: 450px) {
+			margin-bottom: 5px;
+			font-size: 12px;
 		}
 	}
 }

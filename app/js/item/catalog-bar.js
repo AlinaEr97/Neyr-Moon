@@ -5,6 +5,9 @@ $(function() {
 	});
 });
 
+// Показать-скрыть каталог категорий сбоку
+
+
 $(document).ready(function(){
 	$('filter__button').on('click', function(e){
 		e.preventDefault();
@@ -18,3 +21,5 @@ $(document).ready(function(){
 		}, this), 100));
 	});
 });
+
+// Кнопки фильтров над карточкой товара

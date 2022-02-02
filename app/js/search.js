@@ -52,6 +52,7 @@ document.querySelector("#search").oninput = function Searching() {
 	});
 }
 
+// Настройка строки поиска
 
 
 

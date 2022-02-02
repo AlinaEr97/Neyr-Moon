@@ -10885,12 +10885,17 @@ $(function() {
 		$(".menu").toggleClass('menu_active');
 	});
 });
+
+// Показать-скрыть меню в мобильной версии
 $(function() {
 	$(".catalog__arrow-item").on("click", function() {
 		$(this).toggleClass('catalog__arrow-item_active');
 		$(".catalog__list").toggleClass('catalog__list-item_active');
 	});
 });
+
+// Показать-скрыть каталог категорий сбоку
+
 
 $(document).ready(function(){
 	$('filter__button').on('click', function(e){
@@ -10905,6 +10910,8 @@ $(document).ready(function(){
 		}, this), 100));
 	});
 });
+
+// Кнопки фильтров над карточкой товара
 
 let search_wrapper = document.querySelector(".search-items");
 let searchItems = document.querySelectorAll(".search__item");
@@ -10960,6 +10967,7 @@ document.querySelector("#search").oninput = function Searching() {
 	});
 }
 
+// Настройка строки поиска
 
 
 
@@ -10968,7 +10976,8 @@ const catalog = [
 	{
 		id: 'salt1',
 		path: 'Настольные',
-		classes: 'salt',
+		path_link: 'catalog.html#table_link',
+		classes: 'salt table',
 		brend: 'Saltway',
 		brend_img: 'img/brends/brend1.jpg',
 		material: 'Дерево, пластик, гималайская соль',
@@ -10988,10 +10997,11 @@ const catalog = [
 	{
 		id: 'distanceusb2',
 		path: 'Настольные',
+		path_link: 'catalog.html#table_link',
 		brend: 'My Smart Home',
 		brend_img: 'img/brends/brend2.jpg',
 		material: 'ABS-пластик, медь, фольгированное покрытие',
-		classes: 'distance usb',
+		classes: 'distance usb table',
 		img: 'img/goods/good2.png',
 		img1: 'img/goods/good2-1.png',
 		img2: 'img/goods/good2-2.png',
@@ -11008,10 +11018,11 @@ const catalog = [
 	{
 		id: 'babythreeddistanceusb3',
 		path: 'Настольные',
+		path_link: 'catalog.html#table_link',
 		brend: 'UNIHIT',
 		brend_img: 'img/brends/brend3.jpg',
 		material: 'Пластик',
-		classes: 'baby threed distance usb',
+		classes: 'baby threed distance usb table',
 		img: 'img/goods/good3.png',
 		img1: 'img/goods/good3-1.png',
 		img2: 'img/goods/good3-2.png',
@@ -11028,10 +11039,11 @@ const catalog = [
 	{
 		id: 'projectorusb4',
 		path: 'Настольные',
+		path_link: 'catalog.html#table_link',
 		brend: 'Le Romarin',
 		brend_img: 'img/brends/brend4.jpg',
 		material: 'ABS-пластик',
-		classes: 'projector usb',
+		classes: 'projector usb table',
 		img: 'img/goods/good4.png',
 		img1: 'img/goods/good4-1.png',
 		img2: 'img/goods/good4-2.png',
@@ -11048,10 +11060,11 @@ const catalog = [
 	{
 		id: 'portable5',
 		path: 'Настольные',
+		path_link: 'catalog.html#table_link',
 		brend: 'Neon-Night',
 		brend_img: 'img/brends/brend5.jpg',
 		material: 'ПВХ',
-		classes: 'portable',
+		classes: 'portable table',
 		img: 'img/goods/good5.png',
 		img1: 'img/goods/good5-1.png',
 		img2: 'img/goods/good5-2.png',
@@ -11068,10 +11081,11 @@ const catalog = [
 	{
 		id: 'babysocket6',
 		path: 'Бра',
+		path_link: 'catalog.html#bra_link',
 		brend: 'Rexant',
 		brend_img: 'img/brends/brend6.jpg',
 		material: 'Пластик, светодиоды',
-		classes: 'baby socket',
+		classes: 'baby socket bra',
 		img: 'img/goods/good6.png',
 		img1: 'img/goods/good6-1.png',
 		img2: 'img/goods/good6.png',
@@ -11088,10 +11102,11 @@ const catalog = [
 	{
 		id: 'threeddistance7',
 		path: 'Настольные',
+		path_link: 'catalog.html#table_link',
 		brend: 'AlexMax',
 		brend_img: 'img/brends/brend7.jpg',
 		material: 'Стекло, ABS-пластик',
-		classes: 'threed distance',
+		classes: 'threed distance table',
 		img: 'img/goods/good7.png',
 		img1: 'img/goods/good7-1.png',
 		img2: 'img/goods/good7-2.png',
@@ -11108,10 +11123,11 @@ const catalog = [
 	{
 		id: 'babydistanceusb8',
 		path: 'Настольные',
+		path_link: 'catalog.html#table_link',
 		brend: 'BeForYou',
 		brend_img: 'img/brends/brend8.jpg',
 		material: 'Силикон; ABS-пластик',
-		classes: 'baby distance usb',
+		classes: 'baby distance usb table',
 		img: 'img/goods/good8.png',
 		img1: 'img/goods/good8-1.png',
 		img2: 'img/goods/good8-2.png',
@@ -11128,10 +11144,11 @@ const catalog = [
 	{
 		id: 'babyneondistance9',
 		path: 'Настольные',
+		path_link: 'catalog.html#table_link',
 		brend: 'Artandwood',
 		brend_img: 'img/brends/brend9.jpg',
 		material: 'Акрил',
-		classes: 'baby neon distance',
+		classes: 'baby neon distance table',
 		img: 'img/goods/good9.png',
 		img1: 'img/goods/good9-1.png',
 		img2: 'img/goods/good9-2.png',
@@ -11148,10 +11165,11 @@ const catalog = [
 	{
 		id: 'lamp10',
 		path: 'Настольные',
+		path_link: 'catalog.html#table_link',
 		brend: 'Lucia',
 		brend_img: 'img/brends/brend10.jpg',
 		material: 'Дерево, текстиль',
-		classes: 'lamp',
+		classes: 'lamp table',
 		img: 'img/goods/good10.png',
 		img1: 'img/goods/good10-1.png',
 		img2: 'img/goods/good10-2.png',
@@ -11168,6 +11186,7 @@ const catalog = [
 	{
 		id: 'candles11',
 		path: 'Свечи',
+		path_link: 'catalog.html#candles_link',
 		brend: 'Apeyron',
 		brend_img: 'img/brends/brend11.jpg',
 		material: 'Пластик',
@@ -11188,10 +11207,11 @@ const catalog = [
 	{
 		id: 'salt12',
 		path: 'Настольные',
+		path_link: 'catalog.html#table_link',
 		brend: 'Saltway',
 		brend_img: 'img/brends/brend1.jpg',
 		material: 'Дерево, пластик, гималайская соль',
-		classes: 'salt',
+		classes: 'salt table',
 		img: 'img/goods/good12.png',
 		img1: 'img/goods/good12-1.png',
 		img2: 'img/goods/good12-2.png',
@@ -11208,10 +11228,11 @@ const catalog = [
 	{
 		id: 'threedbabyprojectordistance13',
 		path: 'Настольные',
+		path_link: 'catalog.html#table_link',
 		brend: 'TimeToCreate',
 		brend_img: 'img/brends/brend12.jpg',
 		material: 'Пластик',
-		classes: 'threed baby projector distance',
+		classes: 'threed baby projector distance table',
 		img: 'img/goods/good13.png',
 		img1: 'img/goods/good13-1.png',
 		img2: 'img/goods/good13-2.png',
@@ -11228,10 +11249,11 @@ const catalog = [
 	{
 		id: 'threeddistance14',
 		path: 'Настольные',
+		path_link: 'catalog.html#table_link',
 		brend: 'Hasbender',
 		brend_img: 'img/brends/brend13.jpg',
 		material: 'Стекло',
-		classes: 'threed distance',
+		classes: 'threed distance table',
 		img: 'img/goods/good14.png',
 		img1: 'img/goods/good14-1.png',
 		img2: 'img/goods/good14-2.png',
@@ -11248,6 +11270,7 @@ const catalog = [
 	{
 		id: 'candles15',
 		path: 'Свечи',
+		path_link: 'catalog.html#candles_link',
 		brend: 'Organika',
 		brend_img: 'img/brends/brend14.jpg',
 		material: 'Гранулированный воск',
@@ -11268,10 +11291,11 @@ const catalog = [
 	{
 		id: 'threedlava16',
 		path: 'Настольные',
+		path_link: 'catalog.html#table_link',
 		brend: 'LaLava',
 		brend_img: 'img/brends/brend15.jpg',
 		material: 'Стекло',
-		classes: 'threed lava',
+		classes: 'threed lava table',
 		img: 'img/goods/good16.png',
 		img1: 'img/goods/good16-1.png',
 		img2: 'img/goods/good16.png',
@@ -11288,10 +11312,11 @@ const catalog = [
 	{
 		id: 'projectordistance17',
 		path: 'Настольные',
+		path_link: 'catalog.html#table_link',
 		brend: 'MullerHaus',
 		brend_img: 'img/brends/brend16.jpg',
 		material: 'Сплав алюминия',
-		classes: 'projector distance',
+		classes: 'projector distance table',
 		img: 'img/goods/good17.png',
 		img1: 'img/goods/good17-1.png',
 		img2: 'img/goods/good17-2.png',
@@ -11308,6 +11333,7 @@ const catalog = [
 	{
 		id: 'floordistance18',
 		path: 'Торшеры',
+		path_link: 'catalog.html#floor_link',
 		brend: 'LED TUBE',
 		brend_img: 'img/brends/brend17.jpg',
 		material: 'Пластик',
@@ -11325,20 +11351,23 @@ const catalog = [
 		description: 'Соляная лампа SL-35 (3-5 кг) - это светильник созданный самой природой из 100% натуральной гималайской соли. Гималайская соль обладает лечебными свойствами, является прекрасным ионизатором и очистителем воздуха, оказывает успокаивающее действие. Такая настольная лампа поможет погрузиться в глубокий расслабляющий сон ночью и с легкостью проснуться даже ранним утром. Будет отличным подарком, который украсит любой интерьер детской, спальни или гостиной комнаты. Ночник оснащен диммером, что позволяет регулировать яркость свечения лампы. Исходящий теплый, мягкий янтарный свет создаст уютную и комфортную обстановку в вашей комнате. Каждая лампа создана вручную, именно поэтому его форма, вес, цвет и рельеф уникальны. Патрон с цоколем Е14 легко вынимается из плафона, и замена лампочки происходит быстро и безопасно. В комплект поставки входит лампочка, инструкция по использованию на русском языке. Имеет Сертификат Соответствия ЕЭС.',
 	},
 ]
+
+// Список товаров
 let item_wrapper = document.querySelector(".popup__content");
 
 class Item {
 	render() {
 		let ItemCatalog = '';
-		catalog.forEach(({id, classes, path, group, brend_img, material, img, img1, img2, img3, type, name, old_price, new_price, description}) => {
+		catalog.forEach(({id, path, path_link, group, brend_img, material, img, img1, img2, img3, type, name, old_price, new_price, description}) => {
+
 			ItemCatalog += `
 			<div class="popup__group popup__group" id="${id}">
 
 				<nav class="breadcrumbs">
 					<ul class="breadcrumbs__nav" id="breadcrumbs">
 						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
-						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link" href="#">Каталог товаров</a></li>
-						<li class="breadcrumbs__crumb breadcrumbs__crumb_path"><a class="breadcrumbs__link" href="#">${path}</a></li>
+						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link" href="catalog.html">Каталог товаров</a></li>
+						<li class="breadcrumbs__crumb breadcrumbs__crumb_path"><a class="breadcrumbs__link" href="${path_link}">${path}</a></li>
 						<li class="breadcrumbs__crumb breadcrumbs__crumb_good"><a class="breadcrumbs__link current" href="#">${type} "${name}"</a></li>
 					</ul>
 				</nav>
@@ -11499,6 +11528,8 @@ class Item {
 
 const itemPage = new Item();
 itemPage.render();
+
+//Рендеринг карточек товаров 
 
 
 
@@ -11676,9 +11707,9 @@ $(function($){
     base.listener.style.display = "none";
     document.body.style.cursor = "auto";
   };
-
 });
 
+// Настройка OKZoom
 $(function() {
 
 	$(".card-pictures__image").okzoom({ 
@@ -11690,6 +11721,8 @@ $(function() {
 	});
 	
 });
+
+// Настройка зума главной картинки товара
 new Swiper (".card-slider", {
 	mousewheel: {
 		sensitivity: 1, 
@@ -11737,6 +11770,9 @@ new Swiper (".card-slider", {
 	effect: 'slide',
 });
 
+// Слайдер картинок в карточке товара
+
+
 let main_image = document.querySelectorAll(".card-pictures__image");
 let chosen_image = document.querySelectorAll(".card-slider__image");
 
@@ -11749,6 +11785,8 @@ $(function() {
 		});
 	}
 });
+
+// Переключение главной картинки товара
 let similar_wrapper = document.querySelectorAll(".similar__wrapper");
 
 class Similar {
@@ -11795,7 +11833,7 @@ class Similar {
 
 const similarPage = new Similar();
 similarPage.render();
-
+/* Рендеринг похожих товаров на странице карточек */
 
 
 let similar_salt = document.querySelectorAll(".goods-offer_salt");
@@ -11979,7 +12017,7 @@ if (document.location.hash.indexOf('floordistance18') == 1) {
 		similar_usb[l].style.display = "none";
 	}
 }
-
+/* Фильтр похожих товаров */
 
 	
 

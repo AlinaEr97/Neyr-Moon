@@ -1,10 +1,11 @@
 let goods_wrapper = document.getElementById ("goods");
+
 class Goods {
 	render() {
 		let htmlCatalog = '';
-		catalog.forEach(({id, classes, brend, material, img, type, name, old_price, new_price}) => {
+		catalog.forEach(({id, path, classes, brend, material, img, type, name, old_price, new_price}) => {
 			htmlCatalog += `
-					<div class="goods__offer goods-offer ${classes}">
+					<div class="goods__offer goods-offer ${classes}" data-price="${new_price}" data-type="${path}">
 
 						<img src="${img}" alt="#" class="goods-offer__image">
 
@@ -41,4 +42,6 @@ class Goods {
 
 const goodsPage = new Goods();
 goodsPage.render();
+
+// Рендеринг каталога товаров
 

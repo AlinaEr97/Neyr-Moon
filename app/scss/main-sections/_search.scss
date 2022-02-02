@@ -178,6 +178,10 @@
 	border-radius: 0 0 20px 20px;
 	background-color: white;
 	overflow-y: scroll;
+
+	&_item {
+		margin-top: -20px;
+	}
 }
 
 .hide {

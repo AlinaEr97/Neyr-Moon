@@ -3,15 +3,16 @@ let item_wrapper = document.querySelector(".popup__content");
 class Item {
 	render() {
 		let ItemCatalog = '';
-		catalog.forEach(({id, classes, path, group, brend_img, material, img, img1, img2, img3, type, name, old_price, new_price, description}) => {
+		catalog.forEach(({id, path, path_link, group, brend_img, material, img, img1, img2, img3, type, name, old_price, new_price, description}) => {
+
 			ItemCatalog += `
 			<div class="popup__group popup__group" id="${id}">
 
 				<nav class="breadcrumbs">
 					<ul class="breadcrumbs__nav" id="breadcrumbs">
 						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
-						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link" href="#">Каталог товаров</a></li>
-						<li class="breadcrumbs__crumb breadcrumbs__crumb_path"><a class="breadcrumbs__link" href="#">${path}</a></li>
+						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link" href="catalog.html">Каталог товаров</a></li>
+						<li class="breadcrumbs__crumb breadcrumbs__crumb_path"><a class="breadcrumbs__link" href="${path_link}">${path}</a></li>
 						<li class="breadcrumbs__crumb breadcrumbs__crumb_good"><a class="breadcrumbs__link current" href="#">${type} "${name}"</a></li>
 					</ul>
 				</nav>
@@ -172,6 +173,8 @@ class Item {
 
 const itemPage = new Item();
 itemPage.render();
+
+//Рендеринг карточек товаров 
 
 
 

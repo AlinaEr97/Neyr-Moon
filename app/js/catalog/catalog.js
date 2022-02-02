@@ -10881,145 +10881,12 @@ return jQuery;
 } );
 
 $(function() {
-	$(".catalog__arrow").on("click", function() {
-		$(this).toggleClass('catalog__arrow_unactive');
-		$(".catalog__list").toggleClass('catalog__list_unactive');
+	$(".menu-burger").on("click", function() {
+		$(".menu").toggleClass('menu_active');
 	});
 });
 
-// Скрыть-показать каталог категорий сбоку 
-
-new Swiper (".sales-slider", {
-	//пагинация
-	pagination: {
-		el: '.swiper-pagination',
-		clickable: true,
-		dynamicBullets: true,
-	},
-	mousewheel: {
-		sensitivity: 1, 
-	},
-	slidesPerView: 1,
-	centeredSlides: true,
-	initialSlide: 2,
-	loop: true,
-	loopedSlides: 1,
-	autoplay: {
-		delay: 2000,
-		disableOnInteraction: false,
-	},
-	effect: 'slide',
-	breakpoints: {
-		
-	}, 
-});
-// Слайдер акций 
-
-
-new Swiper (".brends-slider", {
-	//стрелки
-	navigation: {
-		nextEl: '.brends__button_next',
-		prevEl: '.brends__button_prev'
-	},
-	mousewheel: {
-		sensitivity: 1, 
-	},
-	slidesPerView: 6,
-	initialSlide: 5,
-	loopedSlides: 17,
-	centeredSlides: true,
-	spaceBetween: 5,
-	breakpoints: {
-		500: {
-			spaceBetween: 10,
-		},
-	},
-	loop: true,
-	
-	autoplay: {
-		delay: 2000,
-		disableOnInteraction: false,
-	},
-	effect: 'slide',
-	breakpoints: {
-		
-	}, 
-});
-
-// Слайдер брендов 
-
-
-const swiperPrev = document.getElementById('swiperPrev')
-const swiperNext = document.getElementById('swiperNext')
-
-swiperPrev.addEventListener('click', () => {
-	document.querySelector(".brends-slider").slidePrev();
-})
-swiperNext.addEventListener('click', () => {
-	document.querySelector(".brends-slider").slideNext();
-})
-
-//Стрелки навигации слайдера брендов 
-let search_wrapper = document.querySelector(".search-items");
-let searchItems = document.querySelectorAll(".search__item");
-
-document.querySelector("#search").oninput = function Searching() {
-	search_wrapper.style.display = "flex";
-	let val = this.value.trim();
-	class Search {
-		render() {
-			let htmlSearch = '';
-			catalog.forEach(({brend, material, type, name}) => {
-				htmlSearch += `
-					<li class="search__item">${brend}</li>
-					<li class="search__item">${material}</li>
-					<li class="search__item">${type}</li>
-					<li class="search__item">${name}</li>
-				`
-			});
-			search_wrapper.innerHTML = htmlSearch;
-
-			let searchItems = document.querySelectorAll(".search__item");
-			if (val != '') {
-				searchItems.forEach(function(elem) {
-					if (elem.innerText.search(val) == -1) {
-						elem.classList.add('hide');
-					}
-					else {
-						elem.classList.remove('hide');
-					}
-				});
-			}
-			else {
-				searchItems.forEach(function(elem) {
-					elem.classList.remove('hide');
-				});
-			}
-		}
-	}
-	const searchPage = new Search();
-	searchPage.render();
-
-	document.querySelector("#search").addEventListener('focusout', function (event) { 
-		if (this.contains(event.relatedTarget)) return; 
-		else {
-			search_wrapper.style.display = "none";
-		} 
-	});
-	document.querySelector("#search").addEventListener('focusin', function (event) { 
-		if (this.contains(event.relatedTarget)) return; 
-		else {
-			search_wrapper.style.display = "flex";
-		} 
-	});
-}
-
-// Настройка строки поиска
-
-
-
-
+// Показать-скрыть меню в мобильной версии
 const catalog = [
 	{
 		id: 'salt1',
@@ -11449,7 +11316,75 @@ goodsPage.render();
 // Рендеринг каталога товаров
 
 
-let $page = $('html, body, .wrapper, header, .header__block, .header-nav');
+$(function() {
+	$(".catalog__arrow").on("click", function() {
+		$(this).toggleClass('catalog__arrow_unactive');
+		$(".catalog__list").toggleClass('catalog__list_unactive');
+	});
+});
+
+// Скрыть-показать каталог категорий сбоку 
+
+let search_wrapper = document.querySelector(".search-items");
+let searchItems = document.querySelectorAll(".search__item");
+
+document.querySelector("#search").oninput = function Searching() {
+	search_wrapper.style.display = "flex";
+	let val = this.value.trim();
+	class Search {
+		render() {
+			let htmlSearch = '';
+			catalog.forEach(({brend, material, type, name}) => {
+				htmlSearch += `
+					<li class="search__item">${brend}</li>
+					<li class="search__item">${material}</li>
+					<li class="search__item">${type}</li>
+					<li class="search__item">${name}</li>
+				`
+			});
+			search_wrapper.innerHTML = htmlSearch;
+
+			let searchItems = document.querySelectorAll(".search__item");
+			if (val != '') {
+				searchItems.forEach(function(elem) {
+					if (elem.innerText.search(val) == -1) {
+						elem.classList.add('hide');
+					}
+					else {
+						elem.classList.remove('hide');
+					}
+				});
+			}
+			else {
+				searchItems.forEach(function(elem) {
+					elem.classList.remove('hide');
+				});
+			}
+		}
+	}
+	const searchPage = new Search();
+	searchPage.render();
+
+	document.querySelector("#search").addEventListener('focusout', function (event) { 
+		if (this.contains(event.relatedTarget)) return; 
+		else {
+			search_wrapper.style.display = "none";
+		} 
+	});
+	document.querySelector("#search").addEventListener('focusin', function (event) { 
+		if (this.contains(event.relatedTarget)) return; 
+		else {
+			search_wrapper.style.display = "flex";
+		} 
+	});
+}
+
+// Настройка строки поиска
+
+
+
+
+var $page = $('html, body, .wrapper, header, .header__block, .header-nav');
 $('a[href*="#"]').click(function() {
    $page.animate({
       scrollTop: $($.attr(this, 'href')).offset().top - 200
@@ -11616,190 +11551,147 @@ $(function () {
 // Фильтр товаров в боковом меню
 
 
-$(function() {
-	$(".menu-burger").on("click", function() {
-		$(".menu").toggleClass('menu_active');
+$(function () {
+	$('.logo__image').on("click", function () {
+		window.location.href = "index.html";
 	});
 });
+// Ссылка на главную страницу в логотипе 
 
-// Показать-скрыть меню в мобильной версии
-let item_wrapper = document.querySelector(".popup__content");
 
-class Item {
-	render() {
-		let ItemCatalog = '';
-		catalog.forEach(({id, path, path_link, group, brend_img, material, img, img1, img2, img3, type, name, old_price, new_price, description}) => {
+document.querySelector('.filter-buttons__high-price').onclick = function () {
+	MySort('data-price');
+}
+document.querySelector('.filter-buttons__low-price').onclick = function () {
+	MySortDesc('data-price');
+}
 
-			ItemCatalog += `
-			<div class="popup__group popup__group" id="${id}">
-
-				<nav class="breadcrumbs">
-					<ul class="breadcrumbs__nav" id="breadcrumbs">
-						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
-						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link" href="catalog.html">Каталог товаров</a></li>
-						<li class="breadcrumbs__crumb breadcrumbs__crumb_path"><a class="breadcrumbs__link" href="${path_link}">${path}</a></li>
-						<li class="breadcrumbs__crumb breadcrumbs__crumb_good"><a class="breadcrumbs__link current" href="#">${type} "${name}"</a></li>
-					</ul>
-				</nav>
-				<!-- /.breadcrumbs -->
-
-				<div class="popup__box">
-				
-					<section class="card">
-				
-						<div class="card__offer card-offer">
-
-							<div class="card-offer__pictures card-pictures">
-
-								<img src="${img}" alt="item" class="card-pictures__image">
-							
-								<div class="card-slider swiper-container">
-
-									<div class="card-slider__wrapper swiper-wrapper">
-
-										<div class="card-slider__slide swiper-slide">
-											<div class="card-slider__item">
-												<img class="card-slider__image" src="${img1}" alt="item">
-											</div>
-										</div>
-
-										<div class="card-slider__slide swiper-slide">
-											<div class="card-slider__item">
-												<img class="card-slider__image" src="${img2}" alt="item">
-											</div>
-										</div>
-
-										<div class="card-slider__slide swiper-slide">
-											<div class="card-slider__item">
-												<img class="card-slider__image" src="${img3}" alt="item">
-											</div>
-										</div>
-
-									</div>
-									<!-- /.swiper-wrapper -->
-
-								</div> 
-								<!-- /.swiper-container -->
-
-							</div>
-							<!-- /.card-pictures -->
-
-							<div class="card-offer__container details">
-							
-									<h2 class="details__title">${group} <br> ${type} "${name}"</h2>
-								<div class="details__feedback feedback">
-									<img src="img/pages/item/icons/star.png" alt="star" class="feedback__icon">
-									<img src="img/pages/item/icons/star.png" alt="star" class="feedback__icon">
-									<img src="img/pages/item/icons/star.png" alt="star" class="feedback__icon">
-									<img src="img/pages/item/icons/star.png" alt="star" class="feedback__icon">
-									<img src="img/pages/item/icons/star.png" alt="star" class="feedback__icon">
-									<a href="#feedbacks" class="feedback__link">0.0 / 0 отзывов</a>
-								</div>
-								<div class="details__box details-box">
-									<div class="details-box__pricing pricing">
-										<p class="pricing__old-price">${old_price}</p>
-										<p class="pricing__new-price">${new_price}</p>
-										<img src="${brend_img}" alt="brend-name" class="pricing__brend">
-									</div>
-									<div class="details-box__buying buying">
-										<button class="buying__add">В корзину</button>
-										<p class="buying__availability">Товар в наличии</p>
-										<img src="img/pages/item/icons/delivery.png" alt="delivery" class="buying__delivery">
-									</div>
-								</div>
-								<p class="details__description">${description}</p>
-
-							</div>
-							<!-- /.details -->
-
-						</div>
-						<!-- /.card-offer -->
-
-						<div class="card__characteristics characteristics">
-
-							<h3 class="characteristics__title">Основные характеристики:</h3>
-
-							<ul class="characteristics__list">
-
-								<li class="characteristics__item">
-									<span class="characteristics__text">Гарантийный срок:</span>
-									<span class="characteristics__info">1 год</span>
-								</li>
-								<li class="characteristics__item">
-									<span class="characteristics__text">Длина кабеля:</span>
-									<span class="characteristics__info">160 см</span>
-								</li>
-								<li class="characteristics__item">
-									<span class="characteristics__text">Материал:</span>
-									<span class="characteristics__info">${material}</span>
-								</li>
-								<li class="characteristics__item">
-									<span class="characteristics__text">Напряжение:</span>
-									<span class="characteristics__info">230 В</span>
-								</li>
-								<li class="characteristics__item">
-									<span class="characteristics__text">Питание:</span>
-									<span class="characteristics__info">От сети 220 - 230 В 50 Гц</span>
-								</li>
-								<li class="characteristics__item">
-									<span class="characteristics__text">Вес:</span>
-									<span class="characteristics__info">4 кг</span>
-								</li>
-								<li class="characteristics__item">
-									<span class="characteristics__text">Высота:</span>
-									<span class="characteristics__info">22,5 см</span>
-								</li>
-								<li class="characteristics__item">
-									<span class="characteristics__text">Тип светильника:</span>
-									<span class="characteristics__info">Солевая лампа, Настольный ночник</span>
-								</li>
-								<li class="characteristics__item">
-									<span class="characteristics__text">Страна производителя:</span>
-									<span class="characteristics__info">Пакистан</span>
-								</li>
-								<li class="characteristics__item">
-									<span class="characteristics__text">Комплектация:</span>
-									<span class="characteristics__info">Инструкция; Солевая лампа; Лампочка Е14 15 Вт; <br> Патрон для лампы с сетевым проводом</span>
-								</li>
-
-							</ul>
-
-						</div>
-
-						<div class="card__feedbacks feedbacks" id="feedbacks">
-
-							<h3 class="feedbacks__title">Отзывы</h3>
-							<p class="feedbacks__text">На этот товар ещё не поступало отзывов</p>
-
-						</div>
-
-					</section>
-					<!-- /.card -->
-
-					<section class="similar">
-
-						<h2 class="similar__title">Похожие товары</h2>
-
-						<div class="similar__wrapper">
-						</div>
-
-					</section>
-					<!-- /.similar -->
-
-				</div>
-
-			</div>
-			`;
-		});
-
-		item_wrapper.innerHTML += ItemCatalog;
+function MySort(sortType) {
+	let good_object = document.querySelector("#goods");
+	for (let i = 0; i < good_object.children.length; i++) {
+		for (let j = i; j < good_object.children.length; j++) {
+			if (+good_object.children[i].getAttribute(sortType) > +good_object.children[j].getAttribute(sortType)) {
+				replacedNode = good_object.insertBefore(good_object.children[j], good_object.children[i]);
+				insertAfter(replacedNode, good_object.children[i]);
+			}
+		}
 	}
 }
 
-const itemPage = new Item();
-itemPage.render();
+function insertAfter (elem, refElem) {
+	return refElem.parentNode.insertBefore(elem, refElem.nextSibling);
+}
 
-//Рендеринг карточек товаров 
+function MySortDesc (sortType) {
+	let good_object = document.querySelector("#goods");
+	for (let i = 0; i < good_object.children.length; i++) {
+		for (let j = i; j < good_object.children.length; j++) {
+			if (+good_object.children[i].getAttribute(sortType) < +good_object.children[j].getAttribute(sortType)) {
+				replacedNode = good_object.insertBefore(good_object.children[j], good_object.children[i]);
+				insertAfter(replacedNode, good_object.children[i]);
+			}
+		}
+	}
+}
+
+// Сортировка товаров по цене 
 
 
+let table = document.querySelectorAll(".table");
+let bra = document.querySelector(".bra");
+
+$(function () {
+	$('.filter-links__table').on("click", function () {
+		for (let j = 0; j < all_goods.length; j++) {
+			all_goods[j].style.display = 'none';
+		}
+		for (let i = 0; i < table.length; i++) {
+			table[i].style.display = 'block';
+		}
+		history.pushState('', document.title, 'catalog.html#table_link');
+	});
+});
+
+$(function () {
+	$('.filter-links__bra').on("click", function () {
+		for (let j = 0; j < all_goods.length; j++) {
+			all_goods[j].style.display = 'none';
+		}
+		bra.style.display = 'block';
+		history.pushState('', document.title, 'catalog.html#bra_link');
+	});
+});
+
+$(function () {
+	$('.filter-links__floor').on("click", function () {
+		for (let j = 0; j < all_goods.length; j++) {
+			all_goods[j].style.display = 'none';
+		}
+		for (let i = 0; i < floor.length; i++) {
+			floor[i].style.display = 'block';
+		}
+		history.pushState('', document.title, 'catalog.html#floor_link');
+	});
+});
+
+$(function () {
+	$('.filter-links__candles').on("click", function () {
+		for (let j = 0; j < all_goods.length; j++) {
+			all_goods[j].style.display = 'none';
+		}
+		for (let i = 0; i < candles.length; i++) {
+			candles[i].style.display = 'block';
+		}
+		history.pushState('', document.title, 'catalog.html#candles_link');
+	});
+});
+
+$(function () {
+	$('.filter-links__all').on("click", function () {
+		for (let j = 0; j < all_goods.length; j++) {
+			all_goods[j].style.display = 'block';
+		}
+		history.pushState('', document.title, window.location.pathname);
+	});
+});
+
+// Фильтр каталога  
+
+
+if (document.location.hash.indexOf('table_link') == 1) {
+	for (let j = 0; j < all_goods.length; j++) {
+		all_goods[j].style.display = 'none';
+	}
+	for (let i = 0; i < table.length; i++) {
+		table[i].style.display = 'block';
+	}
+}
+
+if (document.location.hash.indexOf('bra_link') == 1) {
+	for (let j = 0; j < all_goods.length; j++) {
+		all_goods[j].style.display = 'none';
+	}
+	bra.style.display = 'block';
+}
+
+if (document.location.hash.indexOf('floor_link') == 1) {
+	for (let j = 0; j < all_goods.length; j++) {
+		all_goods[j].style.display = 'none';
+	}
+	for (let i = 0; i < floor.length; i++) {
+		floor[i].style.display = 'block';
+	}
+}
+
+if (document.location.hash.indexOf('candles_link') == 1) {
+	for (let j = 0; j < all_goods.length; j++) {
+		all_goods[j].style.display = 'none';
+	}
+	for (let i = 0; i < candles.length; i++) {
+		candles[i].style.display = 'block';
+	}
+	
+}
+
+// Изменение хэша URL при нажатии на кнопки фильтра 
 

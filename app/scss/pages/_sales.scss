@@ -1,0 +1,41 @@
+.sales-page {
+	padding: 20px;
+
+
+	&__title {
+		font-size: 30px;
+		color: white;
+
+		@media (max-width: 800px) {
+			font-size: 26px;
+		}
+		@media (max-width: 600px) {
+			font-size: 22px;
+		}
+		@media (max-width: 400px) {
+			font-size: 18px;
+		}
+	}
+
+	&__wrapper {
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__image	{
+		margin: 20px auto;
+		width: 100%;
+		display: block;
+		border-radius: 10px;
+		box-shadow: 0 20px 20px 0 rgba(146, 145, 145, 0.5);
+
+		@media (max-width: 800px) {
+			box-shadow: 0 15px 15px 0 rgba(146, 145, 145, 0.5);
+		}
+		@media (max-width: 500px) {
+			margin: 10px auto;
+			box-shadow: 0 10px 10px 0 rgba(146, 145, 145, 0.5);
+		}
+	}
+}

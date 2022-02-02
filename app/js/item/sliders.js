@@ -45,6 +45,9 @@ new Swiper (".card-slider", {
 	effect: 'slide',
 });
 
+// Слайдер картинок в карточке товара
+
+
 let main_image = document.querySelectorAll(".card-pictures__image");
 let chosen_image = document.querySelectorAll(".card-slider__image");
 
@@ -57,3 +60,5 @@ $(function() {
 		});
 	}
 });
+
+// Переключение главной картинки товара

@@ -4,3 +4,5 @@ $(function() {
 		$(".catalog__list").toggleClass('catalog__list_unactive');
 	});
 });
+
+// Скрыть-показать каталог категорий сбоку 

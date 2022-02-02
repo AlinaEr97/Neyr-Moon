@@ -42,15 +42,15 @@
 		@media (max-width: 1000px) {
 			width: 20px;
 			height: 20px;
-			top: -65px;
+			top: -55px;
 		}
 		@media (max-width: 800px) {
 			width: 15px;
 			height: 15px;
-			top: -55px;
+			top: -50px;
 		}
 		@media (max-width: 700px) {
-			top: -48px;
+			top: -45px;
 		}
 		@media (max-width: 600px) {
 			width: 10px;
@@ -85,19 +85,12 @@
 	width: 90%;
 	overflow: hidden;
 
-	&__item {
-		margin: 10px;
-
-		@media (max-width: 800px) {
-			margin: 5px;
-		}
-		@media (max-width: 500px) {
-			margin: 1px;
-		}
+	&__wrapper {
+		width: 100%;
 	}
 
 	&__image {
-		
+		width: 100%;
 	}
 }
 

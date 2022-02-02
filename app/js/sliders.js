@@ -22,6 +22,8 @@ new Swiper (".sales-slider", {
 		
 	}, 
 });
+// Слайдер акций 
+
 
 new Swiper (".brends-slider", {
 	//стрелки
@@ -36,6 +38,12 @@ new Swiper (".brends-slider", {
 	initialSlide: 5,
 	loopedSlides: 17,
 	centeredSlides: true,
+	spaceBetween: 5,
+	breakpoints: {
+		500: {
+			spaceBetween: 10,
+		},
+	},
 	loop: true,
 	
 	autoplay: {
@@ -48,6 +56,9 @@ new Swiper (".brends-slider", {
 	}, 
 });
 
+// Слайдер брендов 
+
+
 const swiperPrev = document.getElementById('swiperPrev')
 const swiperNext = document.getElementById('swiperNext')
 
@@ -57,3 +68,5 @@ swiperPrev.addEventListener('click', () => {
 swiperNext.addEventListener('click', () => {
 	document.querySelector(".brends-slider").slideNext();
 })
+
+//Стрелки навигации слайдера брендов 

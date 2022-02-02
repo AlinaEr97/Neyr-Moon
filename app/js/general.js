@@ -1,3 +1,14 @@
+let $page = $('html, body, .wrapper, header, .header__block, .header-nav');
+$('a[href*="#"]').click(function() {
+   $page.animate({
+      scrollTop: $($.attr(this, 'href')).offset().top - 200
+	}, 800);
+   return false;
+});
+
+// Плавный переход по якорям из хедера
+
+
 let threed = document.querySelectorAll('.threed');
 let lamp = document.querySelectorAll('.lamp');
 let baby = document.querySelectorAll('.baby');
@@ -13,7 +24,6 @@ let floor = document.querySelectorAll('.floor');
 let usb = document.querySelectorAll('.usb');
 let all_goods = document.querySelectorAll('.goods-offer');
 
-//Фильтр поиска товаров
 $(function () {
 	$('#threed').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
@@ -152,4 +162,5 @@ $(function () {
 	});
 });
 
+// Фильтр товаров в боковом меню
 

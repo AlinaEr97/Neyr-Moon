@@ -44,7 +44,7 @@ class Similar {
 
 const similarPage = new Similar();
 similarPage.render();
-
+/* Рендеринг похожих товаров на странице карточек */
 
 
 let similar_salt = document.querySelectorAll(".goods-offer_salt");
@@ -228,7 +228,7 @@ if (document.location.hash.indexOf('floordistance18') == 1) {
 		similar_usb[l].style.display = "none";
 	}
 }
-
+/* Фильтр похожих товаров */
 
 	
 
