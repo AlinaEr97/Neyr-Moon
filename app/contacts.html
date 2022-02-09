@@ -70,7 +70,7 @@
 					<!-- /.header-nav -->
 
 					<div class="header-logo logo">
-						<a href="index.html" class="logo__link"> <img class="logo__image" src="img/header/logo.png" alt=""></a>
+						<img class="logo__image" src="img/header/logo.png" alt="logo">
 						<div class="logo__text">Интернет-магазин оригинальных ночников</div>
 					</div>
 					<!-- /.logo -->
@@ -95,32 +95,190 @@
 			</header>
 			<!-- /.header -->
 
-			<div class="acc-string">
+			<section class="acc-string">
 
-				<div class="acc-string__block">
+				<div class="acc-string__wrapper">
 
-					<div class="acc-string__login">Вход</div>
+					<a href="#signin" class="acc-string__item acc-string__login">Вход</a>
 
-					<a href="signup.html" class="acc-string__registration">Регистрация</a>
+					<a href="signup.html" class="acc-string__item acc-string__registration">Регистрация</a>
 
-					<div class="acc-string__back-call">Обратный звонок</div>
+					<a href="#backcall" class="acc-string__item acc-string__back-call">Обратный звонок</a>
 
 					<div class="acc-string__working-time">Пн-Вс: 9:00-21:00</div>
 
-					<a href="#cart" class="acc-string__basket"></a>
+					<a href="#cart" class="acc-string__item acc-string__basket"></a>
 
 				</div>
+				<!-- /.acc-string__wrapper -->
 
-			</div>
+			</section>
 			<!-- /.acc-string -->
 
-			<main>
+			<main class="contacts">
 
+				<nav class="breadcrumbs">
+					<ul class="breadcrumbs__nav" id="breadcrumbs">
+						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link current" href="#">Контакты</a></li>
+					</ul>
+				</nav>
+				<!-- /.breadcrumbs -->
 
+					<h2 class="contacts__title contacts__title_main">Контакты интернет-магазина Neyr Moon</h2>
+
+					<div class="contacts__box">
+
+						<section class="contacts__section contacts-phones">
+
+							<h3 class="contacts__title">Телефоны:</h3>
+							<ul class="contacts__list">
+								<li class="contacts__item">+7 (123) 456-78-90 &mdash; Санкт-Петербург;</li>
+								<li class="contacts__item">+7 (012) 345-67-89 &mdash; другие регионы России</li>
+							</ul>
+							<p class="contacts__text">Все звонки бесплатны!</p>
+
+						</section>
+						<!-- /.contacts-phones -->
+
+						<section class="contacts__section contacts-emails">
+
+							<h3 class="contacts__title">Электронная почта:</h3>
+							<ul class="contacts__list">
+								<li class="contacts__item"> <span class="contacts-emails__address">info@neyr-moon.ru</span> &mdash; клиентский отдел;</li>
+								<li class="contacts__item"> <span class="contacts-emails__address">service@neyr-moon.ru</span> &mdash; рекламации (брак, некомплект);</li>
+								<li class="contacts__item"> <span class="contacts-emails__address">opt@neyr-moon.ru</span> &mdash; оптовый отдел.</li>
+							</ul>
+							<p class="contacts__text contacts__text_note">Если наши сотрудники не смогли помочь с решением вашего вопроса, вы можете обратиться напрямую к руководству. Ваш вопрос будет рассмотрен в течение 3 дней.</p>
+							<p class="contacts__text"> <span class="contacts-emails__address">main@neyr-moon.ru</span> &mdash; для связи с руководством.</p>
+
+						</section>
+						<!-- /.contacts-emails -->
+
+					</div>
+					<!-- /.contacts__box -->
+
+					<div class="contacts__box">
+
+						<section class="contacts__section contacts-addresses">
+
+							<h3 class="contacts__title">Адрес офиса:</h3>
+							<p class="contacts__text">г. Санкт-Петербург, Рандомная ул., 58</p>
+							<p class="contacts__text">9:00 &mdash; 21:00</p>
+							<p class="contacts__text contacts__text_note">Прием заказов через корзину сайта осуществляется круглосуточно</p>
+
+						</section>
+
+						<section class="contacts__section contacts-company">
+
+							<h3 class="contacts__title">Юридическая информация</h3>
+
+							<table class="contacts-company___list">
+								
+								<tr class="contacts-company___item">
+									<td class="contacts-company__text contacts-company__text_left contacts__text">Организация</td>
+									<td class="contacts-company__text contacts-company__text_right contacts__text">Neyr Moon</td>
+								</tr>
+								<tr class="contacts-company___item">
+									<td class="contacts-company__text contacts-company__text_left contacts__text">Юридическое лицо</td>
+									<td class="contacts-company__text contacts-company__text_right contacts__text">ООО "Тонкая свеча"</td>
+								</tr>
+								<tr class="contacts-company___item">
+									<td class="contacts-company__text contacts-company__text_left contacts__text">ИНН</td>
+									<td class="contacts-company__text contacts-company__text_right contacts__text">1234567890</td>
+								</tr>
+								<tr class="contacts-company___item">
+									<td class="contacts-company__text contacts-company__text_left contacts__text">КПП</td>
+									<td class="contacts-company__text contacts-company__text_right contacts__text">012345678</td>
+								</tr>
+								<tr class="contacts-company___item">
+									<td class="contacts-company__text contacts-company__text_left contacts__text">ЕГРН</td>
+									<td class="contacts-company__text contacts-company__text_right contacts__text">1234567890123</td>
+								</tr>
+								<tr class="contacts-company___item">
+									<td class="contacts-company__text contacts-company__text_left contacts__text">Юр. адрес</td>
+									<td class="contacts-company__text contacts-company__text_right contacts__text">123456, г. Санкт-Петербург, Рандомная ул., 58</td>
+								</tr>
+								
+							</table>
+							<!-- /.contacts-company__list -->
+
+						</section>
+						<!-- /.contacts-company -->
+
+					</div>
+					<!-- /.contacts__box -->
+				
+				<section class="transfer"> 
+					<a href="order.html" class="transfer__link">Вернуться к оформлению заказа</a>
+					<a href="catalog.html" class="transfer__link">Перейти в каталог товаров</a>
+				</section>
+				<!-- /.transfer -->
 
 			</main>
+			<!-- /.contacts-->
+
+			<footer class="footer">
+
+				<div class="footer__main-block">
+
+					<div class="footer__item">
+						<div class="footer__title">Интернет-магазин <br> Neyr Moon</div>
+						<a href="catalog.html#bra_link" class="footer__link">Бра</a>
+						<a href="catalog.html#table_link" class="footer__link">Настольные</a>
+						<a href="catalog.html#floor_link" class="footer__link">Торшеры</a>
+						<a href="catalog.html#candles_link" class="footer__link">Свечи</a>
+					</div>
+
+					<div class="footer__item">
+						<div class="footer__title">Присоединяйтесь</div>
+						<div class="footer__massangers">
+							<a href="https://vk.com/" class="footer__networks">
+								<img src="img/footer/vk.svg" alt="vkontakte" class="footer__networks-img">
+							</a>
+							<a href="https://www.instagram.com/" class="footer__networks">
+								<img src="img/footer/insta.svg" alt="instagram" class="footer__networks-img">
+							</a>
+							<a href="https://ru-ru.facebook.com/" class="footer__networks">
+								<img src="img/footer/fb.svg" alt="facebook" class="footer__networks-img">
+							</a>
+						</div>
+						<div class="footer__title">Мой кабинет</div>
+						<a href="#sign_in" class="footer__link">Авторизация</a>
+						<a href="order.html" class="footer__link">Мои заказы</a>
+					</div>
+
+					<div class="footer__item">
+						<div class="footer__title">Информация</div>
+						<a href="#" class="footer__link">Доставка в СПб</a>
+						<a href="#" class="footer__link">Доставка по России</a>
+						<a href="#" class="footer__link">Самовывоз</a>
+						<a href="#" class="footer__link">Возврат товара</a>
+						<a href="#" class="footer__link">Способы оплаты</a>
+						<a href="#" class="footer__link">О нас</a>
+						<a href="#" class="footer__link">Политика <br> конфиденциальности</a>
+					</div>
+
+					<div class="footer__item">
+						<div class="footer__title">Контакты</div>
+						<a href="#" class="footer__link">info@neyr-moon.ru</a>
+						<a href="#" class="footer__link">Neyr Moon</a>
+						<a href="#" class="footer__link">+7 (927) 700-81-45</a>
+						<a href="#" class="footer__link">+7 (800) 123-45-67</a>
+						<div class="footer__cards"></div>
+						<a href="#" class="footer__back-call">Заказать обратный звонок</a>
+					</div>
+
+				</div>
+				<!-- /.footer__main-block -->
+
+			</footer>
+			<!-- /.footer -->
 
 		</div>
+		
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="js/general.js"></script>
 		
 	</body>
 

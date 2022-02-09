@@ -17,25 +17,25 @@
 @import "general/footer";
 
 // Колонка каталога товаров
-@import "main-sections/catalog-bar";
+@import "main-section/catalog-bar";
 
 // Колонка с акциями
-@import "main-sections/sales";
+@import "main-section/sales";
 
 // Строка поиска
-@import "main-sections/search";
+@import "main-section/search";
 
 // Главный рекламный блок
-@import "main-sections/hero";
+@import "main-section/hero";
 
 // Список товаров
-@import "main-sections/goods";
+@import "main-section/goods";
 
 // Список брендов
-@import "main-sections/brends";
+@import "main-section/brends";
 
 // О магазине
-@import "main-sections/about";
+@import "main-section/about";
 
 // Карточка товара
 @import "pages/item";
@@ -49,8 +49,17 @@
 // Страница об оплате
 @import "pages/payment";
 
+// Страница c контактами
+@import "pages/contacts";
+
 // Страница о доставке
 @import "pages/delivery";
+
+// Страница о гарантии и возврате товара
+@import "pages/guarantee";
+
+// Страница политики конфиденциальности
+@import "pages/confident";
 
 
 

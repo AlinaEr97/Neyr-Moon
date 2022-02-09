@@ -202,6 +202,7 @@
 
 	&__image {
 		margin: auto;
+		cursor: pointer;
 
 		@media (max-width: 1500px) {
 			width: 300px;

@@ -8,12 +8,12 @@ class Item {
 			ItemCatalog += `
 			<div class="popup__group popup__group" id="${id}">
 
-				<nav class="breadcrumbs">
-					<ul class="breadcrumbs__nav" id="breadcrumbs">
-						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
-						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link" href="catalog.html">Каталог товаров</a></li>
-						<li class="breadcrumbs__crumb breadcrumbs__crumb_path"><a class="breadcrumbs__link" href="${path_link}">${path}</a></li>
-						<li class="breadcrumbs__crumb breadcrumbs__crumb_good"><a class="breadcrumbs__link current" href="#">${type} "${name}"</a></li>
+				<nav class="breadcrumbs-item">
+					<ul class="breadcrumbs-item__nav" id="breadcrumbs">
+						<li class="breadcrumbs-item__crumb"><a class="breadcrumbs-item__link" href="index.html">Главная</a></li>
+						<li class="breadcrumbs-item__crumb"><a class="breadcrumbs-item__link" href="catalog.html">Каталог товаров</a></li>
+						<li class="breadcrumbs-item__crumb breadcrumbs-item__crumb_path"><a class="breadcrumbs-item__link" href="${path_link}">${path}</a></li>
+						<li class="breadcrumbs-item__crumb breadcrumbs-item__crumb_good"><a class="breadcrumbs-item__link current" href="#">${type} "${name}"</a></li>
 					</ul>
 				</nav>
 				<!-- /.breadcrumbs -->

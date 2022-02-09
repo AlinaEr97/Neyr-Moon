@@ -5,7 +5,7 @@
 
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Neyr Moon - доставка</title>
+		<title>Доставка</title>
 		<link rel="stylesheet" href="css/style.css">
 
 		<link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
@@ -70,7 +70,7 @@
 					<!-- /.header-nav -->
 
 					<div class="header-logo logo">
-						<a href="index.html" class="logo__link"> <img class="logo__image" src="img/header/logo.png" alt=""></a>
+						<img class="logo__image" src="img/header/logo.png" alt="logo">
 						<div class="logo__text">Интернет-магазин оригинальных ночников</div>
 					</div>
 					<!-- /.logo -->
@@ -95,78 +95,148 @@
 			</header>
 			<!-- /.header -->
 
-			<div class="acc-string">
+			<section class="acc-string">
 
-				<div class="acc-string__block">
+				<div class="acc-string__wrapper">
 
-					<div class="acc-string__login">Вход</div>
+					<a href="#signin" class="acc-string__item acc-string__login">Вход</a>
 
-					<a href="signup.html" class="acc-string__registration">Регистрация</a>
+					<a href="signup.html" class="acc-string__item acc-string__registration">Регистрация</a>
 
-					<div class="acc-string__back-call">Обратный звонок</div>
+					<a href="#backcall" class="acc-string__item acc-string__back-call">Обратный звонок</a>
 
 					<div class="acc-string__working-time">Пн-Вс: 9:00-21:00</div>
 
-					<a href="#cart" class="acc-string__basket"></a>
+					<a href="#cart" class="acc-string__item acc-string__basket"></a>
 
 				</div>
+				<!-- /.acc-string__wrapper -->
 
-			</div>
+			</section>
 			<!-- /.acc-string -->
 
-			<main>
+			<main class="delivery">
 
-				<div class="delivery">
+				<nav class="breadcrumbs">
+					<ul class="breadcrumbs__nav" id="breadcrumbs">
+						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link current" href="#">Доставка</a></li>
+					</ul>
+				</nav>
+				<!-- /.breadcrumbs -->
 
-					<section class="delivery__wrapper">
+				<section class="delivery__info delivery-info">
 
-						<h3 class="delivery__title delivery__title_main">Мы доставляем любую точку Российской Федерации!</h3>
-						<p class="delivery__text">Доставка заказов в регионы России осуществляется транспортной компанией «DPD». «DPD» - один из лидеров российского рынка экспресс доставки грузов и посылок, работает по современным мировым стандартам. Доставка заказов осуществляется «до двери». Также, по желанию, возможен самовывоз заказов из пунктов выдачи «DPD» в Вашем городе. Перед передачей заказов в транспортную компанию наши сотрудники осуществляют осмотр и тщательную упаковку товара для междугородней перевозки.</p>
+					<h2 class="delivery-info__title delivery-info__title_main">Мы доставляем в любую точку Российской Федерации!</h2>
+					<p class="delivery-info__text">Доставка заказов в регионы России осуществляется транспортной компанией «DPD». «DPD» - один из лидеров российского рынка экспресс доставки грузов и посылок, работает по современным мировым стандартам. Доставка заказов осуществляется «до двери». Также, по желанию, возможен самовывоз заказов из пунктов выдачи «DPD» в Вашем городе. Перед передачей заказов в транспортную компанию наши сотрудники осуществляют осмотр и тщательную упаковку товара для междугородней перевозки.</p>
 
-						<h4 class="delivery__title">Сроки доставки:</h4>
-						<ul class="delivery__list">
-							<li class="delivery__item">Доставка в регионы занимает от 3 до 10 дней с момента отгрузки заказа в службу доставки.</li>
-							<li class="delivery__item">Заказы по Санкт-Петербургу доставляются с 10:00 до 21:00 в течение 1-2 дней с момента приема заказа.
-							<br> Доставка за пределы КАД осуществляется с 10 до 20. Вечерняя доставка и доставка в указанный Вами промежуток времени оговаривается индивидуально.</li>
-						</ul>
+					<h3 class="delivery-info__title">Сроки доставки:</h3>
+					<ul class="delivery-info__list">
+						<li class="delivery-info__item">Доставка в регионы занимает от 3 до 10 дней с момента отгрузки заказа в службу доставки.</li>
+						<li class="delivery-info__item">Заказы по Санкт-Петербургу доставляются с 10:00 до 21:00 в течение 1-2 дней с момента приема заказа.
+						<br> Доставка за пределы КАД осуществляется с 10 до 20. Вечерняя доставка и доставка в указанный Вами промежуток времени оговаривается индивидуально.</li>
+					</ul>
 
-						<h4 class="delivery__title">Стоимость доставки:</h4>
-						<ul class="delivery__list">
-							<li class="delivery__item">Доставка в предалах КАД  &mdash; 300 руб. </li>
-							<li class="delivery__item">Доставка за КАД в пределах ЛО &mdash; 500 руб. </li>
-							<li class="delivery__item">Доставка в другие регионы России &mdash; 700 руб. </li>
-							<li class="delivery__item">При заказе от 5000 руб. доставка бесплатно!</li>
-						</ul>
+					<h3 class="delivery-info__title">Стоимость доставки:</h3>
+					<ul class="delivery-info__list">
+						<li class="delivery-info__item">Доставка в предалах КАД  &mdash; 300 руб. </li>
+						<li class="delivery-info__item">Доставка за КАД в пределах ЛО &mdash; 500 руб. </li>
+						<li class="delivery-info__item">Доставка в другие регионы России &mdash; 700 руб. </li>
+						<li class="delivery-info__item">При заказе от 5000 руб. доставка бесплатно!</li>
+					</ul>
 
-						<h4 id="pickup" class="delivery__title">Бесплатный самовывоз</h4>
-						<p class="delivery__text">Вы можете оформить заказ и самостоятельно забрать товар с нашего склада в  в Санкт-Петербурге, расположенного по адресу: Южное шоссе 37, корп. 1, лит. В.</p>
-						<p class="delivery__text">Понедельник - пятница с 10.00 до 21.00, суббота - воскресенье с 10.00 до 19.00.</p>
-						<p class="delivery__text"> Телефоны склада самовывоза +7 (123) 456 78 90, +7 (012) 345 67 89.</p>
-						<p class="delivery__text">Внимание: Для пропуска на территорию складов с собой необходимо иметь паспорт.
-						</p>
-						
-					</section>
-
-					<section class="delivery__map delivery-map">
-
-						<h3 class="delivery-map__title delivery__title_main">Склад в Санкт-Петербурге на карте:</h3>
-						<div class="delivery-map__yandex">
-							<div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/house/yuzhnoye_shosse_37k1v/Z0kYcgVjS00OQFtjfXR3dXlgbQ==/?ll=30.419228%2C59.868071&utm_medium=mapframe&utm_source=maps&z=13.43" style="color:#eee;font-size:12px;position:absolute;top:14px;">Южное шоссе, 37к1В — Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCU5a-W9XD" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
-						</div>
-
-					</section>
-
-				</div>
-
-				<section class="transfer"> 
-					<a href="payment.html" class="transfer__link">Узнать подробнее об оплате</a>
-					<a href="order.html" class="transfer__link">Вернуться к оформлению заказа</a>
-					<a href="catalog.html" class="transfer__link">Перейти в каталог товаров</a>
+					<h3 id="pickup" class="delivery-info__title">Бесплатный самовывоз</h3>
+					<p class="delivery-info__text">Вы можете оформить заказ и самостоятельно забрать товар с нашего склада в  в Санкт-Петербурге, расположенного по адресу: Южное шоссе 37, корп. 1, лит. В.</p>
+					<p class="delivery-info__text">Понедельник - пятница с 10.00 до 21.00, суббота - воскресенье с 10.00 до 19.00.</p>
+					<p class="delivery-info__text"> Телефоны склада самовывоза +7 (123) 456 78 90, +7 (012) 345 67 89.</p>
+					<p class="delivery-info__text">Внимание: Для пропуска на территорию складов с собой необходимо иметь паспорт.
+					</p>
+					
 				</section>
+				<!-- /.delivery-info -->
+
+				<section class="delivery__map delivery-map">
+
+					<h2 class="delivery-map__title">Склад в Санкт-Петербурге на карте:</h2>
+					<div class="delivery-map__yandex">
+						<div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/2/saint-petersburg/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Санкт‑Петербург</a><a href="https://yandex.ru/maps/2/saint-petersburg/house/yuzhnoye_shosse_37k1v/Z0kYcgVjS00OQFtjfXR3dXlgbQ==/?ll=30.419228%2C59.868071&utm_medium=mapframe&utm_source=maps&z=13.43" style="color:#eee;font-size:12px;position:absolute;top:14px;">Южное шоссе, 37к1В — Яндекс.Карты</a><iframe src="https://yandex.ru/map-widget/v1/-/CCU5a-W9XD" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+					</div>
+
+				</section>
+				<!-- /.delivery-map -->
 
 			</main>
+			<!-- /.delivery -->
+
+			<section class="transfer"> 
+				<a href="payment.html" class="transfer__link">Узнать подробнее об оплате</a>
+				<a href="guarantee.html#return" class="transfer__link">О возврате товара</a>
+				<a href="order.html" class="transfer__link">Вернуться к оформлению заказа</a>
+				<a href="catalog.html" class="transfer__link">Перейти в каталог товаров</a>
+			</section>
+			<!-- /.transfer -->
+
+			<footer class="footer">
+
+				<div class="footer__main-block">
+
+					<div class="footer__item">
+						<div class="footer__title">Интернет-магазин <br> Neyr Moon</div>
+						<a href="catalog.html#bra_link" class="footer__link">Бра</a>
+						<a href="catalog.html#table_link" class="footer__link">Настольные</a>
+						<a href="catalog.html#floor_link" class="footer__link">Торшеры</a>
+						<a href="catalog.html#candles_link" class="footer__link">Свечи</a>
+					</div>
+
+					<div class="footer__item">
+						<div class="footer__title">Присоединяйтесь</div>
+						<div class="footer__massangers">
+							<a href="https://vk.com/" class="footer__networks">
+								<img src="img/footer/vk.svg" alt="vkontakte" class="footer__networks-img">
+							</a>
+							<a href="https://www.instagram.com/" class="footer__networks">
+								<img src="img/footer/insta.svg" alt="instagram" class="footer__networks-img">
+							</a>
+							<a href="https://ru-ru.facebook.com/" class="footer__networks">
+								<img src="img/footer/fb.svg" alt="facebook" class="footer__networks-img">
+							</a>
+						</div>
+						<div class="footer__title">Мой кабинет</div>
+						<a href="#sign_in" class="footer__link">Авторизация</a>
+						<a href="order.html" class="footer__link">Мои заказы</a>
+					</div>
+
+					<div class="footer__item">
+						<div class="footer__title">Информация</div>
+						<a href="#" class="footer__link">Доставка в СПб</a>
+						<a href="#" class="footer__link">Доставка по России</a>
+						<a href="#" class="footer__link">Самовывоз</a>
+						<a href="#" class="footer__link">Возврат товара</a>
+						<a href="#" class="footer__link">Способы оплаты</a>
+						<a href="#" class="footer__link">О нас</a>
+						<a href="#" class="footer__link">Политика <br> конфиденциальности</a>
+					</div>
+
+					<div class="footer__item">
+						<div class="footer__title">Контакты</div>
+						<a href="#" class="footer__link">info@neyr-moon.ru</a>
+						<a href="#" class="footer__link">Neyr Moon</a>
+						<a href="#" class="footer__link">+7 (927) 700-81-45</a>
+						<a href="#" class="footer__link">+7 (800) 123-45-67</a>
+						<div class="footer__cards"></div>
+						<a href="#" class="footer__back-call">Заказать обратный звонок</a>
+					</div>
+
+				</div>
+				<!-- /.footer__main-block -->
+
+			</footer>
+			<!-- /.footer -->
 
 		</div>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="js/general.js"></script>
 		
 	</body>
 

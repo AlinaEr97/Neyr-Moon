@@ -10880,13 +10880,6 @@ if ( typeof noGlobal === "undefined" ) {
 return jQuery;
 } );
 
-$(function() {
-	$(".menu-burger").on("click", function() {
-		$(".menu").toggleClass('menu_active');
-	});
-});
-
-// Показать-скрыть меню в мобильной версии
 const catalog = [
 	{
 		id: 'salt1',
@@ -11384,7 +11377,7 @@ document.querySelector("#search").oninput = function Searching() {
 
 
 
-var $page = $('html, body, .wrapper, header, .header__block, .header-nav');
+let $page = $('html, body, .wrapper, header, .header__block, .header-nav');
 $('a[href*="#"]').click(function() {
    $page.animate({
       scrollTop: $($.attr(this, 'href')).offset().top - 200
@@ -11393,6 +11386,21 @@ $('a[href*="#"]').click(function() {
 });
 
 // Плавный переход по якорям из хедера
+
+
+$(function() {
+	$(".menu-burger").on("click", function() {
+		$(".menu").toggleClass('menu_active');
+	});
+});
+
+// Показать-скрыть меню в мобильной версии
+
+
+$('.logo__image').on('click', () => {
+	location.href = 'index.html';
+});
+// Логотип-ссылка на главную страницу сайта
 
 
 let threed = document.querySelectorAll('.threed');

@@ -1,4 +1,5 @@
-.payment {
+.guarantee-return {
+	margin-bottom: 30px;
 	padding: 20px 40px;
 	text-align: justify;
 	color: white; 
@@ -12,10 +13,57 @@
 		padding: 10px;
 		text-indent: 5px;
 	}
+}
+
+.guarantee {
 
 	&__title {
 		margin: 20px 0 15px;
-		font-size: 20px;
+		font-size: 26px;
+		font-weight: bold;
+		color: rgb(224, 224, 154);
+
+		@media (max-width: 700px) {
+			margin: 15px 0 10px;
+			font-size: 22px;
+		}
+		@media (max-width: 450px) {
+			margin: 10px 0 5px;
+			font-size: 16px;
+		}
+	}
+
+	&_years {
+		padding: 0 15px;
+		font-size: 36px;
+		text-align: center;
+		color: white;
+		text-shadow: 2px 2px black;
+		border-radius: 10px;
+		background-color: orange;
+
+		@media (max-width: 800px) {
+			padding: 0 10px;
+			font-size: 32px;
+		}
+		@media (max-width: 600px) {
+			font-size: 28px;
+		}
+		@media (max-width: 500px) {
+			padding: 0 5px;
+			font-size: 22px;
+		}
+		@media (max-width: 400px) {
+			font-size: 18px;
+		}
+	}
+} 
+
+.return {
+
+	&__title {
+		margin: 20px 0 15px;
+		font-size: 22px;
 		font-weight: bold;
 		color: rgb(224, 224, 154);
 
@@ -29,21 +77,35 @@
 		}
 
 		&_main {
-			margin-top: 10px;
-			font-size: 22px;
+			font-size: 26px;
 
 			@media (max-width: 700px) {
-				margin-top: 5px;
-				font-size: 18px;
+				margin: 15px 0 10px;
+				font-size: 22px;
 			}
 			@media (max-width: 450px) {
-				margin-top: 0;
-				font-size: 14px;
+				margin: 10px 0 5px;
+				font-size: 16px;
 			}
+		}
+
+		&_small {
+			font-size: 20px;
+			font-weight: normal;
+			color: orange;
+
+			@media (max-width: 700px) {
+				font-size: 16px;
+			}
+			@media (max-width: 450px) {
+				font-size: 12px;
+			}
+
 		}
 	}
 
 	&__text {
+		margin-bottom: 15px;
 		font-size: 20px;
 
 		@media (max-width: 700px) {
@@ -52,9 +114,18 @@
 		@media (max-width: 450px) {
 			font-size: 12px;
 		}
+
+		&_note {
+			color: orange;
+		}
+	}
+
+	&__list {
+		margin-bottom: 30px;
 	}
 
 	&__item {
+		margin-bottom: 10px;
 		position: relative;
 		font-size: 20px;
 		&:before {
@@ -86,6 +157,15 @@
 				line-height: 18px;        
 			}
 		}
+
+		&_main {
+			color: orange;
+		}
 	}
 }
+
+	
+
+
+
 

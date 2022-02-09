@@ -34,14 +34,12 @@ function images () {
 function sсripts () {
 	return src([
 		'node_modules/jquery/app/jquery.js',
-		
 		'app/js/catalog-bar.js',
 		'app/js/sliders.js',
 		'app/js/search.js',
 		'app/js/item-list.js',
 		'app/js/goods.js',
 		'app/js/general.js',
-		'app/js/menu.js',
 		'app/js/item/card.js',
 	])
 
@@ -53,9 +51,9 @@ function sсripts () {
 function item_sсripts () {
 	return src([
 		'node_modules/jquery/app/jquery.js',
-		'app/js/menu.js',
 		'app/js/item/catalog-bar.js',
 		'app/js/search.js',
+		'app/js/general.js',
 		'app/js/item-list.js',
 		'app/js/item/card.js',
 		'app/js/item/okzoom.js',
@@ -72,7 +70,6 @@ function item_sсripts () {
 function catalog_sсripts () {
 	return src([
 		'node_modules/jquery/app/jquery.js',
-		'app/js/menu.js',
 		'app/js/item-list.js',
 		'app/js/goods.js',
 		'app/js/catalog-bar.js',

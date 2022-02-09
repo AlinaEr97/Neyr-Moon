@@ -20,6 +20,10 @@
 		font-size: 26px;
 		font-weight: bold;
 		color: white;
+		text-decoration: underline;
+		&:hover {
+			color: rgb(238, 173, 31);
+		}
 
 		@media (max-width: 900px) {
 			margin-bottom: 15px;

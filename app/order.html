@@ -5,7 +5,7 @@
 
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Neyr Moon - корзина</title>
+		<title>Корзина</title>
 		<link rel="stylesheet" href="css/style.css">
 
 		<link rel="apple-touch-icon" sizes="180x180" href="../favicons/apple-touch-icon.png">
@@ -70,7 +70,7 @@
 					<!-- /.header-nav -->
 
 					<div class="header-logo logo">
-						<a href="index.html" class="logo__link"> <img class="logo__image" src="img/header/logo.png" alt=""></a>
+						<img class="logo__image" src="img/header/logo.png" alt="logo">
 						<div class="logo__text">Интернет-магазин оригинальных ночников</div>
 					</div>
 					<!-- /.logo -->
@@ -95,24 +95,35 @@
 			</header>
 			<!-- /.header -->
 
-			<div class="acc-string">
+			<section class="acc-string">
 
-				<div class="acc-string__block">
+				<div class="acc-string__wrapper">
 
-					<div class="acc-string__login">Вход</div>
+					<a href="#signin" class="acc-string__item acc-string__login">Вход</a>
 
-					<a href="signup.html" class="acc-string__registration">Регистрация</a>
+					<a href="signup.html" class="acc-string__item acc-string__registration">Регистрация</a>
 
-					<div class="acc-string__back-call">Обратный звонок</div>
+					<a href="#backcall" class="acc-string__item acc-string__back-call">Обратный звонок</a>
 
 					<div class="acc-string__working-time">Пн-Вс: 9:00-21:00</div>
 
-				</div>
+					<a href="#cart" class="acc-string__item acc-string__basket"></a>
 
-			</div>
+				</div>
+				<!-- /.acc-string__wrapper -->
+
+			</section>
 			<!-- /.acc-string -->
 
 			<main>
+
+				<nav class="breadcrumbs">
+					<ul class="breadcrumbs__nav" id="breadcrumbs">
+						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link current" href="#">Мои заказы</a></li>
+					</ul>
+				</nav>
+				<!-- /.breadcrumbs -->
 
 
 
@@ -120,6 +131,8 @@
 
 		</div>
 		
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript" src="js/general.js"></script>
 	</body>
 
 </html>

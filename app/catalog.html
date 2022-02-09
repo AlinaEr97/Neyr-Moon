@@ -65,11 +65,12 @@
 							<a href="payment.html" class="header-nav__link">Оплата</a>
 							<a href="contacts.html" class="header-nav__link">Контакты</a>
 						</div>
+
 					</nav>
 					<!-- /.header-nav -->
 
 					<div class="header-logo logo">
-						<a href="index.html" class="logo__link"> <img class="logo__image" src="img/header/logo.png" alt=""></a>
+						<img class="logo__image" src="img/header/logo.png" alt="logo">
 						<div class="logo__text">Интернет-магазин оригинальных ночников</div>
 					</div>
 					<!-- /.logo -->
@@ -94,26 +95,35 @@
 			</header>
 			<!-- /.header -->
 
-			<div class="acc-string">
+			<section class="acc-string">
 
-				<div class="acc-string__block">
+				<div class="acc-string__wrapper">
 
-					<div class="acc-string__login">Вход</div>
+					<a href="#signin" class="acc-string__item acc-string__login">Вход</a>
 
-					<a href="signup.html" class="acc-string__registration">Регистрация</a>
+					<a href="signup.html" class="acc-string__item acc-string__registration">Регистрация</a>
 
-					<div class="acc-string__back-call">Обратный звонок</div>
+					<a href="#backcall" class="acc-string__item acc-string__back-call">Обратный звонок</a>
 
 					<div class="acc-string__working-time">Пн-Вс: 9:00-21:00</div>
 
-					<a href="#cart" class="acc-string__basket"></a>
+					<a href="#cart" class="acc-string__item acc-string__basket"></a>
 
 				</div>
+				<!-- /.acc-string__wrapper -->
 
-			</div>
+			</section>
 			<!-- /.acc-string -->
 
-			<main>
+			<main class="main-catalog">
+				
+				<nav class="breadcrumbs">
+					<ul class="breadcrumbs__nav" id="breadcrumbs">
+						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+						<li class="breadcrumbs__crumb"><a class="breadcrumbs__link current" href="#">Каталог товаров</a></li>
+					</ul>
+				</nav>
+				<!-- /.breadcrumbs -->
 
 				<div class="main-wrapper">
 
@@ -193,7 +203,7 @@
 					</section>
 					<!-- /.side-bar -->
 
-					<section class="main">
+					<section class="main-block">
 
 						<section class="goods">
 
@@ -213,15 +223,17 @@
 								<button class="filter-buttons__item filter-buttons__high-price">увеличению цены</button>
 								<button class="filter-buttons__item filter-buttons__low-price">убыванию цены</button>
 							</div>
+								<!-- /.filter-buttons -->
 
 							<div class="goods__links filter-links">
 								<p class="filter-links__title">Фильтры:</p>
-								<button class="filter-buttons__item filter-buttons__item_links filter-links__table">Настольные</button>
-								<button class="filter-buttons__item filter-buttons__item_links filter-links__bra">Бра</button>
-								<button class="filter-buttons__item filter-buttons__item_links filter-links__floor">Торшеры</button>
-								<button class="filter-buttons__item filter-buttons__item_links filter-links__candles">Свечи</button>
-								<button class="filter-buttons__item filter-buttons__item_links filter-links__all">Сбросить фильтры</button>
+								<button class="filter-links__item filter-links__item_links filter-links__table">Настольные</button>
+								<button class="filter-links__item filter-links__item_links filter-links__bra">Бра</button>
+								<button class="filter-links__item filter-links__item_links filter-links__floor">Торшеры</button>
+								<button class="filter-links__item filter-links__item_links filter-links__candles">Свечи</button>
+								<button class="filter-links__item filter-links__item_links filter-links__all">Сбросить фильтры</button>
 							</div>
+							<!-- /.filter-links -->
 
 							<div class="goods__wrapper" id="goods"></div>
 
@@ -229,13 +241,73 @@
 						<!-- /.goods -->
 
 					</section>
-					<!-- /.main -->
+					<!-- /.main-block -->
 
 				</div>
+				<!-- /.main-wrapper -->
 
 			</main>
+			<!-- /.main-catalog -->
+
+			<footer class="footer">
+
+				<div class="footer__main-block">
+
+					<div class="footer__item">
+						<div class="footer__title">Интернет-магазин <br> Neyr Moon</div>
+						<a href="catalog.html#bra_link" class="footer__link">Бра</a>
+						<a href="catalog.html#table_link" class="footer__link">Настольные</a>
+						<a href="catalog.html#floor_link" class="footer__link">Торшеры</a>
+						<a href="catalog.html#candles_link" class="footer__link">Свечи</a>
+					</div>
+
+					<div class="footer__item">
+						<div class="footer__title">Присоединяйтесь</div>
+						<div class="footer__massangers">
+							<a href="https://vk.com/" class="footer__networks">
+								<img src="img/footer/vk.svg" alt="vkontakte" class="footer__networks-img">
+							</a>
+							<a href="https://www.instagram.com/" class="footer__networks">
+								<img src="img/footer/insta.svg" alt="instagram" class="footer__networks-img">
+							</a>
+							<a href="https://ru-ru.facebook.com/" class="footer__networks">
+								<img src="img/footer/fb.svg" alt="facebook" class="footer__networks-img">
+							</a>
+						</div>
+						<div class="footer__title">Мой кабинет</div>
+						<a href="#sign_in" class="footer__link">Авторизация</a>
+						<a href="order.html" class="footer__link">Мои заказы</a>
+					</div>
+
+					<div class="footer__item">
+						<div class="footer__title">Информация</div>
+						<a href="#" class="footer__link">Доставка в СПб</a>
+						<a href="#" class="footer__link">Доставка по России</a>
+						<a href="#" class="footer__link">Самовывоз</a>
+						<a href="#" class="footer__link">Возврат товара</a>
+						<a href="#" class="footer__link">Способы оплаты</a>
+						<a href="#" class="footer__link">О нас</a>
+						<a href="#" class="footer__link">Политика <br> конфиденциальности</a>
+					</div>
+
+					<div class="footer__item">
+						<div class="footer__title">Контакты</div>
+						<a href="#" class="footer__link">info@neyr-moon.ru</a>
+						<a href="#" class="footer__link">Neyr Moon</a>
+						<a href="#" class="footer__link">+7 (927) 700-81-45</a>
+						<a href="#" class="footer__link">+7 (800) 123-45-67</a>
+						<div class="footer__cards"></div>
+						<a href="#" class="footer__back-call">Заказать обратный звонок</a>
+					</div>
+
+				</div>
+				<!-- /.footer__main-block -->
+
+			</footer>
+			<!-- /.footer -->
 
 		</div>
+		<!-- /.wrapper-->
 		
 		<script type="text/javascript" src="js/catalog/catalog.js"></script>
 

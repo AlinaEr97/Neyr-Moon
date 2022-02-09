@@ -1,4 +1,4 @@
-.payment {
+.contacts {
 	padding: 20px 40px;
 	text-align: justify;
 	color: white; 
@@ -11,6 +11,15 @@
 	@media (max-width: 450px) {
 		padding: 10px;
 		text-indent: 5px;
+	}
+
+	&__box {
+		margin-bottom: 20px;
+		display: flex;
+
+		@media (max-width: 650px) {
+			display: block;
+		}
 	}
 
 	&__title {
@@ -30,27 +39,36 @@
 
 		&_main {
 			margin-top: 10px;
-			font-size: 22px;
+			font-size: 24px;
 
 			@media (max-width: 700px) {
 				margin-top: 5px;
-				font-size: 18px;
+				font-size: 20px;
 			}
 			@media (max-width: 450px) {
 				margin-top: 0;
-				font-size: 14px;
+				font-size: 16px;
 			}
 		}
 	}
 
 	&__text {
 		font-size: 20px;
+		line-height: 1.2;
 
 		@media (max-width: 700px) {
 			font-size: 16px;
 		}
 		@media (max-width: 450px) {
 			font-size: 12px;
+		}
+
+		&_note {
+			font-size: 16px;
+
+			@media (max-width: 450px) {
+				font-size: 12px;
+			}
 		}
 	}
 
@@ -87,5 +105,55 @@
 			}
 		}
 	}
+
+	&__section {
+		flex-grow: 1;
+		width: 100%;
+	}
 }
 
+.contacts-emails {
+
+	&__address {
+		color: orange;
+	}
+}
+
+.contacts-phones, .contacts-addresses {
+	margin-right: 20px;
+}
+
+.contacts-company {
+
+	@media (max-width: 650px) {
+		text-indent: 25px;
+	}
+	
+	&__text {
+		text-align: start;
+		vertical-align: top;
+
+		@media (max-width: 1000px) {
+			font-size: 18px;
+		}
+		@media (max-width: 850px) {
+			font-size: 16px;
+		}
+		@media (max-width: 450px) {
+			font-size: 12px;
+		}
+		
+		
+		&_left {
+			width: 200px;
+
+			@media (max-width: 650px) {
+				width: 180px;
+			}
+			@media (max-width: 450px) {
+				width: 130px;
+			}
+		}
+	}
+
+}

@@ -9,6 +9,21 @@ $('a[href*="#"]').click(function() {
 // Плавный переход по якорям из хедера
 
 
+$(function() {
+	$(".menu-burger").on("click", function() {
+		$(".menu").toggleClass('menu_active');
+	});
+});
+
+// Показать-скрыть меню в мобильной версии
+
+
+$('.logo__image').on('click', () => {
+	location.href = 'index.html';
+});
+// Логотип-ссылка на главную страницу сайта
+
+
 let threed = document.querySelectorAll('.threed');
 let lamp = document.querySelectorAll('.lamp');
 let baby = document.querySelectorAll('.baby');
