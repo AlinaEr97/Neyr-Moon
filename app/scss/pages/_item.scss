@@ -418,6 +418,7 @@
 
 	&__box {
 		display: flex;
+		align-items: flex-start;
 		@media (max-width: 500px) {
 			flex-direction: column;
 		}
@@ -428,12 +429,14 @@
 	padding: 30px 20px;
 	width: 70%;
 	background-color: white;
+	
 
 	@media (max-width: 800px) {
 		padding: 20px 10px;
 	}
 	@media (max-width: 500px) {
-		padding: 10px 10;
+		margin-bottom: 15px;
+		padding: 10px;
 		width: 100%;
 	}
 }

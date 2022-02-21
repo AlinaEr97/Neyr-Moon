@@ -1870,6 +1870,7 @@ main {
   flex: 80%;
   box-shadow: 0 20px 20px 0 rgba(146, 145, 145, 0.5);
   overflow: hidden;
+  text-indent: 0;
 }
 .goods-offer:hover {
   box-shadow: 0 0 10px 5px #dad877;
@@ -2078,6 +2079,7 @@ main {
   position: relative;
   font-size: 18px;
   font-weight: bold;
+  color: #131457;
 }
 .goods-offer__new-price::after {
   content: "";
@@ -2141,6 +2143,7 @@ main {
   height: calc(100% - 88px);
   top: 0;
   left: 100%;
+  text-align: start;
   font-size: 18px;
   color: white;
   background-color: rgba(0, 0, 0, 0.7);
@@ -3299,6 +3302,7 @@ main {
 }
 .popup__box {
   display: flex;
+  align-items: flex-start;
 }
 @media (max-width: 500px) {
   .popup__box {
@@ -3318,7 +3322,8 @@ main {
 }
 @media (max-width: 500px) {
   .card {
-    padding: 10px 10;
+    margin-bottom: 15px;
+    padding: 10px;
     width: 100%;
   }
 }
@@ -5227,4 +5232,78 @@ main {
 }
 .return__item_main {
   color: orange;
+}
+
+.confident {
+  margin-bottom: 30px;
+  padding: 20px 40px;
+  text-align: justify;
+  color: white;
+  text-indent: 25px;
+}
+@media (max-width: 700px) {
+  .confident {
+    padding: 15px 20px;
+    text-indent: 10px;
+  }
+}
+@media (max-width: 450px) {
+  .confident {
+    padding: 10px;
+    text-indent: 5px;
+  }
+}
+
+.confident-text__box {
+  margin-bottom: 25px;
+}
+.confident-text__title {
+  margin: 20px 0 15px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #e0e09a;
+}
+@media (max-width: 700px) {
+  .confident-text__title {
+    margin: 15px 0 10px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 450px) {
+  .confident-text__title {
+    margin: 10px 0 5px;
+    font-size: 12px;
+  }
+}
+.confident-text__title_main {
+  margin-top: 10px;
+  font-size: 22px;
+  color: orange;
+}
+@media (max-width: 700px) {
+  .confident-text__title_main {
+    margin-top: 5px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 450px) {
+  .confident-text__title_main {
+    margin-top: 0;
+    font-size: 14px;
+  }
+}
+.confident-text__item {
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+@media (max-width: 700px) {
+  .confident-text__item {
+    font-size: 16px;
+  }
+}
+@media (max-width: 450px) {
+  .confident-text__item {
+    font-size: 12px;
+  }
 }

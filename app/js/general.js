@@ -21,6 +21,7 @@ $(function() {
 $('.logo__image').on('click', () => {
 	location.href = 'index.html';
 });
+
 // Логотип-ссылка на главную страницу сайта
 
 
@@ -29,7 +30,7 @@ let lamp = document.querySelectorAll('.lamp');
 let baby = document.querySelectorAll('.baby');
 let lava = document.querySelectorAll('.lava');
 let neon = document.querySelectorAll('.neon');
-let socket = document.querySelectorAll('.socket');
+let bra = document.querySelectorAll('.bra');
 let portable = document.querySelectorAll('.portable');
 let projector = document.querySelectorAll('.projector');
 let salt = document.querySelectorAll('.salt');
@@ -90,12 +91,12 @@ $(function () {
 	});
 });
 $(function () {
-	$('#socket').on("click", function () {
+	$('#bra').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
 			all_goods[j].style.display = 'none';
 		}
-		for (let i = 0; i < socket.length; i++) {
-			socket[i].style.display = 'block';
+		for (let i = 0; i < bra.length; i++) {
+			bra[i].style.display = 'block';
 		}
 	});
 });

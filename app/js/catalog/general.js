@@ -45,7 +45,7 @@ function MySortDesc (sortType) {
 
 
 let table = document.querySelectorAll(".table");
-let bra = document.querySelector(".bra");
+let wall = document.querySelectorAll(".bra");
 
 $(function () {
 	$('.filter-links__table').on("click", function () {
@@ -64,7 +64,9 @@ $(function () {
 		for (let j = 0; j < all_goods.length; j++) {
 			all_goods[j].style.display = 'none';
 		}
-		bra.style.display = 'block';
+		for (let i = 0; i < wall.length; i++) {
+			wall[i].style.display = 'block';
+		}
 		history.pushState('', document.title, 'catalog.html#bra_link');
 	});
 });
@@ -114,11 +116,13 @@ if (document.location.hash.indexOf('table_link') == 1) {
 	}
 }
 
-if (document.location.hash.indexOf('bra_link') == 1) {
+if (document.location.hash.indexOf('wall_link') == 1) {
 	for (let j = 0; j < all_goods.length; j++) {
 		all_goods[j].style.display = 'none';
 	}
-	bra.style.display = 'block';
+	for (let i = 0; i < wall.length; i++) {
+		wall[i].style.display = 'block';
+	}
 }
 
 if (document.location.hash.indexOf('floor_link') == 1) {

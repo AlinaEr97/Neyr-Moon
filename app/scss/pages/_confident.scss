@@ -1,3 +1,66 @@
 .confident {
-	
+	margin-bottom: 30px;
+	padding: 20px 40px;
+	text-align: justify;
+	color: white; 
+	text-indent: 25px;
+
+	@media (max-width: 700px) {
+		padding: 15px 20px;
+		text-indent: 10px;
+	}
+	@media (max-width: 450px) {
+		padding: 10px;
+		text-indent: 5px;
+	}
+}
+
+.confident-text {
+	&__box {
+		margin-bottom: 25px;
+	}
+
+	&__title {
+		margin: 20px 0 15px;
+		font-size: 20px;
+		font-weight: bold;
+		text-align: center;
+		color: rgb(224, 224, 154);
+
+		@media (max-width: 700px) {
+			margin: 15px 0 10px;
+			font-size: 16px;
+		}
+		@media (max-width: 450px) {
+			margin: 10px 0 5px;
+			font-size: 12px;
+		}
+
+		&_main {
+			margin-top: 10px;
+			font-size: 22px;
+			color: orange;
+
+			@media (max-width: 700px) {
+				margin-top: 5px;
+				font-size: 18px;
+			}
+			@media (max-width: 450px) {
+				margin-top: 0;
+				font-size: 14px;
+			}
+		}
+	}
+
+	&__item {
+		margin-bottom: 5px;
+		font-size: 20px;
+
+		@media (max-width: 700px) {
+			font-size: 16px;
+		}
+		@media (max-width: 450px) {
+			font-size: 12px;
+		}
+	}
 }

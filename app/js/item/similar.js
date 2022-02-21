@@ -60,6 +60,8 @@ let similar_candles = document.querySelectorAll(".goods-offer_candles");
 let similar_floor = document.querySelectorAll(".goods-offer_floor");
 let similar_portable = document.querySelectorAll(".goods-offer_portable");
 let similar_lamp = document.querySelectorAll(".goods-offer_lamp");
+let similar_bra = document.querySelectorAll(".goods-offer_bra");
+let similar_bra2 = document.querySelectorAll(".bra");
 
 if (document.location.hash.indexOf('salt') == 1) {
 	for (let i = 0; i < similar_salt.length; i++) {
@@ -85,6 +87,9 @@ if (document.location.hash.indexOf('threed') == 1) {
 	}
 	for (let k = 0; k < similar_distance2.length; k++) {
 		similar_distance2[k].style.display = "block";
+	}
+	for (let i = 0; i < similar_bra.length; i++) {
+		similar_bra[i].style.display = "block";
 	}
 }
 
@@ -173,8 +178,8 @@ if (document.location.hash.indexOf('babydistanceusb8') == 1) {
 }
 
 if (document.location.hash.indexOf('babyneondistance9') == 1) {
-	for (let i = 0; i < document.querySelectorAll(".socket").length; i++) {
-		document.querySelectorAll(".socket")[i].style.display = "none";
+	for (let i = 0; i < similar_bra2.length; i++) {
+		similar_bra2[i].style.display = "none";
 	}
 }
 
@@ -228,6 +233,19 @@ if (document.location.hash.indexOf('floordistance18') == 1) {
 		similar_usb[l].style.display = "none";
 	}
 }
+
+if (document.location.hash.indexOf('bra') == 1) {
+	for (let i = 0; i < similar_bra.length; i++) {
+		similar_bra[i].style.display = "block";
+	}
+	for (let j = 0; j < similar_bra2.length; j++) {
+		similar_bra2[j].style.display = "block";
+	}
+	for (let k = 0; k < similar_threed.length; k++) {
+		similar_threed[k].style.display = "block";
+	}
+}
+
 /* Фильтр похожих товаров */
 
 	

@@ -3,10 +3,10 @@ let item_wrapper = document.querySelector(".popup__content");
 class Item {
 	render() {
 		let ItemCatalog = '';
-		catalog.forEach(({id, path, path_link, group, brend_img, material, img, img1, img2, img3, type, name, old_price, new_price, description}) => {
+		catalog.forEach(({id, path, path_link, group, brend_img, material, img, img1, img2, img3, type, name, old_price, new_price, description, cable, voltage, weight, height, madein, equipment}) => {
 
 			ItemCatalog += `
-			<div class="popup__group popup__group" id="${id}">
+			<div class="popup__group" id="${id}">
 
 				<nav class="breadcrumbs-item">
 					<ul class="breadcrumbs-item__nav" id="breadcrumbs">
@@ -102,39 +102,35 @@ class Item {
 								</li>
 								<li class="characteristics__item">
 									<span class="characteristics__text">Длина кабеля:</span>
-									<span class="characteristics__info">160 см</span>
+									<span class="characteristics__info">${cable}</span>
 								</li>
 								<li class="characteristics__item">
 									<span class="characteristics__text">Материал:</span>
 									<span class="characteristics__info">${material}</span>
 								</li>
 								<li class="characteristics__item">
-									<span class="characteristics__text">Напряжение:</span>
-									<span class="characteristics__info">230 В</span>
-								</li>
-								<li class="characteristics__item">
 									<span class="characteristics__text">Питание:</span>
-									<span class="characteristics__info">От сети 220 - 230 В 50 Гц</span>
+									<span class="characteristics__info">${voltage}</span>
 								</li>
 								<li class="characteristics__item">
 									<span class="characteristics__text">Вес:</span>
-									<span class="characteristics__info">4 кг</span>
+									<span class="characteristics__info">${weight}</span>
 								</li>
 								<li class="characteristics__item">
 									<span class="characteristics__text">Высота:</span>
-									<span class="characteristics__info">22,5 см</span>
+									<span class="characteristics__info">${height}</span>
 								</li>
 								<li class="characteristics__item">
 									<span class="characteristics__text">Тип светильника:</span>
-									<span class="characteristics__info">Солевая лампа, Настольный ночник</span>
+									<span class="characteristics__info">${group} ${type}</span>
 								</li>
 								<li class="characteristics__item">
-									<span class="characteristics__text">Страна производителя:</span>
-									<span class="characteristics__info">Пакистан</span>
+									<span class="characteristics__text">Страна производитель:</span>
+									<span class="characteristics__info">${madein}</span>
 								</li>
 								<li class="characteristics__item">
 									<span class="characteristics__text">Комплектация:</span>
-									<span class="characteristics__info">Инструкция; Солевая лампа; Лампочка Е14 15 Вт; <br> Патрон для лампы с сетевым проводом</span>
+									<span class="characteristics__info">${equipment}</span>
 								</li>
 
 							</ul>
