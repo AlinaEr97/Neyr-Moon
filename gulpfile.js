@@ -40,6 +40,7 @@ function sсripts () {
 		'app/js/item-list.js',
 		'app/js/goods.js',
 		'app/js/general.js',
+		'app/js/popup.js',
 		'app/js/item/card.js',
 	])
 

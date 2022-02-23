@@ -101,8 +101,84 @@
 
 			</main>
 
+			<footer class="footer">
+
+				<div class="footer__main-block">
+
+					<div class="footer__item">
+						<div class="footer__title">Интернет-магазин <br> Neyr Moon</div>
+						<a href="catalog.html#bra_link" class="footer__link">Бра</a>
+						<a href="catalog.html#table_link" class="footer__link">Настольные</a>
+						<a href="catalog.html#floor_link" class="footer__link">Торшеры</a>
+						<a href="catalog.html#candles_link" class="footer__link">Свечи</a>
+					</div>
+
+					<div class="footer__item">
+						<div class="footer__title">Присоединяйтесь</div>
+						<div class="footer__massangers">
+							<a href="https://vk.com/" class="footer__networks">
+								<img src="img/footer/vk.svg" alt="vkontakte" class="footer__networks-img">
+							</a>
+							<a href="https://www.instagram.com/" class="footer__networks">
+								<img src="img/footer/insta.svg" alt="instagram" class="footer__networks-img">
+							</a>
+							<a href="https://ru-ru.facebook.com/" class="footer__networks">
+								<img src="img/footer/fb.svg" alt="facebook" class="footer__networks-img">
+							</a>
+						</div>
+						<div class="footer__title">Мой кабинет</div>
+						<a href="#sign_in" class="footer__link">Авторизация</a>
+						<a href="order.html" class="footer__link">Мои заказы</a>
+					</div>
+
+					<div class="footer__item">
+						<div class="footer__title">Информация</div>
+						<a href="#" class="footer__link">Доставка в СПб</a>
+						<a href="#" class="footer__link">Доставка по России</a>
+						<a href="#" class="footer__link">Самовывоз</a>
+						<a href="#" class="footer__link">Возврат товара</a>
+						<a href="#" class="footer__link">Способы оплаты</a>
+						<a href="#" class="footer__link">О нас</a>
+						<a href="confident.html" class="footer__link">Политика <br> конфиденциальности</a>
+					</div>
+
+					<div class="footer__item">
+						<div class="footer__title">Контакты</div>
+						<a href="#" class="footer__link">info@neyr-moon.ru</a>
+						<a href="#" class="footer__link">Neyr Moon</a>
+						<a href="#" class="footer__link">+7 (927) 700-81-45</a>
+						<a href="#" class="footer__link">+7 (800) 123-45-67</a>
+						<div class="footer__cards"></div>
+						<a href="#" class="footer__back-call">Заказать обратный звонок</a>
+					</div>
+
+				</div>
+				<!-- /.footer__main-block -->
+
+			</footer>
+			<!-- /.footer -->
+
 		</div>
-		
+		<!-- /.wrapper -->
+
+		<script type="text/javascript">
+			(function () {
+				var options = {
+					  vkontakte: "https://vk.com/", // VKontakte page name
+					  instagram: "https://www.instagram.com/ ", // Instagram username
+					  call_to_action: "", // Call to action
+					  button_color: "#129BF4", // Color of button
+					  position: "left", // Position may be 'right' or 'left'
+					  order: "vkontakte,instagram", // Order of buttons
+				};
+				var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
+				var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
+				s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
+				var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
+			})();
+		</script>
+		<!-- /GetButton.io widget -->
+
 	</body>
 
 </html>

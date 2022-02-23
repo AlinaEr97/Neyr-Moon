@@ -70,13 +70,13 @@
 		border: 1px solid black;
 	}
 
-	.swiper-slide-prev,
-	.swiper-slide-next {
-		opacity: 0;
+	.swiper-pagination {
+		z-index: 0 !important;
 	}
-
+	
 	.swiper-pagination-bullet {
 		background: rgba(24, 29, 77, 0.63) !important;
+		
 	}
 }
 

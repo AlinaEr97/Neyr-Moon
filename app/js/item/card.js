@@ -1,4 +1,4 @@
-let item_wrapper = document.querySelector(".popup__content");
+let item_wrapper = document.querySelector(".popup-item__content");
 
 class Item {
 	render() {
@@ -6,7 +6,7 @@ class Item {
 		catalog.forEach(({id, path, path_link, group, brend_img, material, img, img1, img2, img3, type, name, old_price, new_price, description, cable, voltage, weight, height, madein, equipment}) => {
 
 			ItemCatalog += `
-			<div class="popup__group" id="${id}">
+			<div class="popup-item__group" id="${id}">
 
 				<nav class="breadcrumbs-item">
 					<ul class="breadcrumbs-item__nav" id="breadcrumbs">
@@ -18,7 +18,7 @@ class Item {
 				</nav>
 				<!-- /.breadcrumbs -->
 
-				<div class="popup__box">
+				<div class="popup-item__box">
 				
 					<section class="card">
 				
