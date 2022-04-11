@@ -242,54 +242,6 @@
 				left: -25px;
 			}
 		}
-		
-		&::after {
-			content: '0';
-			padding-left: 7px;
-			position: absolute;
-			width: 28px;
-			height: 25px;
-			top: -23px;
-			left: 10px;
-			font-size: 22px;
-			font-weight: bold;
-			color: rgb(243, 221, 125);
-			border-radius: 50%;
-			background-color: rgb(255, 38, 0);
-
-			@media (max-width: 1200px) {
-				padding-left: 6px;
-				width: 25px;
-				height: 23px;
-				top: -20px;
-				left: 2px;
-				font-size: 21px;
-			}
-			@media (max-width: 800px) {
-				padding-left: 5px;
-				width: 21px;
-				height: 21px;
-				top: -20px;
-				left: -7px;
-				font-size: 19px;
-			}
-			@media (max-width: 600px) {
-				padding-left: 4px;
-				width: 19px;
-				height: 18px;
-				top: -15px;
-				left: -10px;
-				font-size: 16px;
-			}
-			@media (max-width: 450px) {
-				padding-left: 3px;
-				width: 14px;
-				height: 14px;
-				top: -11px;
-				left: -6px;
-				font-size: 13px;
-			}
-		}
 	}
 }
 
@@ -392,6 +344,7 @@
 /* Блоки главного контента */
 
 main {
+	margin: 0 auto;
 	padding: 0 30px 0 15px;
 	max-width: 100vw;
 	min-width: 300px;
@@ -543,17 +496,10 @@ main {
 			font-size: 10px;	
 		}
 	}
-}
-
-.popup-signin {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 
 	&__title {
 		margin-bottom: 30px;
 		font-size: 24px;
-		text-align: center;
 		font-weight: bold;
 
 		@media (max-width: 600px) {
@@ -568,6 +514,13 @@ main {
 			font-size: 16px;
 		}
 	}
+}
+
+.popup-signin {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
 
 	&__input {
 		margin: 0 auto 20px;
@@ -663,6 +616,181 @@ main {
 	}
 }
 
+.popup-cart {
+	
+	&__order {
+		margin: 0 auto;
+		padding: 8px;
+		width: 150px;
+		display: none;
+		font-size: 18px;
+		line-height: 1;
+		color: white;
+		border-radius: 10px;
+		background: linear-gradient(180deg, rgb(20, 92, 14) 10%, rgb(9, 121, 28) 90%);
+		&:hover {
+			color: rgb(250, 239, 176);
+			background: linear-gradient(180deg, rgb(20, 92, 14) 10%, rgb(12, 58, 20) 90%);
+		}
+		&:active {
+			background: linear-gradient(180deg, rgb(20, 92, 14) 10%, rgb(9, 121, 28) 90%);
+		}
+
+		@media (max-width: 700px) {
+			width: 120px;
+			font-size: 14px;
+		}
+		@media (max-width: 380px) {
+			padding: 4px;
+			width: 110px;
+			font-size: 12px;
+		}
+	}
+
+	&__summ {
+		display: none;
+	}
+}
+
+.popup-buy {
+	text-indent: 25px;
+
+	&__group {
+		margin-bottom: 30px;
+		display: none;
+	}
+
+	&__image {
+		height: 220px;
+
+		@media (max-width: 700px) {
+			width: 200px;
+		}
+		@media (max-width: 380px) {
+			width: 185px;
+		}
+	}
+
+	&__text-box {
+		margin-top: 20px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__item {
+		margin-left: 15px;
+		padding: 7px 0 2px;
+		font-size: 20px;
+		color: #000409;
+		text-indent: 0;
+		border-bottom: 1px solid #000409;
+
+		@media (max-width: 700px) {
+			font-size: 16px;
+		}
+		@media (max-width: 380px) {
+			font-size: 12px;
+			line-height: 1;
+		}
+	}
+
+	&__button-box {
+		margin: 20px auto 0;
+		display: flex;
+		font-size: 26px;
+		font-weight: bold;
+		text-indent: 0;
+
+		@media (max-width: 700px) {
+			font-size: 22px;
+		}
+		@media (max-width: 380px) {
+			margin: 10px auto 0;
+			font-size: 18px;
+		}
+	}
+
+	&__button {
+		display: block;
+		width: 40px;
+		text-align: center;
+		color: white;
+		border: 1px solid black;
+		border-radius: 20%;
+		background: linear-gradient(180deg, rgba(2,0,36,1) 10%, rgba(9,88,121,1) 90%);
+		cursor: pointer;
+		&:hover {
+			color: #dad877;
+			box-shadow: 0 0 4px 2px #dad877;
+		}
+		&:active {
+			background: linear-gradient(180deg, rgba(2,0,36,1) 30%, rgba(9,88,121,1) 70%);
+		}
+
+		@media (max-width: 700px) {
+			width: 30px;
+		}
+		@media (max-width: 380px) {
+			width: 25px;
+		}
+	}
+
+	&__number {
+		width: 40px;
+		font-size: 16px;
+		text-align: center;
+		font-weight: bold;
+		text-indent: 0;
+
+		@media (max-width: 700px) {
+			width: 30px;
+			font-size: 14px;
+		}
+	}
+
+	&__accept {
+		margin: 15px auto 10px;
+		padding: 3px;
+		display: block;
+		font-size: 17px;
+		text-indent: 0;
+		border: 1px solid grey;
+	}
+
+	&__delete {
+		margin: 20px auto 10px;
+		display: block;
+		text-indent: 0;
+
+		@media (max-width: 380px) {
+			margin: 10px auto 0;
+		}
+	}
+
+	&__delete-button {
+		@media (max-width: 700px) {
+			width: 25px;
+		}
+		@media (max-width: 380px) {
+			width: 20px;
+		}
+	}
+	
+	&__summ {
+		margin-bottom: 10px;
+		font-size: 20px;
+	}
+
+	&__result {
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	&__currency {
+		margin-left: -190px;
+		text-indent: 0;
+	}
+}
 
 .popup-open {
 	visibility: visible;

@@ -12,7 +12,6 @@ function browsersync () {
 		}
 	});
 }
-
 	
 function images () {
 	return src('app/img/**/*')
@@ -30,7 +29,6 @@ function images () {
 	.pipe(dest('app/img'))
 }
 	
-
 function sсripts () {
 	return src([
 		'node_modules/jquery/app/jquery.js',
@@ -41,6 +39,8 @@ function sсripts () {
 		'app/js/goods.js',
 		'app/js/general.js',
 		'app/js/popup.js',
+		'app/js/cart.js',
+		'app/js/header.js',
 		'app/js/item/card.js',
 	])
 
@@ -57,6 +57,8 @@ function item_sсripts () {
 		'app/js/general.js',
 		'app/js/item-list.js',
 		'app/js/item/card.js',
+		'app/js/popup.js',
+		'app/js/cart.js',
 		'app/js/item/okzoom.js',
 		'app/js/item/zoom.js',
 		'app/js/item/sliders.js',
@@ -73,6 +75,8 @@ function catalog_sсripts () {
 		'node_modules/jquery/app/jquery.js',
 		'app/js/item-list.js',
 		'app/js/goods.js',
+		'app/js/popup.js',
+		'app/js/cart.js',
 		'app/js/catalog-bar.js',
 		'app/js/search.js',
 		'app/js/general.js',

@@ -95,10 +95,21 @@
 			</header>
 			<!-- /.header -->
 
-			<main>
+			<main class="signup">
 
-
-
+				<div class="signup__wrapper">
+					<h2 class="signup__title">Регистрация</h2>
+					<form class="signup__form signup-form">
+							<input class="signup-form__input" type="text" placeholder="Имя" required>
+							<input class="signup-form__input" type="text" placeholder="Фамилия" required>
+							<input class="signup-form__input" type="tel" placeholder="Телефон" required>
+							<input class="signup-form__input" type="text" placeholder="Email" required>
+							<div class="signup-form__button-box">
+								<button type="submit" class="signup-form__button">Зарегистрироваться</button>
+								<a href="#sign_in" class="signup-form__button popup-link">Войти в аккаунт</a>
+							</div>
+					</form>
+				</div>
 			</main>
 
 			<footer class="footer">
@@ -158,6 +169,24 @@
 			</footer>
 			<!-- /.footer -->
 
+			<div class="popup" id="sign_in">
+				<div class="popup__wrapper">
+					<div class="popup__content popup-signin">
+						<a href="#" class="popup__close close-popup">Х</a>
+						<h2 class="popup__title">Уже есть аккаунт? <br> Авторизуйтесь</h2>
+						<form class="popup-signin__form">
+							<input class="popup-signin__input" type="tel" placeholder="Номер телефона" required>
+							<input class="popup-signin__input" type="password" placeholder="Пароль" required>
+							<div class="popup-signin__button-group">
+								<button type="submit" class="popup-signin__button">Войти</button>
+								<input type="button" href="signup.html" class="popup-signin__button" value="Регистрация">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- /.popup#sign_in -->
+
 		</div>
 		<!-- /.wrapper -->
 
@@ -178,6 +207,12 @@
 			})();
 		</script>
 		<!-- /GetButton.io widget -->
+		<script type="text/javascript" src="js/popup.js"></script>
+		<script>
+			document.querySelector('.logo__image').onclick = () => {
+				location.href = 'index.html';
+			};
+		</script>
 
 	</body>
 

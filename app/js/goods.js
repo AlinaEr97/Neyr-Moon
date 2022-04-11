@@ -1,3 +1,5 @@
+// Рендеринг каталога товаров
+
 let goods_wrapper = document.getElementById ("goods");
 
 class Goods {
@@ -14,8 +16,8 @@ class Goods {
 							<br> ${brend}</p>
 							<p class="hide-text__item search-good"><span class="hide-text__item_titles">Материал:</span> 
 							<br>${material}</p>
-							<a class="hide-text__item_about" href="item.html#${id}" target="_blank">Подробнее >></a>
-							<a class="hide-text__item_add" href='#'></a>
+							<a class="hide-text__item_about" href="item.html#${id}">Подробнее >></a>
+							<a href="#cart" class="hide-text__item_add popup-link" data-cart="${id}"></a>
 						</div>
 						<!-- /.hide-text -->
 
@@ -43,5 +45,4 @@ class Goods {
 const goodsPage = new Goods();
 goodsPage.render();
 
-// Рендеринг каталога товаров
 

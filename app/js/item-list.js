@@ -1,3 +1,5 @@
+// Список товаров
+
 const catalog = [
 	{
 		id: 'salt1',
@@ -31,7 +33,7 @@ const catalog = [
 		path_link: 'catalog.html#table_link',
 		brend: 'My Smart Home',
 		brend_img: 'img/brends/brend2.jpg',
-		material: 'ABS-пластик, медь, фольгированное покрытие',
+		material: 'ABS-пластик, медь',
 		classes: 'distance usb table',
 		img: 'img/goods/good2.avif',
 		img1: 'img/goods/good2-1.avif',
@@ -493,5 +495,3 @@ const catalog = [
 		equipment: 'Крепление, светильник, провод с выключателем',
 	},
 ]
-
-// Список товаров

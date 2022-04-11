@@ -1,13 +1,4 @@
-let $page = $('html, body, .wrapper, header, .header__block, .header-nav');
-$('a[href*="#"]').click(function() {
-   $page.animate({
-      scrollTop: $($.attr(this, 'href')).offset().top - 200
-	}, 800);
-   return false;
-});
-
-// Плавный переход по якорям из хедера
-
+// Показать-скрыть меню в мобильной версии
 
 $(function() {
 	$(".menu-burger").on("click", function() {
@@ -15,15 +6,15 @@ $(function() {
 	});
 });
 
-// Показать-скрыть меню в мобильной версии
 
+// Логотип-ссылка на главную страницу сайта
 
 $('.logo__image').on('click', () => {
 	location.href = 'index.html';
 });
 
-// Логотип-ссылка на главную страницу сайта
 
+// Фильтр товаров в боковом меню
 
 let threed = document.querySelectorAll('.threed');
 let lamp = document.querySelectorAll('.lamp');
@@ -177,6 +168,4 @@ $(function () {
 		}
 	});
 });
-
-// Фильтр товаров в боковом меню
 

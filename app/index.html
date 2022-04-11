@@ -557,12 +557,11 @@
 			</footer>
 			<!-- /.footer -->
 
-
 			<div class="popup" id="sign_in">
 				<div class="popup__wrapper">
 					<div class="popup__content popup-signin">
 						<a href="#" class="popup__close close-popup">Х</a>
-						<h2 class="popup-signin__title">Уже есть аккаунт? <br> Авторизуйтесь</h2>
+						<h2 class="popup__title">Уже есть аккаунт? <br> Авторизуйтесь</h2>
 						<form class="popup-signin__form">
 							<input class="popup-signin__input" type="tel" placeholder="Номер телефона" required>
 							<input class="popup-signin__input" type="password" placeholder="Пароль" required>
@@ -578,9 +577,13 @@
 
 			<div class="popup" id="cart">
 				<div class="popup__wrapper">
-					<div class="popup__content">
-						<h2>Выбранные товары</h2>
-						<div class="popup-cart"></div>
+					<div class="popup__content popup-cart">
+						<a href="#" class="popup__close close-popup">Х</a>
+						<h2 class="popup__title">Выбранные товары</h2>
+						<div class="popup-cart__buy popup-buy"></div>
+						<p class="popup-cart__summ">Общая сумма:</p>
+						<span class="popup-cart__result"></span>
+						<button class="popup-cart__order">Перейти к оформлению</button>
 					</div>
 				</div>
 			</div>

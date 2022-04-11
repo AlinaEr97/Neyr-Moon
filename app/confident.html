@@ -99,7 +99,7 @@
 
 				<div class="acc-string__wrapper">
 
-					<a href="#signin" class="acc-string__item acc-string__login">Вход</a>
+					<a href="#sign_in" class="acc-string__item acc-string__login popup-link">Войти</a>
 
 					<a href="signup.html" class="acc-string__item acc-string__registration">Регистрация</a>
 
@@ -107,7 +107,7 @@
 
 					<div class="acc-string__working-time">Пн-Вс: 9:00-21:00</div>
 
-					<a href="#cart" class="acc-string__item acc-string__basket"></a>
+					<a href="#cart" class="acc-string__item acc-string__basket popup-link"></a>
 
 				</div>
 				<!-- /.acc-string__wrapper -->
@@ -247,18 +247,19 @@
 							</a>
 						</div>
 						<div class="footer__title">Мой кабинет</div>
-						<a href="#sign_in" class="footer__link">Авторизация</a>
-						<a href="order.html" class="footer__link">Мои заказы</a>
+						<a href="#sign_in" class="footer__link popup-link">Авторизация</a>
+						<a href="#sign_in" class="footer__link popup-link">Мои заказы</a>
+						<a href="#cart" class="footer__link popup-link">Корзина</a>
 					</div>
 
 					<div class="footer__item">
 						<div class="footer__title">Информация</div>
-						<a href="delivery.html" class="footer__link">Доставка в СПб</a>
-						<a href="delivery.html" class="footer__link">Доставка по России</a>
-						<a href="delivery.html#pickup" class="footer__link">Самовывоз</a>
-						<a href="guarantee.html" class="footer__link">Возврат товара</a>
-						<a href="payment.html" class="footer__link">Способы оплаты</a>
-						<a href="index.html#about" class="footer__link">О нас</a>
+						<a href="#" class="footer__link">Доставка в СПб</a>
+						<a href="#" class="footer__link">Доставка по России</a>
+						<a href="#" class="footer__link">Самовывоз</a>
+						<a href="#" class="footer__link">Возврат товара</a>
+						<a href="#" class="footer__link">Способы оплаты</a>
+						<a href="#" class="footer__link">О нас</a>
 						<a href="confident.html" class="footer__link">Политика <br> конфиденциальности</a>
 					</div>
 
@@ -269,7 +270,7 @@
 						<a href="#" class="footer__link">+7 (927) 700-81-45</a>
 						<a href="#" class="footer__link">+7 (800) 123-45-67</a>
 						<div class="footer__cards"></div>
-						<a href="#backcall" class="footer__back-call">Заказать обратный звонок</a>
+						<a href="#" class="footer__back-call">Заказать обратный звонок</a>
 					</div>
 
 				</div>
@@ -277,6 +278,35 @@
 
 			</footer>
 			<!-- /.footer -->
+
+			<div class="popup" id="sign_in">
+				<div class="popup__wrapper">
+					<div class="popup__content popup-signin">
+						<a href="#" class="popup__close close-popup">Х</a>
+						<h2 class="popup__title">Уже есть аккаунт? <br> Авторизуйтесь</h2>
+						<form class="popup-signin__form">
+							<input class="popup-signin__input" type="tel" placeholder="Номер телефона" required>
+							<input class="popup-signin__input" type="password" placeholder="Пароль" required>
+							<div class="popup-signin__button-group">
+								<button type="submit" class="popup-signin__button">Войти</button>
+								<input type="button" href="signup.html" class="popup-signin__button" value="Регистрация">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- /.popup#sign_in -->
+
+			<div class="popup" id="cart">
+				<div class="popup__wrapper">
+					<div class="popup__content popup-cart">
+						<a href="#" class="popup__close close-popup">Х</a>
+						<h2 class="popup__title">Выбранные товары</h2>
+						<div class="popup-cart__buy popup-buy"></div>
+					</div>
+				</div>
+			</div>
+			<!-- /.popup#cart -->
 
 		</div>
 		<!-- /.wrapper -->
@@ -300,6 +330,7 @@
 		<!-- /GetButton.io widget -->
 		<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 		<script type="text/javascript" src="js/general.js"></script>
+		<script type="text/javascript" src="js/popup.js"></script>
 
 	</body>
 

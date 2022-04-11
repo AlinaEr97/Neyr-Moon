@@ -1,0 +1,106 @@
+.signup {
+	margin-top: 150px;
+	flex-grow: 1;
+
+	@media (max-width: 1000px) {
+		margin-top: 120px;
+	}
+	@media (max-width: 700px) {
+		margin-top: 100px;
+	}
+	@media (max-width: 500px) {
+		margin-top: 80px;
+	}
+
+	&__wrapper {
+		margin: 0 auto 30px;
+	}
+
+	&__title {
+		margin: 20px 0;
+		font-size: 22px;
+		font-weight: bold;
+		text-align: center;
+		color: white;
+
+		@media (max-width: 700px) {
+			font-size: 18px;
+		}
+		@media (max-width: 450px) {
+			margin: 10px 0;
+			font-size: 14px;
+		}
+	}
+}
+
+.signup-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	&__input {
+		margin-bottom: 20px;
+		padding: 5px;
+		display: block;
+		font-size: 20px;
+		text-align: center;
+		color: white;
+		background:#000409;
+		border: 1px solid rgb(161, 161, 168);
+		&:focus {
+			background: linear-gradient(180deg, #01142b, #000409, #031730);
+			box-shadow: 0 0 5px 2px #e9e491;
+		}
+
+		@media (max-width: 700px) {
+			margin-bottom: 15px;
+			padding: 3px;
+			font-size: 16px;
+		}
+		@media (max-width: 450px) {
+			margin-bottom: 10px;
+			padding: 2px;
+			font-size: 12px;
+		}
+	}
+	&__button-box {
+		margin: 0 auto;
+		display: flex;
+	}
+
+	&__button {
+		padding: 10px;
+		font-size: 18px;
+		color: white;
+		line-height: 1;
+		background: linear-gradient(180deg, #01142b, #000409, #031730);
+		border: 1px solid rgb(161, 161, 168);
+		&:hover {
+			color: #faf0b5;
+			box-shadow: 0 0 5px 3px #dad877;
+			transition: all .3s;
+		}
+		&:active {
+			border: 1px solid #0d0d0f;
+			background: linear-gradient(180deg, #01142b, #000409);
+			transition: all .1s;
+		}
+
+		&:first-child {
+			margin-right: 20px;
+
+			@media (max-width: 450px) {
+				margin-right: 10px;
+			}
+		}
+
+		@media (max-width: 700px) {
+			padding: 8px;
+			font-size: 14px;
+		}
+		@media (max-width: 450px) {
+			padding: 5px;
+			font-size: 11px;
+		}
+	}
+}

@@ -80,26 +80,22 @@
 	&__title {
 
 		&_item {
-			margin: 0 0 0 30px;
-			width: 195px;
+			margin: 0 30px 0 0;
 			font-size: 20px;
 			font-weight: normal;
 			color: #000409;
 
 			@media (max-width: 1200px) {
-				padding-top: 3px;
 				font-size: 16px;
 			}
 			@media (max-width: 1000px) {
-				margin: 0;
-			}
-			@media (max-width: 880px) {
-				width: 190px;
+				margin: 0 20px 0 0;
 			}
 			@media (max-width: 760px) {
-				margin: 0;
-				padding-top: 4px;
 				font-size: 14px;
+			}
+			@media (max-width: 640px) {
+				width: 110px;
 			}
 			@media (max-width: 500px) {
 				padding-top: 1px;
@@ -114,68 +110,62 @@
 	}
 
 	&__arrow-item {
-		margin: 10px 0 0 -18px;
+		margin: 10px 0 0 -5px;
 		border: 7px solid transparent; 
 		border-top: 7px solid #000409;
 		transition: all 0.1s;
 
 		@media (max-width: 1200px) {
-			margin: 10px 0 0 -60px;
 			border: 5px solid transparent; 
 			border-top: 5px solid #000409;
 		}
 		@media (max-width: 760px) {
-			margin: 10px 0 0 -80px;
+			margin: 8px 0 0 -10px;
 			border: 5px solid transparent; 
 			border-top: 5px solid #000409;
 		}
-		@media (max-width: 500px) {
-			margin: 8px 0 0 -75px;
-		}
 		@media (max-width: 450px) {
-			margin: 8px 0 0 -83px;
+			margin: 8px 0 0 -15px;
 		}
 		@media (max-width: 380px) {
-			margin: 7px 0 0 -93px;
+			margin: 8px 0 0 -25px;
 		}
 
 		&_active {
-			margin: 0 0 30px -18px;
+			margin: 0 0 30px -5px;
 			border: 7px solid transparent; 
 			border-bottom: 7px solid #000409;
 
 			@media (max-width: 1200px) {
-				margin: 0 0 5px -60px;
 				border: 5px solid transparent; 
 				border-bottom: 5px solid #000409;
 			}
 			@media (max-width: 760px) {
-				margin: 0 0 0 -80px;
+				margin: 0 0 0 -10px;
 				border: 5px solid transparent; 
 				border-bottom: 5px solid #000409;
 			}
-			@media (max-width: 500px) {
-				margin: 0 0 0 -75px;
-			}
 			@media (max-width: 450px) {
-				margin: 0 0 0 -83px;
+				margin: 0 0 0 -15px;
 			}
 			@media (max-width: 380px) {
-				margin: 0 0 0 -93px;
+				margin: 0 0 0 -25px;
 			}
 		}
 	}
 
 	&__list-item {
-		margin-top: -14px;
-		padding: 5px;
+		margin-top: 0px;
+		padding: 10px;
 		display: none;
 		border-radius: 10px;
 		background: rgb(255, 254, 246);
 		box-shadow: 0 0 15px -2px rgba(222, 231, 121, 0.945);
 
-		@media (max-width: 1200px) {
-			margin-top: 14px;
+		
+		@media (max-width: 760px) {
+			margin-top: 15px;
+			padding: 5px;
 		}
 
 		&_active {
@@ -186,6 +176,7 @@
 	&__item {
 
 		&_item {
+			margin-bottom: 10px;
 			border: none;
 			&:last-child {
 				border: none;
@@ -194,31 +185,22 @@
 		
 	}
 
-	&__radio-btn_item:checked+&__radio_item {
+	&__path {
+		padding: 5px 0;
+		font-size: 17px;
 		color: #000409;
-		background: rgb(233, 233, 146);
-	}
-
-	&__radio {
-
-		&_item {
-			padding: 5px 0;
-			font-size: 17px;
-			color: #000409;
-			&:hover {
-				color: rgb(231, 203, 77);
-				text-shadow: 0 1px 0 rgba(37, 35, 35, 0.61);
-			}
-
-			@media (max-width: 1000px) {
-				font-size: 15px;
-			}
-			@media (max-width: 600px) {
-				font-size: 14px;
-			}
-			@media (max-width: 450px) {
-				font-size: 12px;
-			}
+		&:hover {
+			color: rgb(231, 203, 77) !important;
+			text-shadow: 0 1px 0 rgba(37, 35, 35, 0.61);
+		}
+		@media (max-width: 1000px) {
+			font-size: 15px;
+		}
+		@media (max-width: 600px) {
+			font-size: 14px;
+		}
+		@media (max-width: 450px) {
+			font-size: 12px;
 		}
 	}
 }
@@ -238,24 +220,26 @@
 
 	&__list {
 		display: flex;
-		justify-content: space-between;
 	}
 
 	&__button {
-		margin: 0 20px;
-
+		margin: 0 30px;
+		position: relative;
+		display: block;
+		cursor: pointer;
+		
 		@media (max-width: 1200px) {
 			font-size: 16px;
+		}
+		@media (max-width: 860px) {
+			margin: 0 15px;
 		}
 		@media (max-width: 760px) {
 			font-size: 14px;
 			text-align: center;
 		}
-		@media (max-width: 680px) {
-			margin: 0 10px;
-		}
 		@media (max-width: 600px) {
-			margin: 0 5px;
+			margin: 0 10px;
 			font-size: 12px;
 		}
 		@media (max-width: 530px) {
@@ -264,9 +248,9 @@
 	}
 
 	&__links {
+		position: absolute;
 		margin-top: 10px;
 		padding: 5px;
-		position: relative;
 		z-index: 3;
 		display: none;
 		border-radius: 10px;
@@ -276,6 +260,7 @@
 
 	&__link {
 		display: block;
+		width: 120px;
 		font-size: 17px;
 		text-shadow: 1px 1px 0 #fff;
 		cursor: pointer;
@@ -287,7 +272,6 @@
 
 	&__link-button {
 		padding: 5px;
-		width: 115px;
 		display: block;
 		line-height: 1.4em;
 		transition: all 0.5s;

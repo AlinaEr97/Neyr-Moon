@@ -10880,6 +10880,8 @@ if ( typeof noGlobal === "undefined" ) {
 return jQuery;
 } );
 
+// Список товаров
+
 const catalog = [
 	{
 		id: 'salt1',
@@ -10913,7 +10915,7 @@ const catalog = [
 		path_link: 'catalog.html#table_link',
 		brend: 'My Smart Home',
 		brend_img: 'img/brends/brend2.jpg',
-		material: 'ABS-пластик, медь, фольгированное покрытие',
+		material: 'ABS-пластик, медь',
 		classes: 'distance usb table',
 		img: 'img/goods/good2.avif',
 		img1: 'img/goods/good2-1.avif',
@@ -11376,7 +11378,8 @@ const catalog = [
 	},
 ]
 
-// Список товаров
+// Рендеринг каталога товаров
+
 let goods_wrapper = document.getElementById ("goods");
 
 class Goods {
@@ -11393,8 +11396,8 @@ class Goods {
 							<br> ${brend}</p>
 							<p class="hide-text__item search-good"><span class="hide-text__item_titles">Материал:</span> 
 							<br>${material}</p>
-							<a class="hide-text__item_about" href="item.html#${id}" target="_blank">Подробнее >></a>
-							<a class="hide-text__item_add" href='#'></a>
+							<a class="hide-text__item_about" href="item.html#${id}">Подробнее >></a>
+							<a href="#cart" class="hide-text__item_add popup-link" data-cart="${id}"></a>
 						</div>
 						<!-- /.hide-text -->
 
@@ -11422,7 +11425,306 @@ class Goods {
 const goodsPage = new Goods();
 goodsPage.render();
 
-// Рендеринг каталога товаров
+
+
+const popupLinks = document.querySelectorAll('.popup-link');
+const body = document.querySelector('body');
+const lockPadding = document.querySelectorAll('.lock-padding');
+const curentPopup = document.querySelector('.popup__content');
+
+let unlock = true;
+
+const timeout = 800;
+
+if (popupLinks.length > 0) {
+	for (let i = 0; i < popupLinks.length; i++) {
+		const popupLink = popupLinks[i];
+		popupLink.addEventListener("click", function(e) {
+			const popupName = popupLink.getAttribute('href').replace('#', '');
+			const curentPopup = document.getElementById(popupName);
+			popupOpen(curentPopup);
+			e.preventDefault();
+		});
+	}
+}
+
+const popupCloseIcon = document.querySelectorAll('.close-popup');
+if (popupCloseIcon.length > 0) {
+	for (let i = 0; i < popupCloseIcon.length; i++) {
+		const el = popupCloseIcon[i];
+		el.addEventListener("click", function(e) {
+			popupClose(el.closest('.popup'));
+			e.preventDefault();
+		});
+	}
+}
+
+function popupOpen(curentPopup) {
+	if (curentPopup && unlock) {
+		const popupActive = document.querySelector('.popup-open');
+		if (popupActive) {
+			popupClose (popupActive, false);
+		}
+		else { 
+			bodyLock();
+		}
+		curentPopup.classList.add('popup-open');
+		curentPopup.addEventListener("click", function(e) {
+			if (!e.target.closest('.popup__content')) {
+				popupClose(e.target.closest('.popup'));
+			}
+		});
+	}
+}
+function popupClose(popupActive, doUnlock = true) {
+	if (unlock) {
+		popupActive.classList.remove('popup-open');
+		if (doUnlock) {
+			bodyUnlock();
+		}
+	}
+}
+
+function bodyLock() {
+	const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+
+	if (lockPadding.length > 0) {
+		for (let i = 0; i < lockPadding.length; i++) {
+			const el = lockPadding[i];
+			el.style.paddingRight = lockPaddingValue;
+		}
+	}
+	body.style.paddingRight = lockPaddingValue;
+	body.classList.add('lock');
+
+	unclock = false;
+	setTimeout(function () {
+		unlock = true;
+	}, timeout);
+}
+
+function bodyUnlock() {
+	setTimeout(function () {
+		if (lockPadding.length > 0) {
+			for (let i = 0; i < lockPadding.length; i++) {
+				const el = lockPadding[i];
+				el.style.paddingRight = '0px';
+			}
+		}
+		body.style.paddingRight = '0px';
+		body.classList.remove('lock');
+	}, timeout);
+
+	unlock = false;
+	setTimeout(function() {
+		unlock = true;
+	}, timeout);
+}
+
+document.addEventListener('keydown', function (e) {
+	if (e.which === 27) {
+		const popupActive = document.querySelector('.popup-open');
+		popupClose(popupActive);
+	}
+});
+
+(function () {
+	if (!Element.prototype.closest) {
+		Element.prototype.closest = function (css) {
+			var node = this;
+			while (node) {
+				if (node.matches(css)) return node;
+				else node = node.parrentElement;
+			}
+			return null;
+		};
+	}
+})();
+
+(function () {
+	if (!Element.prototype.matches) {
+		Element.prototype.matches = Element.prototype.matchesSelector ||
+		Element.prototype.webkitMatchesSelector ||
+		Element.prototype.mozMatchesSelector ||
+		Element.prototype.msMatchesSelector;
+	}
+})();
+
+//Рендеринг корзины товаров
+
+let cart_wrapper = document.querySelector(".popup-buy");
+
+class Cart {
+	render() {
+		let CartCatalog = '';
+		catalog.forEach(({id, img, type, name, new_price}) => {
+
+			CartCatalog += `
+			<div class="popup-buy__group" data-price="${new_price}" data-cart="${id}">
+
+				<img class="popup-buy__image" src="${img}" alt="товар">
+
+				<div class="popup-buy__text-box">
+					<span class="popup-buy__item">${type} ${name}</span>
+					<span class="popup-buy__item">${new_price} руб.</span>
+
+					<div class="popup-buy__button-box"> 
+						<span class="popup-buy__button" id="button-plus" data-id="${id}">+</span>
+						<input type="text" class="popup-buy__number" data-price="${new_price}" data-id="${id}" value="1">
+						<span class="popup-buy__button" id="button-minus" data-id="${id}">-</span>
+					</div>
+
+					<div>
+						<button class="popup-buy__accept" data-cart="${id}">Подтвердить</button>
+						<button class="popup-buy__delete" data-cart="${id}">
+							<img class="popup-buy__delete-button" src="img/popup/delete.png" >
+						</button>
+					</div>
+
+					<p class="popup-buy__summ">Выбрано на сумму:</p>
+					<input type="text" class="popup-buy__result" data-price="${new_price}" value="${new_price}">
+				</div>
+				<!-- /.popup-buy__text-box -->
+
+		
+
+			</div>
+			<!-- /.popup-buy__group -->
+			`;
+		});
+
+		cart_wrapper.innerHTML += CartCatalog;
+	}
+}
+
+const cartPopup = new Cart();
+cartPopup.render();
+
+
+// Калькулятор цены
+
+let number = document.querySelectorAll(".popup-buy__number");
+let summ_item = document.querySelectorAll(".popup-buy__result");
+let summ_cart = document.querySelector(".popup-cart__result");
+let cart_item_list = document.querySelectorAll (".popup-buy__group");
+
+function Result_item() {
+	for (let i = 0; i < number.length; i++) {
+		for (let j = 0; j < summ_item.length; j++) {
+			if (summ_item[j].getAttribute('data-price') == number[i].getAttribute('data-price')) {
+				summ_item[j].value = number[i].getAttribute('data-price')*number[i].value + " руб.";
+			}
+		}
+	}
+}
+
+function Result() {
+	let sum = 0;
+	for (let i = 0; i < summ_item.length; i++) {
+		sum = sum + parseInt(summ_item[i].value);
+		for (let j = 0; j < cart_item_list.length; j++) {
+			if (cart_item_list[j].hasAttribute("data-display") && cart_item_list[j].getAttribute("data-price") == summ_item[i].getAttribute("data-price")) {
+				summ_cart.innerHTML = sum + " руб.";
+				
+			}
+		}
+	}
+}
+
+
+// Управление количеством выбранных товаров в корзине
+
+let plus = document.querySelectorAll("#button-plus");
+let minus = document.querySelectorAll("#button-minus");
+let number_button = document.querySelectorAll(".popup-buy__button");
+let delete_item = document.querySelectorAll(".popup-buy__delete");
+let accept = document.querySelectorAll(".popup-buy__accept");
+let add_button = document.querySelectorAll(".hide-text__item_add");
+
+
+
+function Accept() {
+	for (let i = 0; i < accept.length; i++) {
+		accept[i].removeAttribute('disabled');
+		accept[i].onclick = () => {
+			Result_item();
+			Result();
+			if (cart_item_list[i].getAttribute('data-cart') == accept[i].getAttribute('data-cart')) {
+				accept[i].setAttribute('disabled', 'true');
+			}
+			if (number[i].value == "0" && number[i].getAttribute('data-id') == accept[i].getAttribute('data-cart')) {
+				cart_item_list[i].style.display = "none";
+			}
+			
+		}
+	}	
+}
+
+for (let i = 0; i < plus.length; i++) {
+	plus[i].onclick = () => {
+		if (number[i].getAttribute('data-id') == plus[i].getAttribute('data-id')) {
+			number[i].value++;
+			Accept();
+		}	
+	}
+}
+
+for (let i = 0; i < minus.length; i++) {
+	minus[i].onclick = () => {
+		if (number[i].value >= 1 && number[i].getAttribute('data-id') == minus[i].getAttribute('data-id')) {
+			number[i].value--;	
+			Accept();
+		}
+		if (number[i].value == "0" && number[i].getAttribute('data-id') == minus[i].getAttribute('data-id')) {	
+			for (let k = 0; k < cart_item_list.length; k++) {
+				if (cart_item_list[k].getAttribute('data-cart') == number[j].getAttribute('data-id')) {
+					number[j].value;	
+				}
+			}
+		}
+	}
+}
+
+for (let i = 0; i < number.length; i++) {
+	number[i].onclick = () => {
+		Accept();
+	}
+}
+
+
+// Добавление товаров из каталога в корзину и удаление из корзины
+
+
+for (let i = 0; i < add_button.length; i++) {
+	add_button[i].onclick = () => {
+		for (let j = 0; j < cart_item_list.length; j++) {
+			if (cart_item_list[j].getAttribute('data-cart') == add_button[i].getAttribute('data-cart')) {
+				cart_item_list[j].style.display = "flex";
+				cart_item_list[j].setAttribute("data-display", "true");
+				document.querySelector(".popup-cart__order").style.display = "block";
+				document.querySelector(".popup-cart__summ").style.display = "block";
+			}	
+		}
+		Result_item();
+		Result();
+	}
+}
+
+for (let i = 0; i < delete_item.length; i++) {
+	delete_item[i].onclick = () => {
+		if (number[i].getAttribute('data-id') == delete_item[i].getAttribute('data-cart')) {
+			cart_item_list[i].setAttribute("data-display","false");
+			
+			if (cart_item_list[i].getAttribute("data-display") == "false") {
+				number[i].value = "0";
+				if (number[i].value == "0" && number[i].getAttribute('data-id') == accept[i].getAttribute('data-cart')) {
+					
+				}
+			}
+		}
+	}
+}
+
 
 
 $(function() {
@@ -11493,16 +11795,7 @@ document.querySelector("#search").oninput = function Searching() {
 
 
 
-let $page = $('html, body, .wrapper, header, .header__block, .header-nav');
-$('a[href*="#"]').click(function() {
-   $page.animate({
-      scrollTop: $($.attr(this, 'href')).offset().top - 200
-	}, 800);
-   return false;
-});
-
-// Плавный переход по якорям из хедера
-
+// Показать-скрыть меню в мобильной версии
 
 $(function() {
 	$(".menu-burger").on("click", function() {
@@ -11510,15 +11803,15 @@ $(function() {
 	});
 });
 
-// Показать-скрыть меню в мобильной версии
 
+// Логотип-ссылка на главную страницу сайта
 
 $('.logo__image').on('click', () => {
 	location.href = 'index.html';
 });
 
-// Логотип-ссылка на главную страницу сайта
 
+// Фильтр товаров в боковом меню
 
 let threed = document.querySelectorAll('.threed');
 let lamp = document.querySelectorAll('.lamp');
@@ -11672,8 +11965,6 @@ $(function () {
 		}
 	});
 });
-
-// Фильтр товаров в боковом меню
 
 
 $(function () {
