@@ -10880,6 +10880,8 @@ if ( typeof noGlobal === "undefined" ) {
 return jQuery;
 } );
 
+// Скрыть-показать каталог категорий сбоку 
+
 $(function() {
 	$(".catalog__arrow").on("click", function() {
 		$(this).toggleClass('catalog__arrow_unactive');
@@ -10887,7 +10889,7 @@ $(function() {
 	});
 });
 
-// Скрыть-показать каталог категорий сбоку 
+
 
 new Swiper (".sales-slider", {
 	//пагинация
@@ -11916,12 +11918,21 @@ const cartPopup = new Cart();
 cartPopup.render();
 
 
-// Калькулятор цены
+// Переменные для корзины
 
 let number = document.querySelectorAll(".popup-buy__number");
 let summ_item = document.querySelectorAll(".popup-buy__result");
 let summ_cart = document.querySelector(".popup-cart__result");
 let cart_item_list = document.querySelectorAll (".popup-buy__group");
+let plus = document.querySelectorAll("#button-plus");
+let minus = document.querySelectorAll("#button-minus");
+let number_button = document.querySelectorAll(".popup-buy__button");
+let delete_item = document.querySelectorAll(".popup-buy__delete");
+let accept = document.querySelectorAll(".popup-buy__accept");
+let add_button = document.querySelectorAll(".hide-text__item_add");
+
+
+// Калькулятор цены
 
 function Result_item() {
 	for (let i = 0; i < number.length; i++) {
@@ -11950,15 +11961,6 @@ function Result() {
 
 
 // Управление количеством выбранных товаров в корзине
-
-let plus = document.querySelectorAll("#button-plus");
-let minus = document.querySelectorAll("#button-minus");
-let number_button = document.querySelectorAll(".popup-buy__button");
-let delete_item = document.querySelectorAll(".popup-buy__delete");
-let accept = document.querySelectorAll(".popup-buy__accept");
-let add_button = document.querySelectorAll(".hide-text__item_add");
-
-
 
 function Accept() {
 	for (let i = 0; i < accept.length; i++) {
@@ -12010,7 +12012,6 @@ for (let i = 0; i < number.length; i++) {
 
 
 // Добавление товаров из каталога в корзину и удаление из корзины
-
 
 for (let i = 0; i < add_button.length; i++) {
 	add_button[i].onclick = () => {

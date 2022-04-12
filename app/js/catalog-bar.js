@@ -1,3 +1,5 @@
+// Скрыть-показать каталог категорий сбоку 
+
 $(function() {
 	$(".catalog__arrow").on("click", function() {
 		$(this).toggleClass('catalog__arrow_unactive');
@@ -5,4 +7,4 @@ $(function() {
 	});
 });
 
-// Скрыть-показать каталог категорий сбоку 
+

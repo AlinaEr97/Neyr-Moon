@@ -1244,7 +1244,38 @@ main {
   }
 }
 .popup-cart__summ {
+  margin-bottom: 5px;
   display: none;
+  font-size: 18px;
+  font-weight: bold;
+  text-indent: 25px;
+}
+@media (max-width: 700px) {
+  .popup-cart__summ {
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .popup-cart__summ {
+    font-size: 12px;
+  }
+}
+.popup-cart__result {
+  margin-bottom: 15px;
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  text-indent: 25px;
+}
+@media (max-width: 700px) {
+  .popup-cart__result {
+    font-size: 18px;
+  }
+}
+@media (max-width: 500px) {
+  .popup-cart__result {
+    font-size: 14px;
+  }
 }
 
 .popup-buy {
@@ -1254,17 +1285,27 @@ main {
   margin-bottom: 30px;
   display: none;
 }
+@media (max-width: 700px) {
+  .popup-buy__group {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 500px) {
+  .popup-buy__group {
+    margin-bottom: 10px;
+  }
+}
 .popup-buy__image {
   height: 220px;
 }
 @media (max-width: 700px) {
   .popup-buy__image {
-    width: 200px;
+    height: 200px;
   }
 }
-@media (max-width: 380px) {
+@media (max-width: 500px) {
   .popup-buy__image {
-    width: 185px;
+    height: 180px;
   }
 }
 .popup-buy__text-box {
@@ -1283,6 +1324,12 @@ main {
 @media (max-width: 700px) {
   .popup-buy__item {
     font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .popup-buy__item {
+    font-size: 14px;
+    line-height: 1;
   }
 }
 @media (max-width: 380px) {
@@ -1357,6 +1404,12 @@ main {
   text-indent: 0;
   border: 1px solid grey;
 }
+@media (max-width: 500px) {
+  .popup-buy__accept {
+    font-size: 14px;
+    line-height: 1;
+  }
+}
 .popup-buy__delete {
   margin: 20px auto 10px;
   display: block;
@@ -1381,13 +1434,44 @@ main {
   margin-bottom: 10px;
   font-size: 20px;
 }
+@media (max-width: 700px) {
+  .popup-buy__summ {
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+}
+@media (max-width: 500px) {
+  .popup-buy__summ {
+    font-size: 12px;
+  }
+}
 .popup-buy__result {
   font-size: 20px;
   font-weight: bold;
 }
+@media (max-width: 700px) {
+  .popup-buy__result {
+    font-size: 16px;
+  }
+}
+@media (max-width: 500px) {
+  .popup-buy__result {
+    font-size: 14px;
+  }
+}
 .popup-buy__currency {
-  margin-left: -190px;
+  margin-left: -185px;
   text-indent: 0;
+}
+@media (max-width: 700px) {
+  .popup-buy__currency {
+    margin-left: -145px;
+  }
+}
+@media (max-width: 500px) {
+  .popup-buy__currency {
+    margin-left: -130px;
+  }
 }
 
 .popup-open {
