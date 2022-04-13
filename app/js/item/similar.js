@@ -1,3 +1,5 @@
+// Рендеринг похожих товаров на странице карточек 
+
 let similar_wrapper = document.querySelectorAll(".similar__wrapper");
 
 class Similar {
@@ -15,7 +17,7 @@ class Similar {
 								<p class="hide-text__item similar__hide-item search-good"><span class="hide-text__item_titles similar__hide-item_titles">Материал:</span> 
 								<br>${material}</p>
 								<a class="hide-text__item_about similar__hide-item_about" href="item.html#${id}" target="_blank">Подробнее >></a>
-								<a class="hide-text__item_add similar__hide-item_add" href='#'></a>
+								<a href="#cart" class="hide-text__item_add similar__hide-item_add popup-link" data-cart="${id}"></a>
 							</div>
 							<!-- /.hide-text -->
 
@@ -44,8 +46,9 @@ class Similar {
 
 const similarPage = new Similar();
 similarPage.render();
-/* Рендеринг похожих товаров на странице карточек */
 
+
+// Фильтр похожих товаров
 
 let similar_salt = document.querySelectorAll(".goods-offer_salt");
 let similar_threed = document.querySelectorAll(".goods-offer_threed");
@@ -245,10 +248,6 @@ if (document.location.hash.indexOf('bra') == 1) {
 		similar_threed[k].style.display = "block";
 	}
 }
-
-/* Фильтр похожих товаров */
-
-	
 
 
 

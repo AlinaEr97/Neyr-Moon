@@ -1,3 +1,5 @@
+// Показать-скрыть каталог категорий сбоку
+
 $(function() {
 	$(".catalog__arrow-item").on("click", function() {
 		$(this).toggleClass('catalog__arrow-item_active');
@@ -5,8 +7,8 @@ $(function() {
 	});
 });
 
-// Показать-скрыть каталог категорий сбоку
 
+// Кнопки фильтров над карточкой товара
 
 $(document).ready(function(){
 	$('filter__button').on('click', function(e){
@@ -22,4 +24,4 @@ $(document).ready(function(){
 	});
 });
 
-// Кнопки фильтров над карточкой товара
+

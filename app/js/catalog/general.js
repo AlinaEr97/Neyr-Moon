@@ -1,10 +1,13 @@
+// Ссылка на главную страницу в логотипе 
+
 $(function () {
 	$('.logo__image').on("click", function () {
 		window.location.href = "index.html";
 	});
 });
-// Ссылка на главную страницу в логотипе 
 
+
+// Сортировка товаров по цене 
 
 document.querySelector('.filter-buttons__high-price').onclick = function () {
 	MySort('data-price');
@@ -41,8 +44,8 @@ function MySortDesc (sortType) {
 	}
 }
 
-// Сортировка товаров по цене 
 
+// Фильтр каталога  
 
 let table = document.querySelectorAll(".table");
 let wall = document.querySelectorAll(".bra");
@@ -104,8 +107,8 @@ $(function () {
 	});
 });
 
-// Фильтр каталога  
 
+// Изменение хэша URL при нажатии на кнопки фильтра 
 
 if (document.location.hash.indexOf('table_link') == 1) {
 	for (let j = 0; j < all_goods.length; j++) {
@@ -144,5 +147,4 @@ if (document.location.hash.indexOf('candles_link') == 1) {
 	
 }
 
-// Изменение хэша URL при нажатии на кнопки фильтра 
 

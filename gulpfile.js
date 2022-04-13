@@ -1,11 +1,9 @@
-const { src, dest, watch, parallel, series} = require('gulp');
+const {src, dest, watch, parallel} = require('gulp');
 const scss  = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 const uglify = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
-const imagemin = require('gulp-imagemin');
-const del = require('del');
 
 function browsersync () {
 	browserSync.init({
@@ -15,25 +13,6 @@ function browsersync () {
 	});
 }
 
-function cleanDist() {
-	return del('dist');
-}
-	
-function images () {
-	return src('app/img/**/*')
-	.pipe(imagemin([
-		imagemin.gifsicle({interlaced: true}),
-		imagemin.mozjpeg({quality: 75, progressive: true}),
-		imagemin.optipng({optimizationLevel: 5}),
-		imagemin.svgo({
-			plugins: [
-				{removeViewBox: true},
-				{cleanupIDs: false}
-			]
-		})
-	]))
-	.pipe(dest('dist/img'))
-}
 	
 function sсripts () {
 	return src([
@@ -72,7 +51,7 @@ function min_sсripts () {
 
 	.pipe(concat('main.min.js'))
 	.pipe(uglify())
-	.pipe(dest('app/js'))
+	.pipe(dest('dist/js'))
 	.pipe(browserSync.stream())
 }
 
@@ -84,12 +63,12 @@ function item_sсripts () {
 		'app/js/general.js',
 		'app/js/item-list.js',
 		'app/js/item/card.js',
-		'app/js/popup.js',
-		'app/js/cart.js',
 		'app/js/item/okzoom.js',
 		'app/js/item/zoom.js',
 		'app/js/item/sliders.js',
 		'app/js/item/similar.js',
+		'app/js/cart.js',
+		'app/js/popup.js',
 	])
 
 	.pipe(concat('item.js'))
@@ -106,15 +85,15 @@ function min_item_sсripts () {
 		'app/js/item-list.js',
 		'app/js/item/card.js',
 		'app/js/popup.js',
-		'app/js/cart.js',
 		'app/js/item/okzoom.js',
 		'app/js/item/zoom.js',
 		'app/js/item/sliders.js',
 		'app/js/item/similar.js',
+		'app/js/cart.js',
 	])
 
 	.pipe(concat('item.min.js'))
-	.pipe(dest('app/js/item'))
+	.pipe(dest('dist/js/item'))
 	.pipe(uglify())
 	.pipe(browserSync.stream())
 }
@@ -151,7 +130,7 @@ function min_catalog_sсripts () {
 	])
 
 	.pipe(concat('catalog.min.js'))
-	.pipe(dest('app/js/catalog'))
+	.pipe(dest('dist/js/catalog'))
 	.pipe(uglify())
 	.pipe(browserSync.stream())
 }
@@ -186,7 +165,7 @@ function build() {
 	return src ([
 	'app/css/style.min.css',
 	'app/fonts/**/*',
-	'app/js/**/*.min.js',
+	'dist/js/**/*.min.js',
 	'app/*.html'
 	], {base: 'app'})
 	.pipe(dest('dist'))
@@ -196,8 +175,11 @@ function watching() {
 	watch(['app/scss/**/*.scss'], styles);
 	watch(['app/scss/**/*.scss'], min_styles);
 	watch(['app/js/*.js','app/js/item/card.js','!app/js/main.js'], sсripts);
+	watch(['app/js/*.js','app/js/item/card.js','!app/js/main.js', '!dist/js/main.min.js'], min_sсripts);
 	watch(['app/js/item/*.js', '!app/js/item/item.js'], item_sсripts);
+	watch(['app/js/item/*.js', '!app/js/item/item.js', '!dist/js/item/item.min.js',], min_item_sсripts);
 	watch(['app/js/catalog/*.js', '!app/js/catalog/catalog.js'], catalog_sсripts);
+	watch(['app/js/catalog/*.js', '!app/js/catalog/catalog.js', '!dist/js/catalog/catalog.min.js'], min_catalog_sсripts);
 	watch(['app/*.html']).on('change', browserSync.reload)
 }
 	
@@ -211,7 +193,6 @@ exports.item_sсripts = item_sсripts;
 exports.min_item_sсripts = min_item_sсripts;
 exports.sсripts = sсripts;
 exports.min_sсripts = min_sсripts;
-exports.images = images;
-exports.build = series(cleanDist, images, build); 
+exports.build = build; 
 
 exports.default = parallel(catalog_sсripts, item_sсripts, sсripts, browsersync, watching);

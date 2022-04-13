@@ -11930,6 +11930,7 @@ let number_button = document.querySelectorAll(".popup-buy__button");
 let delete_item = document.querySelectorAll(".popup-buy__delete");
 let accept = document.querySelectorAll(".popup-buy__accept");
 let add_button = document.querySelectorAll(".hide-text__item_add");
+let add_button_item = document.querySelectorAll(".buying__add");
 
 
 // Калькулятор цены
@@ -12029,6 +12030,22 @@ for (let i = 0; i < add_button.length; i++) {
 	}
 }
 
+for (let i = 0; i < add_button_item.length; i++) {
+	add_button_item[i].onclick = () => {
+		for (let j = 0; j < cart_item_list.length; j++) {
+			if (cart_item_list[j].getAttribute('data-cart') == add_button_item[i].getAttribute('data-cart')) {
+				cart_item_list[j].style.display = "flex";
+				cart_item_list[j].setAttribute("data-display", "true");
+				document.querySelector(".popup-cart__order").style.display = "block";
+				document.querySelector(".popup-cart__summ").style.display = "block";
+				number[j].value = "1";
+			}	
+		}
+		Result_item();
+		Result();
+	}
+}
+
 for (let i = 0; i < delete_item.length; i++) {
 	delete_item[i].onclick = () => {
 		if (number[i].getAttribute('data-id') == delete_item[i].getAttribute('data-cart')) {
@@ -12050,6 +12067,8 @@ $('a[href*="#"]').click(function() {
 	}, 800);
    return false;
 });
+// Рендеринг карточек товаров 
+
 let item_wrapper = document.querySelector(".popup-item__content");
 
 class Item {
@@ -12129,7 +12148,7 @@ class Item {
 										<img src="${brend_img}" alt="brend-name" class="pricing__brend">
 									</div>
 									<div class="details-box__buying buying">
-										<button class="buying__add">В корзину</button>
+										<a href="#cart" class="buying__add popup-link" data-cart="${id}">В корзину</a>
 										<p class="buying__availability">Товар в наличии</p>
 										<img src="img/pages/item/icons/delivery.png" alt="delivery" class="buying__delivery">
 									</div>
@@ -12222,7 +12241,7 @@ class Item {
 const itemPage = new Item();
 itemPage.render();
 
-//Рендеринг карточек товаров 
+
 
 
 

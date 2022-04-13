@@ -1,3 +1,5 @@
+// Рендеринг карточек товаров 
+
 let item_wrapper = document.querySelector(".popup-item__content");
 
 class Item {
@@ -77,7 +79,7 @@ class Item {
 										<img src="${brend_img}" alt="brend-name" class="pricing__brend">
 									</div>
 									<div class="details-box__buying buying">
-										<button class="buying__add">В корзину</button>
+										<a href="#cart" class="buying__add popup-link" data-cart="${id}">В корзину</a>
 										<p class="buying__availability">Товар в наличии</p>
 										<img src="img/pages/item/icons/delivery.png" alt="delivery" class="buying__delivery">
 									</div>
@@ -170,7 +172,7 @@ class Item {
 const itemPage = new Item();
 itemPage.render();
 
-//Рендеринг карточек товаров 
+
 
 
 
