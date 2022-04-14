@@ -1,3 +1,5 @@
+// Настройка строки поиска
+
 let search_wrapper = document.querySelector(".search-items");
 let searchItems = document.querySelectorAll(".search__item");
 
@@ -51,8 +53,6 @@ document.querySelector("#search").oninput = function Searching() {
 		} 
 	});
 }
-
-// Настройка строки поиска
 
 
 

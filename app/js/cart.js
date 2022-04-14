@@ -1,4 +1,4 @@
-//Рендеринг корзины товаров
+// Рендеринг корзины товаров
 
 let cart_wrapper = document.querySelector(".popup-buy");
 
@@ -54,17 +54,17 @@ cartPopup.render();
 
 // Переменные для корзины
 
-let number = document.querySelectorAll(".popup-buy__number");
-let summ_item = document.querySelectorAll(".popup-buy__result");
+let number = $(".popup-buy__number");
+let summ_item = $(".popup-buy__result");
 let summ_cart = document.querySelector(".popup-cart__result");
-let cart_item_list = document.querySelectorAll (".popup-buy__group");
+let cart_item_list = $(".popup-buy__group");
 let plus = document.querySelectorAll("#button-plus");
 let minus = document.querySelectorAll("#button-minus");
-let number_button = document.querySelectorAll(".popup-buy__button");
-let delete_item = document.querySelectorAll(".popup-buy__delete");
-let accept = document.querySelectorAll(".popup-buy__accept");
-let add_button = document.querySelectorAll(".hide-text__item_add");
-let add_button_item = document.querySelectorAll(".buying__add");
+let number_button = $(".popup-buy__button");
+let delete_item = $(".popup-buy__delete");
+let accept = $(".popup-buy__accept");
+let add_button = $(".hide-text__item_add");
+let add_button_item = $(".buying__add");
 
 
 // Калькулятор цены
@@ -80,16 +80,13 @@ function Result_item() {
 function Result() {
 	let sum = 0;
 	for (let i = 0; i < summ_item.length; i++) {
-		for (let j = 0; j < cart_item_list.length; j++) {
-			if (cart_item_list[j].hasAttribute("data-display") && cart_item_list[j].getAttribute("data-price") == summ_item[i].getAttribute("data-price")) {
-				sum = sum + parseInt(summ_item[i].value);
+		if (cart_item_list[i].hasAttribute("data-display") && $(cart_item_list[i]).attr("data-price") == $(summ_item[i]).attr("data-price")) {
+			sum = sum + parseInt(summ_item[i].value);
+			summ_cart.innerHTML = sum + " руб.";
+			if (number[i].value == "0" && $(number[i]).attr('data-id') == $(delete_item[i]).attr('data-cart')) {
+				sum = sum - summ_item[i].value;
 				summ_cart.innerHTML = sum + " руб.";
-				if (number[i].value == "0" && number[i].getAttribute('data-id') == delete_item[i].getAttribute('data-cart')) {
-					sum = sum - summ_item[j].value;
-					summ_cart.innerHTML = sum + " руб.";
-				}
 			}
-			
 		}
 	}
 }
@@ -99,95 +96,92 @@ function Result() {
 
 function Accept() {
 	for (let i = 0; i < accept.length; i++) {
-		accept[i].removeAttribute('disabled');
-		accept[i].onclick = () => {
+		$(accept[i]).removeAttr('disabled');
+		$(accept[i]).on("click", function () {
 			Result_item();
 			Result();
-			if (cart_item_list[i].getAttribute('data-cart') == accept[i].getAttribute('data-cart')) {
-				accept[i].setAttribute('disabled', 'true');
+			if ($(cart_item_list[i]).attr('data-cart') == $(accept[i]).attr('data-cart')) {
+				$(accept[i]).attr('disabled', 'true');
 			}
-			if (number[i].value == "0" && number[i].getAttribute('data-id') == accept[i].getAttribute('data-cart')) {
-				cart_item_list[i].style.display = "none";
+			if (number[i].value == "0" && $(number[i]).attr('data-id') == $(accept[i]).attr('data-cart')) {
+				$(cart_item_list[i]).css("display", "none");
 			}
-			
-		}
+		});
 	}	
 }
 
 for (let i = 0; i < plus.length; i++) {
-	plus[i].onclick = () => {
-		if (number[i].getAttribute('data-id') == plus[i].getAttribute('data-id')) {
+	$(plus[i]).on("click", function () {
+		if ($(number[i]).attr('data-id') == $(plus[i]).attr('data-id')) {
 			number[i].value++;
 			Accept();
 		}	
-	}
+	});
 }
 
 for (let i = 0; i < minus.length; i++) {
-	minus[i].onclick = () => {
-		if (number[i].value >= 1 && number[i].getAttribute('data-id') == minus[i].getAttribute('data-id')) {
+	$(minus[i]).on("click", function () {
+		if (number[i].value >= 1 && $(number[i]).attr('data-id') == $(minus[i]).attr('data-id')) {
 			number[i].value--;	
 			Accept();
 		}
-		if (number[i].value == "0" && number[i].getAttribute('data-id') == minus[i].getAttribute('data-id')) {	
-			for (let k = 0; k < cart_item_list.length; k++) {
-				if (cart_item_list[k].getAttribute('data-cart') == number[j].getAttribute('data-id')) {
-					number[j].value;	
-				}
+		if (number[i].value == "0" && $(number[i]).attr('data-id') == $(minus[i]).attr('data-id')) {	
+			if ($(cart_item_list[i]).attr('data-cart') == $(number[i]).attr('data-id')) {
+				number[i].value;	
 			}
 		}
-	}
+	});
 }
 
 for (let i = 0; i < number.length; i++) {
-	number[i].onclick = () => {
+	$(number[i]).on("click", function () {
 		Accept();
-	}
+	});
 }
 
 
 // Добавление товаров из каталога в корзину и удаление из корзины
 
 for (let i = 0; i < add_button.length; i++) {
-	add_button[i].onclick = () => {
+	$(add_button[i]).on("click", function () {
 		for (let j = 0; j < cart_item_list.length; j++) {
-			if (cart_item_list[j].getAttribute('data-cart') == add_button[i].getAttribute('data-cart')) {
-				cart_item_list[j].style.display = "flex";
-				cart_item_list[j].setAttribute("data-display", "true");
-				document.querySelector(".popup-cart__order").style.display = "block";
-				document.querySelector(".popup-cart__summ").style.display = "block";
-				number[j].value = "1";
+			if ($(cart_item_list[j]).attr('data-cart') == $(add_button[i]).attr('data-cart')) {
+				$(cart_item_list[j]).css("display", "flex");
+				$(cart_item_list[j]).attr("data-display", "true");
+				$(".popup-cart__order").css("display", "block");
+				$(".popup-cart__summ").css("display", "block");
+				$(number[j]).val("1");
 			}	
 		}
 		Result_item();
 		Result();
-	}
+	});
 }
 
 for (let i = 0; i < add_button_item.length; i++) {
-	add_button_item[i].onclick = () => {
+	$(add_button_item[i]).on("click", function () {
 		for (let j = 0; j < cart_item_list.length; j++) {
-			if (cart_item_list[j].getAttribute('data-cart') == add_button_item[i].getAttribute('data-cart')) {
-				cart_item_list[j].style.display = "flex";
+			if ($(cart_item_list[j]).attr('data-cart') == $(add_button_item[i]).attr('data-cart')) {
+				$(cart_item_list[j]).css("display", "flex");
 				cart_item_list[j].setAttribute("data-display", "true");
-				document.querySelector(".popup-cart__order").style.display = "block";
-				document.querySelector(".popup-cart__summ").style.display = "block";
-				number[j].value = "1";
+				$(".popup-cart__order").css("display", "block");
+				$(".popup-cart__summ").css("display", "block");
+				$(number[j]).val("1");
 			}	
 		}
 		Result_item();
 		Result();
-	}
+	});
 }
 
 for (let i = 0; i < delete_item.length; i++) {
-	delete_item[i].onclick = () => {
-		if (number[i].getAttribute('data-id') == delete_item[i].getAttribute('data-cart')) {
-			number[i].value = "0";
+	$(delete_item[i]).on("click", function () {
+		if ($(number[i]).attr('data-id') == $(delete_item[i]).attr('data-cart')) {
+			$(number[i]).val("0");
 			Result();
-			cart_item_list[i].style.display = "none";
+			$(cart_item_list[i]).css("display", "none");
 		}
-	}
+	});
 }
 
 

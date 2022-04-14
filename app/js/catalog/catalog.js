@@ -11397,7 +11397,7 @@ class Goods {
 							<p class="hide-text__item search-good"><span class="hide-text__item_titles">Материал:</span> 
 							<br>${material}</p>
 							<a class="hide-text__item_about" href="item.html#${id}">Подробнее >></a>
-							<a href="item.html#cart" class="hide-text__item_add popup-link" data-cart="${id}"></a>
+							<a href="#cart" class="hide-text__item_add popup-link" data-cart="${id}"></a>
 						</div>
 						<!-- /.hide-text -->
 
@@ -11616,6 +11616,7 @@ let number_button = document.querySelectorAll(".popup-buy__button");
 let delete_item = document.querySelectorAll(".popup-buy__delete");
 let accept = document.querySelectorAll(".popup-buy__accept");
 let add_button = document.querySelectorAll(".hide-text__item_add");
+let add_button_item = document.querySelectorAll(".buying__add");
 
 
 // Калькулятор цены
@@ -11703,6 +11704,22 @@ for (let i = 0; i < add_button.length; i++) {
 	add_button[i].onclick = () => {
 		for (let j = 0; j < cart_item_list.length; j++) {
 			if (cart_item_list[j].getAttribute('data-cart') == add_button[i].getAttribute('data-cart')) {
+				cart_item_list[j].style.display = "flex";
+				cart_item_list[j].setAttribute("data-display", "true");
+				document.querySelector(".popup-cart__order").style.display = "block";
+				document.querySelector(".popup-cart__summ").style.display = "block";
+				number[j].value = "1";
+			}	
+		}
+		Result_item();
+		Result();
+	}
+}
+
+for (let i = 0; i < add_button_item.length; i++) {
+	add_button_item[i].onclick = () => {
+		for (let j = 0; j < cart_item_list.length; j++) {
+			if (cart_item_list[j].getAttribute('data-cart') == add_button_item[i].getAttribute('data-cart')) {
 				cart_item_list[j].style.display = "flex";
 				cart_item_list[j].setAttribute("data-display", "true");
 				document.querySelector(".popup-cart__order").style.display = "block";

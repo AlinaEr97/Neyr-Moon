@@ -12,7 +12,6 @@ function browsersync () {
 		}
 	});
 }
-
 	
 function sсripts () {
 	return src([
