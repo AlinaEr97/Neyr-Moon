@@ -1,3 +1,5 @@
+// Слайдер акций
+
 new Swiper (".sales-slider", {
 	//пагинация
 	pagination: {
@@ -22,8 +24,9 @@ new Swiper (".sales-slider", {
 		
 	}, 
 });
-// Слайдер акций 
 
+
+// Слайдер брендов 
 
 new Swiper (".brends-slider", {
 	//стрелки
@@ -56,17 +59,16 @@ new Swiper (".brends-slider", {
 	}, 
 });
 
-// Слайдер брендов 
 
+//Стрелки навигации слайдера брендов
 
 const swiperPrev = document.getElementById('swiperPrev')
 const swiperNext = document.getElementById('swiperNext')
 
 swiperPrev.addEventListener('click', () => {
-	document.querySelector(".brends-slider").slidePrev();
-})
-swiperNext.addEventListener('click', () => {
-	document.querySelector(".brends-slider").slideNext();
+	$(".brends-slider").slidePrev();
 })
 
-//Стрелки навигации слайдера брендов 
+swiperNext.addEventListener('click', () => {
+	$(".brends-slider").slideNext();
+})

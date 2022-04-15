@@ -3,8 +3,8 @@
 let search_wrapper = document.querySelector(".search-items");
 let searchItems = document.querySelectorAll(".search__item");
 
-document.querySelector("#search").oninput = function Searching() {
-	search_wrapper.style.display = "flex";
+$("#search").on("input", function () {
+	$(search_wrapper).css("display", "flex");
 	let val = this.value.trim();
 	class Search {
 		render() {
@@ -40,19 +40,20 @@ document.querySelector("#search").oninput = function Searching() {
 	const searchPage = new Search();
 	searchPage.render();
 
-	document.querySelector("#search").addEventListener('focusout', function (event) { 
+	this.addEventListener('focusout', function (event) { 
 		if (this.contains(event.relatedTarget)) return; 
 		else {
-			search_wrapper.style.display = "none";
+			$(search_wrapper).css("display", "none");
 		} 
 	});
-	document.querySelector("#search").addEventListener('focusin', function (event) { 
+
+	this.addEventListener('focusin', function (event) { 
 		if (this.contains(event.relatedTarget)) return; 
 		else {
-			search_wrapper.style.display = "flex";
+			$(search_wrapper).css("display", "flex");
 		} 
 	});
-}
+});
 
 
 

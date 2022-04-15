@@ -1,3 +1,5 @@
+// Настройка OKZoom
+
 /*
  * OKZoom by OKFocus v1.1
  * http://okfoc.us // @okfocus
@@ -172,5 +174,3 @@ $(function($){
     document.body.style.cursor = "auto";
   };
 });
-
-// Настройка OKZoom

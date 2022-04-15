@@ -10891,6 +10891,8 @@ $(function() {
 
 
 
+// Слайдер акций
+
 new Swiper (".sales-slider", {
 	//пагинация
 	pagination: {
@@ -10915,8 +10917,9 @@ new Swiper (".sales-slider", {
 		
 	}, 
 });
-// Слайдер акций 
 
+
+// Слайдер брендов 
 
 new Swiper (".brends-slider", {
 	//стрелки
@@ -10949,27 +10952,27 @@ new Swiper (".brends-slider", {
 	}, 
 });
 
-// Слайдер брендов 
 
+//Стрелки навигации слайдера брендов
 
 const swiperPrev = document.getElementById('swiperPrev')
 const swiperNext = document.getElementById('swiperNext')
 
 swiperPrev.addEventListener('click', () => {
-	document.querySelector(".brends-slider").slidePrev();
-})
-swiperNext.addEventListener('click', () => {
-	document.querySelector(".brends-slider").slideNext();
+	$(".brends-slider").slidePrev();
 })
 
-//Стрелки навигации слайдера брендов 
+swiperNext.addEventListener('click', () => {
+	$(".brends-slider").slideNext();
+})
+
 // Настройка строки поиска
 
 let search_wrapper = document.querySelector(".search-items");
 let searchItems = document.querySelectorAll(".search__item");
 
-document.querySelector("#search").oninput = function Searching() {
-	search_wrapper.style.display = "flex";
+$("#search").on("input", function () {
+	$(search_wrapper).css("display", "flex");
 	let val = this.value.trim();
 	class Search {
 		render() {
@@ -11005,19 +11008,20 @@ document.querySelector("#search").oninput = function Searching() {
 	const searchPage = new Search();
 	searchPage.render();
 
-	document.querySelector("#search").addEventListener('focusout', function (event) { 
+	this.addEventListener('focusout', function (event) { 
 		if (this.contains(event.relatedTarget)) return; 
 		else {
-			search_wrapper.style.display = "none";
+			$(search_wrapper).css("display", "none");
 		} 
 	});
-	document.querySelector("#search").addEventListener('focusin', function (event) { 
+
+	this.addEventListener('focusin', function (event) { 
 		if (this.contains(event.relatedTarget)) return; 
 		else {
-			search_wrapper.style.display = "flex";
+			$(search_wrapper).css("display", "flex");
 		} 
 	});
-}
+});
 
 
 
@@ -11741,10 +11745,10 @@ $(function () {
 });
 
 
-const popupLinks = document.querySelectorAll('.popup-link');
+const popupLinks = $('.popup-link');
 const body = document.querySelector('body');
-const lockPadding = document.querySelectorAll('.lock-padding');
-const curentPopup = document.querySelector('.popup__content');
+const lockPadding = $('.lock-padding');
+const curentPopup = $('.popup__content');
 
 let unlock = true;
 
@@ -11754,7 +11758,7 @@ if (popupLinks.length > 0) {
 	for (let i = 0; i < popupLinks.length; i++) {
 		const popupLink = popupLinks[i];
 		popupLink.addEventListener("click", function(e) {
-			const popupName = popupLink.getAttribute('href').replace('#', '');
+			const popupName = $(popupLink).attr('href').replace('#', '');
 			const curentPopup = document.getElementById(popupName);
 			popupOpen(curentPopup);
 			e.preventDefault();
@@ -11762,7 +11766,7 @@ if (popupLinks.length > 0) {
 	}
 }
 
-const popupCloseIcon = document.querySelectorAll('.close-popup');
+const popupCloseIcon = $('.close-popup');
 if (popupCloseIcon.length > 0) {
 	for (let i = 0; i < popupCloseIcon.length; i++) {
 		const el = popupCloseIcon[i];
@@ -11790,6 +11794,7 @@ function popupOpen(curentPopup) {
 		});
 	}
 }
+
 function popupClose(popupActive, doUnlock = true) {
 	if (unlock) {
 		popupActive.classList.remove('popup-open');
@@ -11800,7 +11805,7 @@ function popupClose(popupActive, doUnlock = true) {
 }
 
 function bodyLock() {
-	const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+	const lockPaddingValue = window.innerWidth - $('.wrapper').offsetWidth + 'px';
 
 	if (lockPadding.length > 0) {
 		for (let i = 0; i < lockPadding.length; i++) {
@@ -11837,7 +11842,7 @@ function bodyUnlock() {
 
 document.addEventListener('keydown', function (e) {
 	if (e.which === 27) {
-		const popupActive = document.querySelector('.popup-open');
+		const popupActive = $('.popup-open');
 		popupClose(popupActive);
 	}
 });

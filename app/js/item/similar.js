@@ -50,204 +50,208 @@ similarPage.render();
 
 // Фильтр похожих товаров
 
-let similar_salt = document.querySelectorAll(".goods-offer_salt");
-let similar_threed = document.querySelectorAll(".goods-offer_threed");
-let similar_distance = document.querySelectorAll(".goods-offer_distance");
-let similar_distance2 = document.querySelectorAll(".distance");
-let similar_baby = document.querySelectorAll(".goods-offer_baby");
-let similar_baby2 = document.querySelectorAll(".baby");
-let similar_projector = document.querySelectorAll(".goods-offer_projector");
-let similar_projector2 = document.querySelectorAll(".projector");
-let similar_usb = document.querySelectorAll(".usb");
-let similar_candles = document.querySelectorAll(".goods-offer_candles");
-let similar_floor = document.querySelectorAll(".goods-offer_floor");
-let similar_portable = document.querySelectorAll(".goods-offer_portable");
-let similar_lamp = document.querySelectorAll(".goods-offer_lamp");
-let similar_bra = document.querySelectorAll(".goods-offer_bra");
-let similar_bra2 = document.querySelectorAll(".bra");
+let similar_salt = $(".goods-offer_salt");
+let similar_threed = $(".goods-offer_threed");
+let similar_distance = $(".goods-offer_distance");
+let similar_distance2 = $(".distance");
+let similar_baby = $(".goods-offer_baby");
+let similar_baby2 = $(".baby");
+let similar_projector = $(".goods-offer_projector");
+let similar_projector2 = $(".projector");
+let similar_usb = $(".usb");
+let similar_candles = $(".goods-offer_candles");
+let similar_floor = $(".goods-offer_floor");
+let similar_portable = $(".goods-offer_portable");
+let similar_lamp = $(".goods-offer_lamp");
+let similar_bra = $(".goods-offer_bra");
+let similar_bra2 = $(".bra");
 
-if (document.location.hash.indexOf('salt') == 1) {
-	for (let i = 0; i < similar_salt.length; i++) {
-		similar_salt[i].style.display = "block";
-	}
-	for (let i = 0; i < similar_portable.length; i++) {
-		similar_portable[i].style.display = "block";
-	}
-	for (let i = 0; i < similar_lamp.length; i++) {
-		similar_lamp[i].style.display = "block";
-	}
-	for (let i = 0; i < similar_candles.length; i++) {
-		similar_candles[i].style.display = "block";
-	}
-}
+$(function () {
 
-if (document.location.hash.indexOf('threed') == 1) {
-	for (let i = 0; i < similar_threed.length; i++) {
-		similar_threed[i].style.display = "block";
+	if (document.location.hash.indexOf('salt') == 1) {
+		for (let i = 0; i < similar_salt.length; i++) {
+			$(similar_salt[i]).css("display", "block");
+		}
+		for (let i = 0; i < similar_portable.length; i++) {
+			$(similar_portable[i]).css("display", "block");
+		}
+		for (let i = 0; i < similar_lamp.length; i++) {
+			$(similar_lamp[i]).css("display", "block");
+		}
+		for (let i = 0; i < similar_candles.length; i++) {
+			$(similar_candles[i]).css("display", "block");
+		}
 	}
-	for (let j = 0; j < similar_distance.length; j++) {
-		similar_distance[j].style.display = "block";
+	
+	if (document.location.hash.indexOf('threed') == 1) {
+		for (let i = 0; i < similar_threed.length; i++) {
+			$(similar_threed[i]).css("display", "block");
+		}
+		for (let j = 0; j < similar_distance.length; j++) {
+			$(similar_distance[j]).css("display", "block");
+		}
+		for (let k = 0; k < similar_distance2.length; k++) {
+			$(similar_distance2[k]).css("display", "block");
+		}
+		for (let i = 0; i < similar_bra.length; i++) {
+			$(similar_bra[i]).css("display", "block");
+		}
 	}
-	for (let k = 0; k < similar_distance2.length; k++) {
-		similar_distance2[k].style.display = "block";
+	
+	if (document.location.hash.indexOf('baby') == 1) {
+		for (let i = 0; i < similar_baby.length; i++) {
+			$(similar_baby[i]).css("display", "block");
+		}
+		for (let j = 0; j < similar_baby2.length; j++) {
+			$(similar_baby2[j]).css("display", "block");
+		}
+		for (let k = 0; k < similar_threed.length; k++) {
+			$(similar_threed[k]).css("displa", "block");
+		}
+		for (let l = 0; l < similar_distance2.length; l++) {
+			$(similar_distance2[l]).css("display", "block");
+		}
 	}
-	for (let i = 0; i < similar_bra.length; i++) {
-		similar_bra[i].style.display = "block";
+	
+	if (document.location.hash.indexOf('projector') == 1) {
+		for (let i = 0; i < similar_projector.length; i++) {
+			$(similar_projector[i]).css("display", "block");
+		}
+		for (let j = 0; j < similar_projector2.length; j++) {
+			$(similar_projector2[j]).css("display", "block");
+		}
 	}
-}
+	
+	if (document.location.hash.indexOf('distance') == 1 || document.location.hash.indexOf('usb') == 1) {
+		for (let i = 0; i < similar_distance.length; i++) {
+			$(similar_distance[i]).css("display", "block");
+		}
+		for (let j = 0; j < similar_distance2.length; j++) {
+			$(similar_distance2[j]).css("display", "block");
+		}
+		for (let k = 0; k < similar_usb.length; k++) {
+			$(similar_usb[k]).css("displa", "block");
+		}
+		for (let l = 0; l < similar_threed.length; l++) {
+			$(similar_threed[l]).css("display", "block");
+		}
+	}
+	
+	if (document.location.hash.indexOf('candles') == 1) {
+		for (let i = 0; i < similar_candles.length; i++) {
+			$(similar_candles[i]).css("display", "block");
+		}
+	}
+	
+	if (document.location.hash.indexOf('distanceusb2') == 1) {
+		for (let i = 0; i < similar_salt.length; i++) {
+			$(similar_salt[i]).css("display", "block");
+		}
+		for (let j = 0; j < similar_lamp.length; j++) {
+			$(similar_lamp[j]).css("display", "block");
+		}
+		for (let k = 0; k < similar_portable.length; k++) {
+			$(similar_portable[k]).css("display", "block");
+		}
+		for (let l = 0; l < similar_baby.length; l++) {
+			$(similar_baby[l]).css("display", "none");
+		}
+		for (let m = 0; m < similar_baby2.length; m++) {
+			$(similar_baby2[m]).css("display", "none");
+		}
+		for (let n = 0; n < similar_projector.length; n++) {
+			$(similar_projector[n]).css("display", "none");
+		}
+	}
+	
+	if (document.location.hash.indexOf('portable5') == 1) {
+		for (let i = 0; i < similar_salt.length; i++) {
+			$(similar_salt[i]).css("display", "block");
+		}
+		for (let i = 0; i < similar_lamp.length; i++) {
+			$(similar_lamp[i]).css("display", "block");
+		}
+		for (let i = 0; i < similar_candles.length; i++) {
+			$(similar_candles[i]).css("display", "block");
+		}
+	}
+	
+	if (document.location.hash.indexOf('babydistanceusb8') == 1) {
+		for (let i = 0; i < similar_floor.length; i++) {
+			$(similar_floor[i]).css("display", "none");
+		}
+	}
+	
+	if (document.location.hash.indexOf('babyneondistance9') == 1) {
+		for (let i = 0; i < similar_bra2.length; i++) {
+			$(similar_bra2[i]).css("display", "none");
+		}
+	}
+	
+	if (document.location.hash.indexOf('lamp10') == 1) {
+		for (let i = 0; i < similar_salt.length; i++) {
+			$(similar_salt[i]).css("display", "block");
+		}
+		for (let j = 0; j < similar_portable.length; j++) {
+			$(similar_portable[j]).css("display", "block");
+		}
+		for (let k = 0; k < similar_candles.length; k++) {
+			$(similar_candles[k]).css("display", "block");
+		}
+	}
+	
+	if (document.location.hash.indexOf('threedbabyprojectordistance13') == 1 || document.location.hash.indexOf('threeddistance14')){
+		for (let i = 0; i < similar_floor.length; i++) {
+			$(similar_floor[i]).css("display", "none");
+		}
+		for (let j = 0; j < similar_distance.length; j++) {
+			$(similar_distance[j]).css("display", "none");
+		}
+	}
+	
+	if (document.location.hash.indexOf('threedlava16') == 1) {
+		for (let i = 0; i < similar_baby.length; i++) {
+			$(similar_baby[i]).css("display", "none");
+		}
+		for (let j = 0; j < similar_baby2.length; j++) {
+			$(similar_baby2[j]).css("display", "none");
+		}
+		for (let k = 0; k < similar_projector1.length; k++) {
+			$(similar_projector1[k]).css("display", "none");
+		}
+	}
+	
+	if (document.location.hash.indexOf('floordistance18') == 1) {
+		for (let i = 0; i < similar_distance.length; i++) {
+			$(similar_distance[i]).css("display", "block");
+		}
+		for (let j = 0; j < similar_distance2.length; j++) {
+			$(similar_distance2[j]).css("display", "block");
+		}
+		for (let k = 0; k < similar_baby.length; k++) {
+			$(similar_baby[k]).css("display", "none");
+		}
+		for (let l = 0; l < similar_baby2.length; l++) {
+			$(similar_baby2[l]).css("display", "none");
+		}
+		for (let l = 0; l < similar_usb.length; l++) {
+			$(similar_usb[l]).css("display", "none");
+		}
+	}
+	
+	if (document.location.hash.indexOf('bra') == 1) {
+		for (let i = 0; i < similar_bra.length; i++) {
+			$(similar_bra[i]).css("display", "block");
+		}
+		for (let j = 0; j < similar_bra2.length; j++) {
+			$(similar_bra2[j]).css("display", "block");
+		}
+		for (let k = 0; k < similar_threed.length; k++) {
+			$(similar_threed[k]).css("display", "block");
+		}
+	}
+});
 
-if (document.location.hash.indexOf('baby') == 1) {
-	for (let i = 0; i < similar_baby.length; i++) {
-		similar_baby[i].style.display = "block";
-	}
-	for (let j = 0; j < similar_baby2.length; j++) {
-		similar_baby2[j].style.display = "block";
-	}
-	for (let k = 0; k < similar_threed.length; k++) {
-		similar_threed[k].style.display = "block";
-	}
-	for (let l = 0; l < similar_distance2.length; l++) {
-		similar_distance2[l].style.display = "block";
-	}
-}
-
-if (document.location.hash.indexOf('projector') == 1) {
-	for (let i = 0; i < similar_projector.length; i++) {
-		similar_projector[i].style.display = "block";
-	}
-	for (let j = 0; j < similar_projector2.length; j++) {
-		similar_projector2[j].style.display = "block";
-	}
-}
-
-if (document.location.hash.indexOf('distance') == 1 || document.location.hash.indexOf('usb') == 1) {
-	for (let i = 0; i < similar_distance.length; i++) {
-		similar_distance[i].style.display = "block";
-	}
-	for (let j = 0; j < similar_distance2.length; j++) {
-		similar_distance2[j].style.display = "block";
-	}
-	for (let k = 0; k < similar_usb.length; k++) {
-		similar_usb[k].style.display = "block";
-	}
-	for (let l = 0; l < similar_threed.length; l++) {
-		similar_threed[l].style.display = "block";
-	}
-}
-
-if (document.location.hash.indexOf('candles') == 1) {
-	for (let i = 0; i < similar_candles.length; i++) {
-		similar_candles[i].style.display = "block";
-	}
-}
-
-if (document.location.hash.indexOf('distanceusb2') == 1) {
-	for (let i = 0; i < similar_salt.length; i++) {
-		similar_salt[i].style.display = "block";
-	}
-	for (let j = 0; j < similar_lamp.length; j++) {
-		similar_lamp[j].style.display = "block";
-	}
-	for (let k = 0; k < similar_portable.length; k++) {
-		similar_portable[k].style.display = "block";
-	}
-	for (let l = 0; l < similar_baby.length; l++) {
-		similar_baby[l].style.display = "none";
-	}
-	for (let m = 0; m < similar_baby2.length; m++) {
-		similar_baby2[m].style.display = "none";
-	}
-	for (let n = 0; n < similar_projector.length; n++) {
-		similar_projector[n].style.display = "none";
-	}
-}
-
-if (document.location.hash.indexOf('portable5') == 1) {
-	for (let i = 0; i < similar_salt.length; i++) {
-		similar_salt[i].style.display = "block";
-	}
-	for (let i = 0; i < similar_lamp.length; i++) {
-		similar_lamp[i].style.display = "block";
-	}
-	for (let i = 0; i < similar_candles.length; i++) {
-		similar_candles[i].style.display = "block";
-	}
-}
-
-if (document.location.hash.indexOf('babydistanceusb8') == 1) {
-	for (let i = 0; i < similar_floor.length; i++) {
-		similar_floor[i].style.display = "none";
-	}
-}
-
-if (document.location.hash.indexOf('babyneondistance9') == 1) {
-	for (let i = 0; i < similar_bra2.length; i++) {
-		similar_bra2[i].style.display = "none";
-	}
-}
-
-if (document.location.hash.indexOf('lamp10') == 1) {
-	for (let i = 0; i < similar_salt.length; i++) {
-		similar_salt[i].style.display = "block";
-	}
-	for (let j = 0; j < similar_portable.length; j++) {
-		similar_portable[j].style.display = "block";
-	}
-	for (let k = 0; k < similar_candles.length; k++) {
-		similar_candles[k].style.display = "block";
-	}
-}
-
-if (document.location.hash.indexOf('threedbabyprojectordistance13') == 1 || document.location.hash.indexOf('threeddistance14')){
-	for (let i = 0; i < similar_floor.length; i++) {
-		similar_floor[i].style.display = "none";
-	}
-	for (let j = 0; j < similar_distance.length; j++) {
-		similar_distance[j].style.display = "none";
-	}
-}
-
-if (document.location.hash.indexOf('threedlava16') == 1) {
-	for (let i = 0; i < similar_baby.length; i++) {
-		similar_baby[i].style.display = "none";
-	}
-	for (let j = 0; j < similar_baby2.length; j++) {
-		similar_baby2[j].style.display = "none";
-	}
-	for (let k = 0; k < similar_projector1.length; k++) {
-		similar_projector1[k].style.display = "none";
-	}
-}
-
-if (document.location.hash.indexOf('floordistance18') == 1) {
-	for (let i = 0; i < similar_distance.length; i++) {
-		similar_distance[i].style.display = "block";
-	}
-	for (let j = 0; j < similar_distance2.length; j++) {
-		similar_distance2[j].style.display = "block";
-	}
-	for (let k = 0; k < similar_baby.length; k++) {
-		similar_baby[k].style.display = "none";
-	}
-	for (let l = 0; l < similar_baby2.length; l++) {
-		similar_baby2[l].style.display = "none";
-	}
-	for (let l = 0; l < similar_usb.length; l++) {
-		similar_usb[l].style.display = "none";
-	}
-}
-
-if (document.location.hash.indexOf('bra') == 1) {
-	for (let i = 0; i < similar_bra.length; i++) {
-		similar_bra[i].style.display = "block";
-	}
-	for (let j = 0; j < similar_bra2.length; j++) {
-		similar_bra2[j].style.display = "block";
-	}
-	for (let k = 0; k < similar_threed.length; k++) {
-		similar_threed[k].style.display = "block";
-	}
-}
 
 
 

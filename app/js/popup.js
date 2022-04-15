@@ -1,7 +1,7 @@
-const popupLinks = document.querySelectorAll('.popup-link');
+const popupLinks = $('.popup-link');
 const body = document.querySelector('body');
-const lockPadding = document.querySelectorAll('.lock-padding');
-const curentPopup = document.querySelector('.popup__content');
+const lockPadding = $('.lock-padding');
+const curentPopup = $('.popup__content');
 
 let unlock = true;
 
@@ -11,7 +11,7 @@ if (popupLinks.length > 0) {
 	for (let i = 0; i < popupLinks.length; i++) {
 		const popupLink = popupLinks[i];
 		popupLink.addEventListener("click", function(e) {
-			const popupName = popupLink.getAttribute('href').replace('#', '');
+			const popupName = $(popupLink).attr('href').replace('#', '');
 			const curentPopup = document.getElementById(popupName);
 			popupOpen(curentPopup);
 			e.preventDefault();
@@ -19,7 +19,7 @@ if (popupLinks.length > 0) {
 	}
 }
 
-const popupCloseIcon = document.querySelectorAll('.close-popup');
+const popupCloseIcon = $('.close-popup');
 if (popupCloseIcon.length > 0) {
 	for (let i = 0; i < popupCloseIcon.length; i++) {
 		const el = popupCloseIcon[i];
@@ -47,6 +47,7 @@ function popupOpen(curentPopup) {
 		});
 	}
 }
+
 function popupClose(popupActive, doUnlock = true) {
 	if (unlock) {
 		popupActive.classList.remove('popup-open');
@@ -57,7 +58,7 @@ function popupClose(popupActive, doUnlock = true) {
 }
 
 function bodyLock() {
-	const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+	const lockPaddingValue = window.innerWidth - $('.wrapper').offsetWidth + 'px';
 
 	if (lockPadding.length > 0) {
 		for (let i = 0; i < lockPadding.length; i++) {
@@ -94,7 +95,7 @@ function bodyUnlock() {
 
 document.addEventListener('keydown', function (e) {
 	if (e.which === 27) {
-		const popupActive = document.querySelector('.popup-open');
+		const popupActive = $('.popup-open');
 		popupClose(popupActive);
 	}
 });

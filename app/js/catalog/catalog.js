@@ -11427,10 +11427,10 @@ goodsPage.render();
 
 
 
-const popupLinks = document.querySelectorAll('.popup-link');
+const popupLinks = $('.popup-link');
 const body = document.querySelector('body');
-const lockPadding = document.querySelectorAll('.lock-padding');
-const curentPopup = document.querySelector('.popup__content');
+const lockPadding = $('.lock-padding');
+const curentPopup = $('.popup__content');
 
 let unlock = true;
 
@@ -11440,7 +11440,7 @@ if (popupLinks.length > 0) {
 	for (let i = 0; i < popupLinks.length; i++) {
 		const popupLink = popupLinks[i];
 		popupLink.addEventListener("click", function(e) {
-			const popupName = popupLink.getAttribute('href').replace('#', '');
+			const popupName = $(popupLink).attr('href').replace('#', '');
 			const curentPopup = document.getElementById(popupName);
 			popupOpen(curentPopup);
 			e.preventDefault();
@@ -11448,7 +11448,7 @@ if (popupLinks.length > 0) {
 	}
 }
 
-const popupCloseIcon = document.querySelectorAll('.close-popup');
+const popupCloseIcon = $('.close-popup');
 if (popupCloseIcon.length > 0) {
 	for (let i = 0; i < popupCloseIcon.length; i++) {
 		const el = popupCloseIcon[i];
@@ -11476,6 +11476,7 @@ function popupOpen(curentPopup) {
 		});
 	}
 }
+
 function popupClose(popupActive, doUnlock = true) {
 	if (unlock) {
 		popupActive.classList.remove('popup-open');
@@ -11486,7 +11487,7 @@ function popupClose(popupActive, doUnlock = true) {
 }
 
 function bodyLock() {
-	const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+	const lockPaddingValue = window.innerWidth - $('.wrapper').offsetWidth + 'px';
 
 	if (lockPadding.length > 0) {
 		for (let i = 0; i < lockPadding.length; i++) {
@@ -11523,7 +11524,7 @@ function bodyUnlock() {
 
 document.addEventListener('keydown', function (e) {
 	if (e.which === 27) {
-		const popupActive = document.querySelector('.popup-open');
+		const popupActive = $('.popup-open');
 		popupClose(popupActive);
 	}
 });
@@ -11550,7 +11551,7 @@ document.addEventListener('keydown', function (e) {
 	}
 })();
 
-//Рендеринг корзины товаров
+// Рендеринг корзины товаров
 
 let cart_wrapper = document.querySelector(".popup-buy");
 
@@ -11606,17 +11607,17 @@ cartPopup.render();
 
 // Переменные для корзины
 
-let number = document.querySelectorAll(".popup-buy__number");
-let summ_item = document.querySelectorAll(".popup-buy__result");
+let number = $(".popup-buy__number");
+let summ_item = $(".popup-buy__result");
 let summ_cart = document.querySelector(".popup-cart__result");
-let cart_item_list = document.querySelectorAll (".popup-buy__group");
+let cart_item_list = $(".popup-buy__group");
 let plus = document.querySelectorAll("#button-plus");
 let minus = document.querySelectorAll("#button-minus");
-let number_button = document.querySelectorAll(".popup-buy__button");
-let delete_item = document.querySelectorAll(".popup-buy__delete");
-let accept = document.querySelectorAll(".popup-buy__accept");
-let add_button = document.querySelectorAll(".hide-text__item_add");
-let add_button_item = document.querySelectorAll(".buying__add");
+let number_button = $(".popup-buy__button");
+let delete_item = $(".popup-buy__delete");
+let accept = $(".popup-buy__accept");
+let add_button = $(".hide-text__item_add");
+let add_button_item = $(".buying__add");
 
 
 // Калькулятор цены
@@ -11632,16 +11633,13 @@ function Result_item() {
 function Result() {
 	let sum = 0;
 	for (let i = 0; i < summ_item.length; i++) {
-		for (let j = 0; j < cart_item_list.length; j++) {
-			if (cart_item_list[j].hasAttribute("data-display") && cart_item_list[j].getAttribute("data-price") == summ_item[i].getAttribute("data-price")) {
-				sum = sum + parseInt(summ_item[i].value);
+		if (cart_item_list[i].hasAttribute("data-display") && $(cart_item_list[i]).attr("data-price") == $(summ_item[i]).attr("data-price")) {
+			sum = sum + parseInt(summ_item[i].value);
+			summ_cart.innerHTML = sum + " руб.";
+			if (number[i].value == "0" && $(number[i]).attr('data-id') == $(delete_item[i]).attr('data-cart')) {
+				sum = sum - summ_item[i].value;
 				summ_cart.innerHTML = sum + " руб.";
-				if (number[i].value == "0" && number[i].getAttribute('data-id') == delete_item[i].getAttribute('data-cart')) {
-					sum = sum - summ_item[j].value;
-					summ_cart.innerHTML = sum + " руб.";
-				}
 			}
-			
 		}
 	}
 }
@@ -11651,95 +11649,92 @@ function Result() {
 
 function Accept() {
 	for (let i = 0; i < accept.length; i++) {
-		accept[i].removeAttribute('disabled');
-		accept[i].onclick = () => {
+		$(accept[i]).removeAttr('disabled');
+		$(accept[i]).on("click", function () {
 			Result_item();
 			Result();
-			if (cart_item_list[i].getAttribute('data-cart') == accept[i].getAttribute('data-cart')) {
-				accept[i].setAttribute('disabled', 'true');
+			if ($(cart_item_list[i]).attr('data-cart') == $(accept[i]).attr('data-cart')) {
+				$(accept[i]).attr('disabled', 'true');
 			}
-			if (number[i].value == "0" && number[i].getAttribute('data-id') == accept[i].getAttribute('data-cart')) {
-				cart_item_list[i].style.display = "none";
+			if (number[i].value == "0" && $(number[i]).attr('data-id') == $(accept[i]).attr('data-cart')) {
+				$(cart_item_list[i]).css("display", "none");
 			}
-			
-		}
+		});
 	}	
 }
 
 for (let i = 0; i < plus.length; i++) {
-	plus[i].onclick = () => {
-		if (number[i].getAttribute('data-id') == plus[i].getAttribute('data-id')) {
+	$(plus[i]).on("click", function () {
+		if ($(number[i]).attr('data-id') == $(plus[i]).attr('data-id')) {
 			number[i].value++;
 			Accept();
 		}	
-	}
+	});
 }
 
 for (let i = 0; i < minus.length; i++) {
-	minus[i].onclick = () => {
-		if (number[i].value >= 1 && number[i].getAttribute('data-id') == minus[i].getAttribute('data-id')) {
+	$(minus[i]).on("click", function () {
+		if (number[i].value >= 1 && $(number[i]).attr('data-id') == $(minus[i]).attr('data-id')) {
 			number[i].value--;	
 			Accept();
 		}
-		if (number[i].value == "0" && number[i].getAttribute('data-id') == minus[i].getAttribute('data-id')) {	
-			for (let k = 0; k < cart_item_list.length; k++) {
-				if (cart_item_list[k].getAttribute('data-cart') == number[j].getAttribute('data-id')) {
-					number[j].value;	
-				}
+		if (number[i].value == "0" && $(number[i]).attr('data-id') == $(minus[i]).attr('data-id')) {	
+			if ($(cart_item_list[i]).attr('data-cart') == $(number[i]).attr('data-id')) {
+				number[i].value;	
 			}
 		}
-	}
+	});
 }
 
 for (let i = 0; i < number.length; i++) {
-	number[i].onclick = () => {
+	$(number[i]).on("click", function () {
 		Accept();
-	}
+	});
 }
 
 
 // Добавление товаров из каталога в корзину и удаление из корзины
 
 for (let i = 0; i < add_button.length; i++) {
-	add_button[i].onclick = () => {
+	$(add_button[i]).on("click", function () {
 		for (let j = 0; j < cart_item_list.length; j++) {
-			if (cart_item_list[j].getAttribute('data-cart') == add_button[i].getAttribute('data-cart')) {
-				cart_item_list[j].style.display = "flex";
-				cart_item_list[j].setAttribute("data-display", "true");
-				document.querySelector(".popup-cart__order").style.display = "block";
-				document.querySelector(".popup-cart__summ").style.display = "block";
-				number[j].value = "1";
+			if ($(cart_item_list[j]).attr('data-cart') == $(add_button[i]).attr('data-cart')) {
+				$(cart_item_list[j]).css("display", "flex");
+				$(cart_item_list[j]).attr("data-display", "true");
+				$(".popup-cart__order").css("display", "block");
+				$(".popup-cart__summ").css("display", "block");
+				$(number[j]).val("1");
 			}	
 		}
 		Result_item();
 		Result();
-	}
+	});
 }
 
 for (let i = 0; i < add_button_item.length; i++) {
-	add_button_item[i].onclick = () => {
+	$(add_button_item[i]).on("click", function () {
 		for (let j = 0; j < cart_item_list.length; j++) {
-			if (cart_item_list[j].getAttribute('data-cart') == add_button_item[i].getAttribute('data-cart')) {
-				cart_item_list[j].style.display = "flex";
+			if ($(cart_item_list[j]).attr('data-cart') == $(add_button_item[i]).attr('data-cart')) {
+				$(cart_item_list[j]).css("display", "flex");
 				cart_item_list[j].setAttribute("data-display", "true");
-				document.querySelector(".popup-cart__order").style.display = "block";
-				document.querySelector(".popup-cart__summ").style.display = "block";
-				number[j].value = "1";
+				$(".popup-cart__order").css("display", "block");
+				$(".popup-cart__summ").css("display", "block");
+				$(number[j]).val("1");
 			}	
 		}
 		Result_item();
 		Result();
-	}
+	});
 }
 
 for (let i = 0; i < delete_item.length; i++) {
-	delete_item[i].onclick = () => {
-		if (number[i].getAttribute('data-id') == delete_item[i].getAttribute('data-cart')) {
-			number[i].value = "0";
+	$(delete_item[i]).on("click", function () {
+		if ($(number[i]).attr('data-id') == $(delete_item[i]).attr('data-cart')) {
+			$(number[i]).val("0");
 			Result();
-			cart_item_list[i].style.display = "none";
+			$(cart_item_list[i]).css("display", "none");
 		}
-	}
+	});
 }
 
 
@@ -11755,11 +11750,13 @@ $(function() {
 
 
 
+// Настройка строки поиска
+
 let search_wrapper = document.querySelector(".search-items");
 let searchItems = document.querySelectorAll(".search__item");
 
-document.querySelector("#search").oninput = function Searching() {
-	search_wrapper.style.display = "flex";
+$("#search").on("input", function () {
+	$(search_wrapper).css("display", "flex");
 	let val = this.value.trim();
 	class Search {
 		render() {
@@ -11795,21 +11792,20 @@ document.querySelector("#search").oninput = function Searching() {
 	const searchPage = new Search();
 	searchPage.render();
 
-	document.querySelector("#search").addEventListener('focusout', function (event) { 
+	this.addEventListener('focusout', function (event) { 
 		if (this.contains(event.relatedTarget)) return; 
 		else {
-			search_wrapper.style.display = "none";
+			$(search_wrapper).css("display", "none");
 		} 
 	});
-	document.querySelector("#search").addEventListener('focusin', function (event) { 
-		if (this.contains(event.relatedTarget)) return; 
-		else {
-			search_wrapper.style.display = "flex";
-		} 
-	});
-}
 
-// Настройка строки поиска
+	this.addEventListener('focusin', function (event) { 
+		if (this.contains(event.relatedTarget)) return; 
+		else {
+			$(search_wrapper).css("display", "flex");
+		} 
+	});
+});
 
 
 
@@ -11832,155 +11828,155 @@ $('.logo__image').on('click', () => {
 
 // Фильтр товаров в боковом меню
 
-let threed = document.querySelectorAll('.threed');
-let lamp = document.querySelectorAll('.lamp');
-let baby = document.querySelectorAll('.baby');
-let lava = document.querySelectorAll('.lava');
-let neon = document.querySelectorAll('.neon');
-let bra = document.querySelectorAll('.bra');
-let portable = document.querySelectorAll('.portable');
-let projector = document.querySelectorAll('.projector');
-let salt = document.querySelectorAll('.salt');
-let distance = document.querySelectorAll('.distance');
-let candles = document.querySelectorAll('.candles');
-let floor = document.querySelectorAll('.floor');
-let usb = document.querySelectorAll('.usb');
-let all_goods = document.querySelectorAll('.goods-offer');
+let threed = $('.threed');
+let lamp = $('.lamp');
+let baby = $('.baby');
+let lava = $('.lava');
+let neon = $('.neon');
+let bra = $('.bra');
+let portable =$('.portable');
+let projector = $('.projector');
+let salt = $('.salt');
+let distance = $('.distance');
+let candles = $('.candles');
+let floor = $('.floor');
+let usb = $('.usb');
+let all_goods = $('.goods-offer');
 
 $(function () {
 	$('#threed').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < threed.length; i++) {
-			threed[i].style.display = 'block';
+			$(threed[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#lamp').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < lamp.length; i++) {
-			lamp[i].style.display = 'block';
+			$(lamp[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#baby').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < baby.length; i++) {
-			baby[i].style.display = 'block';
+			$(baby[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#lava').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < lava.length; i++) {
-			lava[i].style.display = 'block';
+			$(lava[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#neon').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < neon.length; i++) {
-			neon[i].style.display = 'block';
+			$(neon[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#bra').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < bra.length; i++) {
-			bra[i].style.display = 'block';
+			$(bra[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#portable').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < portable.length; i++) {
-			portable[i].style.display = 'block';
+			$(portable[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#projector').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < projector.length; i++) {
-			projector[i].style.display = 'block';
+			$(projector[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#salt').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < salt.length; i++) {
-			salt[i].style.display = 'block';
+			$(salt[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#distance').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < distance.length; i++) {
-			distance[i].style.display = 'block';
+			$(distance[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#candles').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < candles.length; i++) {
-			candles[i].style.display = 'block';
+			$(candles[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#floor').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < floor.length; i++) {
-			floor[i].style.display = 'block';
+			$(floor[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#usb').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < usb.length; i++) {
-			usb[i].style.display = 'block';
+			$(usb[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#all').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'block';
+			$(all_goods[j]).css("display", "block");
 		}
 	});
 });
@@ -11997,12 +11993,17 @@ $(function () {
 
 // Сортировка товаров по цене 
 
-document.querySelector('.filter-buttons__high-price').onclick = function () {
-	MySort('data-price');
-}
-document.querySelector('.filter-buttons__low-price').onclick = function () {
-	MySortDesc('data-price');
-}
+$(function () {
+	$('.filter-buttons__high-price').on("click", function () {
+		MySort('data-price');
+	});
+});
+
+$(function () {
+	$('.filter-buttons__low-price').on("click", function () {
+		MySortDesc('data-price');
+	});
+});
 
 function MySort(sortType) {
 	let good_object = document.querySelector("#goods");
@@ -12041,10 +12042,10 @@ let wall = document.querySelectorAll(".bra");
 $(function () {
 	$('.filter-links__table').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < table.length; i++) {
-			table[i].style.display = 'block';
+			$(table[i]).css("display", "block");
 		}
 		history.pushState('', document.title, 'catalog.html#table_link');
 	});
@@ -12053,10 +12054,10 @@ $(function () {
 $(function () {
 	$('.filter-links__bra').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < wall.length; i++) {
-			wall[i].style.display = 'block';
+			$(wall[i]).css("display", "block");
 		}
 		history.pushState('', document.title, 'catalog.html#bra_link');
 	});
@@ -12065,10 +12066,10 @@ $(function () {
 $(function () {
 	$('.filter-links__floor').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < floor.length; i++) {
-			floor[i].style.display = 'block';
+			$(floor[i]).css("display", "block");
 		}
 		history.pushState('', document.title, 'catalog.html#floor_link');
 	});
@@ -12077,10 +12078,10 @@ $(function () {
 $(function () {
 	$('.filter-links__candles').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < candles.length; i++) {
-			candles[i].style.display = 'block';
+			$(candles[i]).css("display", "block");
 		}
 		history.pushState('', document.title, 'catalog.html#candles_link');
 	});
@@ -12089,7 +12090,7 @@ $(function () {
 $(function () {
 	$('.filter-links__all').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'block';
+			$(all_goods[j]).css("display", "block");
 		}
 		history.pushState('', document.title, window.location.pathname);
 	});
@@ -12098,41 +12099,45 @@ $(function () {
 
 // Изменение хэша URL при нажатии на кнопки фильтра 
 
-if (document.location.hash.indexOf('table_link') == 1) {
-	for (let j = 0; j < all_goods.length; j++) {
-		all_goods[j].style.display = 'none';
-	}
-	for (let i = 0; i < table.length; i++) {
-		table[i].style.display = 'block';
-	}
-}
+$(function () {
 
-if (document.location.hash.indexOf('wall_link') == 1) {
-	for (let j = 0; j < all_goods.length; j++) {
-		all_goods[j].style.display = 'none';
-	}
-	for (let i = 0; i < wall.length; i++) {
-		wall[i].style.display = 'block';
-	}
-}
-
-if (document.location.hash.indexOf('floor_link') == 1) {
-	for (let j = 0; j < all_goods.length; j++) {
-		all_goods[j].style.display = 'none';
-	}
-	for (let i = 0; i < floor.length; i++) {
-		floor[i].style.display = 'block';
-	}
-}
-
-if (document.location.hash.indexOf('candles_link') == 1) {
-	for (let j = 0; j < all_goods.length; j++) {
-		all_goods[j].style.display = 'none';
-	}
-	for (let i = 0; i < candles.length; i++) {
-		candles[i].style.display = 'block';
+	if (document.location.hash.indexOf('table_link') == 1) {
+		for (let j = 0; j < all_goods.length; j++) {
+			$(all_goods[j]).css("display", "none");
+		}
+		for (let i = 0; i < table.length; i++) {
+			$(table[i]).css("display", "block");
+		}
 	}
 	
-}
+	if (document.location.hash.indexOf('wall_link') == 1) {
+		for (let j = 0; j < all_goods.length; j++) {
+			$(all_goods[j]).css("display", "none");
+		}
+		for (let i = 0; i < wall.length; i++) {
+			$(wall[i]).css("display", "block");
+		}
+	}
+	
+	if (document.location.hash.indexOf('floor_link') == 1) {
+		for (let j = 0; j < all_goods.length; j++) {
+			$(all_goods[j]).css("display", "none");
+		}
+		for (let i = 0; i < floor.length; i++) {
+			$(floor[i]).css("display", "block");
+		}
+	}
+	
+	if (document.location.hash.indexOf('candles_link') == 1) {
+		for (let j = 0; j < all_goods.length; j++) {
+			$(all_goods[j]).css("display", "none");
+		}
+		for (let i = 0; i < candles.length; i++) {
+			$(candles[i]).css("display", "block");
+		}
+		
+	}
+})
+
 
 

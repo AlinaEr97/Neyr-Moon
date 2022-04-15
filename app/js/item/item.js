@@ -10908,11 +10908,13 @@ $(document).ready(function(){
 
 
 
+// Настройка строки поиска
+
 let search_wrapper = document.querySelector(".search-items");
 let searchItems = document.querySelectorAll(".search__item");
 
-document.querySelector("#search").oninput = function Searching() {
-	search_wrapper.style.display = "flex";
+$("#search").on("input", function () {
+	$(search_wrapper).css("display", "flex");
 	let val = this.value.trim();
 	class Search {
 		render() {
@@ -10948,21 +10950,20 @@ document.querySelector("#search").oninput = function Searching() {
 	const searchPage = new Search();
 	searchPage.render();
 
-	document.querySelector("#search").addEventListener('focusout', function (event) { 
+	this.addEventListener('focusout', function (event) { 
 		if (this.contains(event.relatedTarget)) return; 
 		else {
-			search_wrapper.style.display = "none";
+			$(search_wrapper).css("display", "none");
 		} 
 	});
-	document.querySelector("#search").addEventListener('focusin', function (event) { 
-		if (this.contains(event.relatedTarget)) return; 
-		else {
-			search_wrapper.style.display = "flex";
-		} 
-	});
-}
 
-// Настройка строки поиска
+	this.addEventListener('focusin', function (event) { 
+		if (this.contains(event.relatedTarget)) return; 
+		else {
+			$(search_wrapper).css("display", "flex");
+		} 
+	});
+});
 
 
 
@@ -10985,155 +10986,155 @@ $('.logo__image').on('click', () => {
 
 // Фильтр товаров в боковом меню
 
-let threed = document.querySelectorAll('.threed');
-let lamp = document.querySelectorAll('.lamp');
-let baby = document.querySelectorAll('.baby');
-let lava = document.querySelectorAll('.lava');
-let neon = document.querySelectorAll('.neon');
-let bra = document.querySelectorAll('.bra');
-let portable = document.querySelectorAll('.portable');
-let projector = document.querySelectorAll('.projector');
-let salt = document.querySelectorAll('.salt');
-let distance = document.querySelectorAll('.distance');
-let candles = document.querySelectorAll('.candles');
-let floor = document.querySelectorAll('.floor');
-let usb = document.querySelectorAll('.usb');
-let all_goods = document.querySelectorAll('.goods-offer');
+let threed = $('.threed');
+let lamp = $('.lamp');
+let baby = $('.baby');
+let lava = $('.lava');
+let neon = $('.neon');
+let bra = $('.bra');
+let portable =$('.portable');
+let projector = $('.projector');
+let salt = $('.salt');
+let distance = $('.distance');
+let candles = $('.candles');
+let floor = $('.floor');
+let usb = $('.usb');
+let all_goods = $('.goods-offer');
 
 $(function () {
 	$('#threed').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < threed.length; i++) {
-			threed[i].style.display = 'block';
+			$(threed[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#lamp').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < lamp.length; i++) {
-			lamp[i].style.display = 'block';
+			$(lamp[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#baby').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < baby.length; i++) {
-			baby[i].style.display = 'block';
+			$(baby[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#lava').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < lava.length; i++) {
-			lava[i].style.display = 'block';
+			$(lava[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#neon').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < neon.length; i++) {
-			neon[i].style.display = 'block';
+			$(neon[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#bra').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < bra.length; i++) {
-			bra[i].style.display = 'block';
+			$(bra[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#portable').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < portable.length; i++) {
-			portable[i].style.display = 'block';
+			$(portable[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#projector').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < projector.length; i++) {
-			projector[i].style.display = 'block';
+			$(projector[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#salt').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < salt.length; i++) {
-			salt[i].style.display = 'block';
+			$(salt[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#distance').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < distance.length; i++) {
-			distance[i].style.display = 'block';
+			$(distance[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#candles').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < candles.length; i++) {
-			candles[i].style.display = 'block';
+			$(candles[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#floor').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < floor.length; i++) {
-			floor[i].style.display = 'block';
+			$(floor[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#usb').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'none';
+			$(all_goods[j]).css("display", "none");
 		}
 		for (let i = 0; i < usb.length; i++) {
-			usb[i].style.display = 'block';
+			$(usb[i]).css("display", "block");
 		}
 	});
 });
 $(function () {
 	$('#all').on("click", function () {
 		for (let j = 0; j < all_goods.length; j++) {
-			all_goods[j].style.display = 'block';
+			$(all_goods[j]).css("display", "block");
 		}
 	});
 });
@@ -11816,6 +11817,8 @@ itemPage.render();
 
 
 
+// Настройка OKZoom
+
 /*
  * OKZoom by OKFocus v1.1
  * http://okfoc.us // @okfocus
@@ -11990,8 +11993,8 @@ $(function($){
     document.body.style.cursor = "auto";
   };
 });
+// Настройка зума главной картинки товара
 
-// Настройка OKZoom
 $(function() {
 
 	$(".card-pictures__image").okzoom({ 
@@ -12003,8 +12006,8 @@ $(function() {
 	});
 	
 });
+// Слайдер картинок в карточке товара
 
-// Настройка зума главной картинки товара
 new Swiper (".card-slider", {
 	mousewheel: {
 		sensitivity: 1, 
@@ -12052,8 +12055,8 @@ new Swiper (".card-slider", {
 	effect: 'slide',
 });
 
-// Слайдер картинок в карточке товара
 
+// Переключение главной картинки товара
 
 let main_image = document.querySelectorAll(".card-pictures__image");
 let chosen_image = document.querySelectorAll(".card-slider__image");
@@ -12068,7 +12071,7 @@ $(function() {
 	}
 });
 
-// Переключение главной картинки товара
+
 // Рендеринг похожих товаров на странице карточек 
 
 let similar_wrapper = document.querySelectorAll(".similar__wrapper");
@@ -12121,210 +12124,214 @@ similarPage.render();
 
 // Фильтр похожих товаров
 
-let similar_salt = document.querySelectorAll(".goods-offer_salt");
-let similar_threed = document.querySelectorAll(".goods-offer_threed");
-let similar_distance = document.querySelectorAll(".goods-offer_distance");
-let similar_distance2 = document.querySelectorAll(".distance");
-let similar_baby = document.querySelectorAll(".goods-offer_baby");
-let similar_baby2 = document.querySelectorAll(".baby");
-let similar_projector = document.querySelectorAll(".goods-offer_projector");
-let similar_projector2 = document.querySelectorAll(".projector");
-let similar_usb = document.querySelectorAll(".usb");
-let similar_candles = document.querySelectorAll(".goods-offer_candles");
-let similar_floor = document.querySelectorAll(".goods-offer_floor");
-let similar_portable = document.querySelectorAll(".goods-offer_portable");
-let similar_lamp = document.querySelectorAll(".goods-offer_lamp");
-let similar_bra = document.querySelectorAll(".goods-offer_bra");
-let similar_bra2 = document.querySelectorAll(".bra");
+let similar_salt = $(".goods-offer_salt");
+let similar_threed = $(".goods-offer_threed");
+let similar_distance = $(".goods-offer_distance");
+let similar_distance2 = $(".distance");
+let similar_baby = $(".goods-offer_baby");
+let similar_baby2 = $(".baby");
+let similar_projector = $(".goods-offer_projector");
+let similar_projector2 = $(".projector");
+let similar_usb = $(".usb");
+let similar_candles = $(".goods-offer_candles");
+let similar_floor = $(".goods-offer_floor");
+let similar_portable = $(".goods-offer_portable");
+let similar_lamp = $(".goods-offer_lamp");
+let similar_bra = $(".goods-offer_bra");
+let similar_bra2 = $(".bra");
 
-if (document.location.hash.indexOf('salt') == 1) {
-	for (let i = 0; i < similar_salt.length; i++) {
-		similar_salt[i].style.display = "block";
-	}
-	for (let i = 0; i < similar_portable.length; i++) {
-		similar_portable[i].style.display = "block";
-	}
-	for (let i = 0; i < similar_lamp.length; i++) {
-		similar_lamp[i].style.display = "block";
-	}
-	for (let i = 0; i < similar_candles.length; i++) {
-		similar_candles[i].style.display = "block";
-	}
-}
+$(function () {
 
-if (document.location.hash.indexOf('threed') == 1) {
-	for (let i = 0; i < similar_threed.length; i++) {
-		similar_threed[i].style.display = "block";
+	if (document.location.hash.indexOf('salt') == 1) {
+		for (let i = 0; i < similar_salt.length; i++) {
+			$(similar_salt[i]).css("display", "block");
+		}
+		for (let i = 0; i < similar_portable.length; i++) {
+			$(similar_portable[i]).css("display", "block");
+		}
+		for (let i = 0; i < similar_lamp.length; i++) {
+			$(similar_lamp[i]).css("display", "block");
+		}
+		for (let i = 0; i < similar_candles.length; i++) {
+			$(similar_candles[i]).css("display", "block");
+		}
 	}
-	for (let j = 0; j < similar_distance.length; j++) {
-		similar_distance[j].style.display = "block";
+	
+	if (document.location.hash.indexOf('threed') == 1) {
+		for (let i = 0; i < similar_threed.length; i++) {
+			$(similar_threed[i]).css("display", "block");
+		}
+		for (let j = 0; j < similar_distance.length; j++) {
+			$(similar_distance[j]).css("display", "block");
+		}
+		for (let k = 0; k < similar_distance2.length; k++) {
+			$(similar_distance2[k]).css("display", "block");
+		}
+		for (let i = 0; i < similar_bra.length; i++) {
+			$(similar_bra[i]).css("display", "block");
+		}
 	}
-	for (let k = 0; k < similar_distance2.length; k++) {
-		similar_distance2[k].style.display = "block";
+	
+	if (document.location.hash.indexOf('baby') == 1) {
+		for (let i = 0; i < similar_baby.length; i++) {
+			$(similar_baby[i]).css("display", "block");
+		}
+		for (let j = 0; j < similar_baby2.length; j++) {
+			$(similar_baby2[j]).css("display", "block");
+		}
+		for (let k = 0; k < similar_threed.length; k++) {
+			$(similar_threed[k]).css("displa", "block");
+		}
+		for (let l = 0; l < similar_distance2.length; l++) {
+			$(similar_distance2[l]).css("display", "block");
+		}
 	}
-	for (let i = 0; i < similar_bra.length; i++) {
-		similar_bra[i].style.display = "block";
+	
+	if (document.location.hash.indexOf('projector') == 1) {
+		for (let i = 0; i < similar_projector.length; i++) {
+			$(similar_projector[i]).css("display", "block");
+		}
+		for (let j = 0; j < similar_projector2.length; j++) {
+			$(similar_projector2[j]).css("display", "block");
+		}
 	}
-}
+	
+	if (document.location.hash.indexOf('distance') == 1 || document.location.hash.indexOf('usb') == 1) {
+		for (let i = 0; i < similar_distance.length; i++) {
+			$(similar_distance[i]).css("display", "block");
+		}
+		for (let j = 0; j < similar_distance2.length; j++) {
+			$(similar_distance2[j]).css("display", "block");
+		}
+		for (let k = 0; k < similar_usb.length; k++) {
+			$(similar_usb[k]).css("displa", "block");
+		}
+		for (let l = 0; l < similar_threed.length; l++) {
+			$(similar_threed[l]).css("display", "block");
+		}
+	}
+	
+	if (document.location.hash.indexOf('candles') == 1) {
+		for (let i = 0; i < similar_candles.length; i++) {
+			$(similar_candles[i]).css("display", "block");
+		}
+	}
+	
+	if (document.location.hash.indexOf('distanceusb2') == 1) {
+		for (let i = 0; i < similar_salt.length; i++) {
+			$(similar_salt[i]).css("display", "block");
+		}
+		for (let j = 0; j < similar_lamp.length; j++) {
+			$(similar_lamp[j]).css("display", "block");
+		}
+		for (let k = 0; k < similar_portable.length; k++) {
+			$(similar_portable[k]).css("display", "block");
+		}
+		for (let l = 0; l < similar_baby.length; l++) {
+			$(similar_baby[l]).css("display", "none");
+		}
+		for (let m = 0; m < similar_baby2.length; m++) {
+			$(similar_baby2[m]).css("display", "none");
+		}
+		for (let n = 0; n < similar_projector.length; n++) {
+			$(similar_projector[n]).css("display", "none");
+		}
+	}
+	
+	if (document.location.hash.indexOf('portable5') == 1) {
+		for (let i = 0; i < similar_salt.length; i++) {
+			$(similar_salt[i]).css("display", "block");
+		}
+		for (let i = 0; i < similar_lamp.length; i++) {
+			$(similar_lamp[i]).css("display", "block");
+		}
+		for (let i = 0; i < similar_candles.length; i++) {
+			$(similar_candles[i]).css("display", "block");
+		}
+	}
+	
+	if (document.location.hash.indexOf('babydistanceusb8') == 1) {
+		for (let i = 0; i < similar_floor.length; i++) {
+			$(similar_floor[i]).css("display", "none");
+		}
+	}
+	
+	if (document.location.hash.indexOf('babyneondistance9') == 1) {
+		for (let i = 0; i < similar_bra2.length; i++) {
+			$(similar_bra2[i]).css("display", "none");
+		}
+	}
+	
+	if (document.location.hash.indexOf('lamp10') == 1) {
+		for (let i = 0; i < similar_salt.length; i++) {
+			$(similar_salt[i]).css("display", "block");
+		}
+		for (let j = 0; j < similar_portable.length; j++) {
+			$(similar_portable[j]).css("display", "block");
+		}
+		for (let k = 0; k < similar_candles.length; k++) {
+			$(similar_candles[k]).css("display", "block");
+		}
+	}
+	
+	if (document.location.hash.indexOf('threedbabyprojectordistance13') == 1 || document.location.hash.indexOf('threeddistance14')){
+		for (let i = 0; i < similar_floor.length; i++) {
+			$(similar_floor[i]).css("display", "none");
+		}
+		for (let j = 0; j < similar_distance.length; j++) {
+			$(similar_distance[j]).css("display", "none");
+		}
+	}
+	
+	if (document.location.hash.indexOf('threedlava16') == 1) {
+		for (let i = 0; i < similar_baby.length; i++) {
+			$(similar_baby[i]).css("display", "none");
+		}
+		for (let j = 0; j < similar_baby2.length; j++) {
+			$(similar_baby2[j]).css("display", "none");
+		}
+		for (let k = 0; k < similar_projector1.length; k++) {
+			$(similar_projector1[k]).css("display", "none");
+		}
+	}
+	
+	if (document.location.hash.indexOf('floordistance18') == 1) {
+		for (let i = 0; i < similar_distance.length; i++) {
+			$(similar_distance[i]).css("display", "block");
+		}
+		for (let j = 0; j < similar_distance2.length; j++) {
+			$(similar_distance2[j]).css("display", "block");
+		}
+		for (let k = 0; k < similar_baby.length; k++) {
+			$(similar_baby[k]).css("display", "none");
+		}
+		for (let l = 0; l < similar_baby2.length; l++) {
+			$(similar_baby2[l]).css("display", "none");
+		}
+		for (let l = 0; l < similar_usb.length; l++) {
+			$(similar_usb[l]).css("display", "none");
+		}
+	}
+	
+	if (document.location.hash.indexOf('bra') == 1) {
+		for (let i = 0; i < similar_bra.length; i++) {
+			$(similar_bra[i]).css("display", "block");
+		}
+		for (let j = 0; j < similar_bra2.length; j++) {
+			$(similar_bra2[j]).css("display", "block");
+		}
+		for (let k = 0; k < similar_threed.length; k++) {
+			$(similar_threed[k]).css("display", "block");
+		}
+	}
+});
 
-if (document.location.hash.indexOf('baby') == 1) {
-	for (let i = 0; i < similar_baby.length; i++) {
-		similar_baby[i].style.display = "block";
-	}
-	for (let j = 0; j < similar_baby2.length; j++) {
-		similar_baby2[j].style.display = "block";
-	}
-	for (let k = 0; k < similar_threed.length; k++) {
-		similar_threed[k].style.display = "block";
-	}
-	for (let l = 0; l < similar_distance2.length; l++) {
-		similar_distance2[l].style.display = "block";
-	}
-}
-
-if (document.location.hash.indexOf('projector') == 1) {
-	for (let i = 0; i < similar_projector.length; i++) {
-		similar_projector[i].style.display = "block";
-	}
-	for (let j = 0; j < similar_projector2.length; j++) {
-		similar_projector2[j].style.display = "block";
-	}
-}
-
-if (document.location.hash.indexOf('distance') == 1 || document.location.hash.indexOf('usb') == 1) {
-	for (let i = 0; i < similar_distance.length; i++) {
-		similar_distance[i].style.display = "block";
-	}
-	for (let j = 0; j < similar_distance2.length; j++) {
-		similar_distance2[j].style.display = "block";
-	}
-	for (let k = 0; k < similar_usb.length; k++) {
-		similar_usb[k].style.display = "block";
-	}
-	for (let l = 0; l < similar_threed.length; l++) {
-		similar_threed[l].style.display = "block";
-	}
-}
-
-if (document.location.hash.indexOf('candles') == 1) {
-	for (let i = 0; i < similar_candles.length; i++) {
-		similar_candles[i].style.display = "block";
-	}
-}
-
-if (document.location.hash.indexOf('distanceusb2') == 1) {
-	for (let i = 0; i < similar_salt.length; i++) {
-		similar_salt[i].style.display = "block";
-	}
-	for (let j = 0; j < similar_lamp.length; j++) {
-		similar_lamp[j].style.display = "block";
-	}
-	for (let k = 0; k < similar_portable.length; k++) {
-		similar_portable[k].style.display = "block";
-	}
-	for (let l = 0; l < similar_baby.length; l++) {
-		similar_baby[l].style.display = "none";
-	}
-	for (let m = 0; m < similar_baby2.length; m++) {
-		similar_baby2[m].style.display = "none";
-	}
-	for (let n = 0; n < similar_projector.length; n++) {
-		similar_projector[n].style.display = "none";
-	}
-}
-
-if (document.location.hash.indexOf('portable5') == 1) {
-	for (let i = 0; i < similar_salt.length; i++) {
-		similar_salt[i].style.display = "block";
-	}
-	for (let i = 0; i < similar_lamp.length; i++) {
-		similar_lamp[i].style.display = "block";
-	}
-	for (let i = 0; i < similar_candles.length; i++) {
-		similar_candles[i].style.display = "block";
-	}
-}
-
-if (document.location.hash.indexOf('babydistanceusb8') == 1) {
-	for (let i = 0; i < similar_floor.length; i++) {
-		similar_floor[i].style.display = "none";
-	}
-}
-
-if (document.location.hash.indexOf('babyneondistance9') == 1) {
-	for (let i = 0; i < similar_bra2.length; i++) {
-		similar_bra2[i].style.display = "none";
-	}
-}
-
-if (document.location.hash.indexOf('lamp10') == 1) {
-	for (let i = 0; i < similar_salt.length; i++) {
-		similar_salt[i].style.display = "block";
-	}
-	for (let j = 0; j < similar_portable.length; j++) {
-		similar_portable[j].style.display = "block";
-	}
-	for (let k = 0; k < similar_candles.length; k++) {
-		similar_candles[k].style.display = "block";
-	}
-}
-
-if (document.location.hash.indexOf('threedbabyprojectordistance13') == 1 || document.location.hash.indexOf('threeddistance14')){
-	for (let i = 0; i < similar_floor.length; i++) {
-		similar_floor[i].style.display = "none";
-	}
-	for (let j = 0; j < similar_distance.length; j++) {
-		similar_distance[j].style.display = "none";
-	}
-}
-
-if (document.location.hash.indexOf('threedlava16') == 1) {
-	for (let i = 0; i < similar_baby.length; i++) {
-		similar_baby[i].style.display = "none";
-	}
-	for (let j = 0; j < similar_baby2.length; j++) {
-		similar_baby2[j].style.display = "none";
-	}
-	for (let k = 0; k < similar_projector1.length; k++) {
-		similar_projector1[k].style.display = "none";
-	}
-}
-
-if (document.location.hash.indexOf('floordistance18') == 1) {
-	for (let i = 0; i < similar_distance.length; i++) {
-		similar_distance[i].style.display = "block";
-	}
-	for (let j = 0; j < similar_distance2.length; j++) {
-		similar_distance2[j].style.display = "block";
-	}
-	for (let k = 0; k < similar_baby.length; k++) {
-		similar_baby[k].style.display = "none";
-	}
-	for (let l = 0; l < similar_baby2.length; l++) {
-		similar_baby2[l].style.display = "none";
-	}
-	for (let l = 0; l < similar_usb.length; l++) {
-		similar_usb[l].style.display = "none";
-	}
-}
-
-if (document.location.hash.indexOf('bra') == 1) {
-	for (let i = 0; i < similar_bra.length; i++) {
-		similar_bra[i].style.display = "block";
-	}
-	for (let j = 0; j < similar_bra2.length; j++) {
-		similar_bra2[j].style.display = "block";
-	}
-	for (let k = 0; k < similar_threed.length; k++) {
-		similar_threed[k].style.display = "block";
-	}
-}
 
 
 
 
 
-//Рендеринг корзины товаров
+// Рендеринг корзины товаров
 
 let cart_wrapper = document.querySelector(".popup-buy");
 
@@ -12380,17 +12387,17 @@ cartPopup.render();
 
 // Переменные для корзины
 
-let number = document.querySelectorAll(".popup-buy__number");
-let summ_item = document.querySelectorAll(".popup-buy__result");
+let number = $(".popup-buy__number");
+let summ_item = $(".popup-buy__result");
 let summ_cart = document.querySelector(".popup-cart__result");
-let cart_item_list = document.querySelectorAll (".popup-buy__group");
+let cart_item_list = $(".popup-buy__group");
 let plus = document.querySelectorAll("#button-plus");
 let minus = document.querySelectorAll("#button-minus");
-let number_button = document.querySelectorAll(".popup-buy__button");
-let delete_item = document.querySelectorAll(".popup-buy__delete");
-let accept = document.querySelectorAll(".popup-buy__accept");
-let add_button = document.querySelectorAll(".hide-text__item_add");
-let add_button_item = document.querySelectorAll(".buying__add");
+let number_button = $(".popup-buy__button");
+let delete_item = $(".popup-buy__delete");
+let accept = $(".popup-buy__accept");
+let add_button = $(".hide-text__item_add");
+let add_button_item = $(".buying__add");
 
 
 // Калькулятор цены
@@ -12406,16 +12413,13 @@ function Result_item() {
 function Result() {
 	let sum = 0;
 	for (let i = 0; i < summ_item.length; i++) {
-		for (let j = 0; j < cart_item_list.length; j++) {
-			if (cart_item_list[j].hasAttribute("data-display") && cart_item_list[j].getAttribute("data-price") == summ_item[i].getAttribute("data-price")) {
-				sum = sum + parseInt(summ_item[i].value);
+		if (cart_item_list[i].hasAttribute("data-display") && $(cart_item_list[i]).attr("data-price") == $(summ_item[i]).attr("data-price")) {
+			sum = sum + parseInt(summ_item[i].value);
+			summ_cart.innerHTML = sum + " руб.";
+			if (number[i].value == "0" && $(number[i]).attr('data-id') == $(delete_item[i]).attr('data-cart')) {
+				sum = sum - summ_item[i].value;
 				summ_cart.innerHTML = sum + " руб.";
-				if (number[i].value == "0" && number[i].getAttribute('data-id') == delete_item[i].getAttribute('data-cart')) {
-					sum = sum - summ_item[j].value;
-					summ_cart.innerHTML = sum + " руб.";
-				}
 			}
-			
 		}
 	}
 }
@@ -12425,103 +12429,100 @@ function Result() {
 
 function Accept() {
 	for (let i = 0; i < accept.length; i++) {
-		accept[i].removeAttribute('disabled');
-		accept[i].onclick = () => {
+		$(accept[i]).removeAttr('disabled');
+		$(accept[i]).on("click", function () {
 			Result_item();
 			Result();
-			if (cart_item_list[i].getAttribute('data-cart') == accept[i].getAttribute('data-cart')) {
-				accept[i].setAttribute('disabled', 'true');
+			if ($(cart_item_list[i]).attr('data-cart') == $(accept[i]).attr('data-cart')) {
+				$(accept[i]).attr('disabled', 'true');
 			}
-			if (number[i].value == "0" && number[i].getAttribute('data-id') == accept[i].getAttribute('data-cart')) {
-				cart_item_list[i].style.display = "none";
+			if (number[i].value == "0" && $(number[i]).attr('data-id') == $(accept[i]).attr('data-cart')) {
+				$(cart_item_list[i]).css("display", "none");
 			}
-			
-		}
+		});
 	}	
 }
 
 for (let i = 0; i < plus.length; i++) {
-	plus[i].onclick = () => {
-		if (number[i].getAttribute('data-id') == plus[i].getAttribute('data-id')) {
+	$(plus[i]).on("click", function () {
+		if ($(number[i]).attr('data-id') == $(plus[i]).attr('data-id')) {
 			number[i].value++;
 			Accept();
 		}	
-	}
+	});
 }
 
 for (let i = 0; i < minus.length; i++) {
-	minus[i].onclick = () => {
-		if (number[i].value >= 1 && number[i].getAttribute('data-id') == minus[i].getAttribute('data-id')) {
+	$(minus[i]).on("click", function () {
+		if (number[i].value >= 1 && $(number[i]).attr('data-id') == $(minus[i]).attr('data-id')) {
 			number[i].value--;	
 			Accept();
 		}
-		if (number[i].value == "0" && number[i].getAttribute('data-id') == minus[i].getAttribute('data-id')) {	
-			for (let k = 0; k < cart_item_list.length; k++) {
-				if (cart_item_list[k].getAttribute('data-cart') == number[j].getAttribute('data-id')) {
-					number[j].value;	
-				}
+		if (number[i].value == "0" && $(number[i]).attr('data-id') == $(minus[i]).attr('data-id')) {	
+			if ($(cart_item_list[i]).attr('data-cart') == $(number[i]).attr('data-id')) {
+				number[i].value;	
 			}
 		}
-	}
+	});
 }
 
 for (let i = 0; i < number.length; i++) {
-	number[i].onclick = () => {
+	$(number[i]).on("click", function () {
 		Accept();
-	}
+	});
 }
 
 
 // Добавление товаров из каталога в корзину и удаление из корзины
 
 for (let i = 0; i < add_button.length; i++) {
-	add_button[i].onclick = () => {
+	$(add_button[i]).on("click", function () {
 		for (let j = 0; j < cart_item_list.length; j++) {
-			if (cart_item_list[j].getAttribute('data-cart') == add_button[i].getAttribute('data-cart')) {
-				cart_item_list[j].style.display = "flex";
-				cart_item_list[j].setAttribute("data-display", "true");
-				document.querySelector(".popup-cart__order").style.display = "block";
-				document.querySelector(".popup-cart__summ").style.display = "block";
-				number[j].value = "1";
+			if ($(cart_item_list[j]).attr('data-cart') == $(add_button[i]).attr('data-cart')) {
+				$(cart_item_list[j]).css("display", "flex");
+				$(cart_item_list[j]).attr("data-display", "true");
+				$(".popup-cart__order").css("display", "block");
+				$(".popup-cart__summ").css("display", "block");
+				$(number[j]).val("1");
 			}	
 		}
 		Result_item();
 		Result();
-	}
+	});
 }
 
 for (let i = 0; i < add_button_item.length; i++) {
-	add_button_item[i].onclick = () => {
+	$(add_button_item[i]).on("click", function () {
 		for (let j = 0; j < cart_item_list.length; j++) {
-			if (cart_item_list[j].getAttribute('data-cart') == add_button_item[i].getAttribute('data-cart')) {
-				cart_item_list[j].style.display = "flex";
+			if ($(cart_item_list[j]).attr('data-cart') == $(add_button_item[i]).attr('data-cart')) {
+				$(cart_item_list[j]).css("display", "flex");
 				cart_item_list[j].setAttribute("data-display", "true");
-				document.querySelector(".popup-cart__order").style.display = "block";
-				document.querySelector(".popup-cart__summ").style.display = "block";
-				number[j].value = "1";
+				$(".popup-cart__order").css("display", "block");
+				$(".popup-cart__summ").css("display", "block");
+				$(number[j]).val("1");
 			}	
 		}
 		Result_item();
 		Result();
-	}
+	});
 }
 
 for (let i = 0; i < delete_item.length; i++) {
-	delete_item[i].onclick = () => {
-		if (number[i].getAttribute('data-id') == delete_item[i].getAttribute('data-cart')) {
-			number[i].value = "0";
+	$(delete_item[i]).on("click", function () {
+		if ($(number[i]).attr('data-id') == $(delete_item[i]).attr('data-cart')) {
+			$(number[i]).val("0");
 			Result();
-			cart_item_list[i].style.display = "none";
+			$(cart_item_list[i]).css("display", "none");
 		}
-	}
+	});
 }
 
 
 
-const popupLinks = document.querySelectorAll('.popup-link');
+const popupLinks = $('.popup-link');
 const body = document.querySelector('body');
-const lockPadding = document.querySelectorAll('.lock-padding');
-const curentPopup = document.querySelector('.popup__content');
+const lockPadding = $('.lock-padding');
+const curentPopup = $('.popup__content');
 
 let unlock = true;
 
@@ -12531,7 +12532,7 @@ if (popupLinks.length > 0) {
 	for (let i = 0; i < popupLinks.length; i++) {
 		const popupLink = popupLinks[i];
 		popupLink.addEventListener("click", function(e) {
-			const popupName = popupLink.getAttribute('href').replace('#', '');
+			const popupName = $(popupLink).attr('href').replace('#', '');
 			const curentPopup = document.getElementById(popupName);
 			popupOpen(curentPopup);
 			e.preventDefault();
@@ -12539,7 +12540,7 @@ if (popupLinks.length > 0) {
 	}
 }
 
-const popupCloseIcon = document.querySelectorAll('.close-popup');
+const popupCloseIcon = $('.close-popup');
 if (popupCloseIcon.length > 0) {
 	for (let i = 0; i < popupCloseIcon.length; i++) {
 		const el = popupCloseIcon[i];
@@ -12567,6 +12568,7 @@ function popupOpen(curentPopup) {
 		});
 	}
 }
+
 function popupClose(popupActive, doUnlock = true) {
 	if (unlock) {
 		popupActive.classList.remove('popup-open');
@@ -12577,7 +12579,7 @@ function popupClose(popupActive, doUnlock = true) {
 }
 
 function bodyLock() {
-	const lockPaddingValue = window.innerWidth - document.querySelector('.wrapper').offsetWidth + 'px';
+	const lockPaddingValue = window.innerWidth - $('.wrapper').offsetWidth + 'px';
 
 	if (lockPadding.length > 0) {
 		for (let i = 0; i < lockPadding.length; i++) {
@@ -12614,7 +12616,7 @@ function bodyUnlock() {
 
 document.addEventListener('keydown', function (e) {
 	if (e.which === 27) {
-		const popupActive = document.querySelector('.popup-open');
+		const popupActive = $('.popup-open');
 		popupClose(popupActive);
 	}
 });
