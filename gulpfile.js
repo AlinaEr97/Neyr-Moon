@@ -12,7 +12,7 @@ function browsersync () {
 		}
 	});
 }
-	
+
 function sсripts () {
 	return src([
 		'node_modules/jquery/app/jquery.js',
@@ -83,12 +83,12 @@ function min_item_sсripts () {
 		'app/js/general.js',
 		'app/js/item-list.js',
 		'app/js/item/card.js',
-		'app/js/popup.js',
 		'app/js/item/okzoom.js',
 		'app/js/item/zoom.js',
 		'app/js/item/sliders.js',
 		'app/js/item/similar.js',
 		'app/js/cart.js',
+		'app/js/popup.js',
 	])
 
 	.pipe(concat('item.min.js'))
@@ -181,7 +181,7 @@ function watching() {
 	watch(['app/js/catalog/*.js', '!app/js/catalog/catalog.js', '!dist/js/catalog/catalog.min.js'], min_catalog_sсripts);
 	watch(['app/*.html']).on('change', browserSync.reload)
 }
-	
+
 exports.styles = styles;
 exports.min_styles = min_styles;
 exports.watching = watching;
