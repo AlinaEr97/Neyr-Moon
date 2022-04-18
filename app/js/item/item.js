@@ -10979,8 +10979,10 @@ $(function() {
 
 // Логотип-ссылка на главную страницу сайта
 
-$('.logo__image').on('click', () => {
-	location.href = 'index.html';
+$(function() {
+	$('.logo__image').on('click', () => {
+		location.href = 'index.html';
+	});
 });
 
 
