@@ -162,7 +162,6 @@ return src('app/scss/style.scss')
 
 function build() {
 	return src ([
-	'app/css/style.min.css',
 	'app/fonts/**/*',
 	'app/img/**/*',
 	'app/js/general.js',
