@@ -149,14 +149,14 @@ return src('app/scss/style.scss')
 
 function min_styles () {
 return src('app/scss/style.scss')
-	.pipe(scss({outputStyle: 'expanded'}))
+	.pipe(scss({outputStyle: 'compressed'}))
 	.pipe(concat('style.min.css'))
 	.pipe(autoprefixer({
 		overrideBrowsersList: ['last 10 version'],
 		grid: true
 	}))
 		
-	.pipe(dest('app/css'))
+	.pipe(dest('dist/css'))
 	.pipe(browserSync.stream()) 
 }
 
@@ -164,7 +164,9 @@ function build() {
 	return src ([
 	'app/css/style.min.css',
 	'app/fonts/**/*',
-	'dist/js/**/*.min.js',
+	'app/img/**/*',
+	'app/js/general.js',
+	'app/js/popup.js',
 	'app/*.html'
 	], {base: 'app'})
 	.pipe(dest('dist'))
