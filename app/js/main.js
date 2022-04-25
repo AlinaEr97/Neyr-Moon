@@ -11535,7 +11535,7 @@ class Goods {
 			htmlCatalog += `
 					<div class="goods__offer goods-offer ${classes}" data-price="${new_price}" data-type="${path}">
 
-						<img src="${img}" alt="#" class="goods-offer__image">
+						<img src="${img}" alt="${type} ${name}" class="goods-offer__image">
 
 						<div class="goods-offer__hide hide-text">
 							<p class="hide-text__item search-good"><span class="hide-text__item_titles">Бренд:</span>
@@ -11746,6 +11746,8 @@ $(function () {
 	});
 });
 
+
+// Настройка попапов
 
 const popupLinks = $('.popup-link');
 const body = document.querySelector('body');
@@ -12075,7 +12077,7 @@ let item_wrapper = document.querySelector(".popup-item__content");
 class Item {
 	render() {
 		let ItemCatalog = '';
-		catalog.forEach(({id, path, path_link, group, brend_img, material, img, img1, img2, img3, type, name, old_price, new_price, description, cable, voltage, weight, height, madein, equipment}) => {
+		catalog.forEach(({id, path, path_link, group, brend, brend_img, material, img, img1, img2, img3, type, name, old_price, new_price, description, cable, voltage, weight, height, madein, equipment}) => {
 
 			ItemCatalog += `
 			<div class="popup-item__group" id="${id}">
@@ -12098,7 +12100,7 @@ class Item {
 
 							<div class="card-offer__pictures card-pictures">
 
-								<img src="${img}" alt="item" class="card-pictures__image">
+								<img src="${img}" alt="${type} ${name}" class="card-pictures__image">
 							
 								<div class="card-slider swiper-container">
 
@@ -12106,19 +12108,19 @@ class Item {
 
 										<div class="card-slider__slide swiper-slide">
 											<div class="card-slider__item">
-												<img class="card-slider__image" src="${img1}" alt="item">
+												<img class="card-slider__image" src="${img1}" alt="${type} ${name}">
 											</div>
 										</div>
 
 										<div class="card-slider__slide swiper-slide">
 											<div class="card-slider__item">
-												<img class="card-slider__image" src="${img2}" alt="item">
+												<img class="card-slider__image" src="${img2}" alt="${type} ${name}">
 											</div>
 										</div>
 
 										<div class="card-slider__slide swiper-slide">
 											<div class="card-slider__item">
-												<img class="card-slider__image" src="${img3}" alt="item">
+												<img class="card-slider__image" src="${img3}" alt="${type} ${name}">
 											</div>
 										</div>
 
@@ -12135,23 +12137,23 @@ class Item {
 							
 									<h2 class="details__title">${group} <br> ${type} "${name}"</h2>
 								<div class="details__feedback feedback">
-									<img src="img/pages/item/icons/star.png" alt="star" class="feedback__icon">
-									<img src="img/pages/item/icons/star.png" alt="star" class="feedback__icon">
-									<img src="img/pages/item/icons/star.png" alt="star" class="feedback__icon">
-									<img src="img/pages/item/icons/star.png" alt="star" class="feedback__icon">
-									<img src="img/pages/item/icons/star.png" alt="star" class="feedback__icon">
+									<img src="img/pages/item/icons/star.png" alt="рейтинг товара" class="feedback__icon">
+									<img src="img/pages/item/icons/star.png" alt="рейтинг товара" class="feedback__icon">
+									<img src="img/pages/item/icons/star.png" alt="рейтинг товара" class="feedback__icon">
+									<img src="img/pages/item/icons/star.png" alt="рейтинг товара" class="feedback__icon">
+									<img src="img/pages/item/icons/star.png" alt="рейтинг товара" class="feedback__icon">
 									<a href="#feedbacks" class="feedback__link">0.0 / 0 отзывов</a>
 								</div>
 								<div class="details__box details-box">
 									<div class="details-box__pricing pricing">
 										<p class="pricing__old-price">${old_price}</p>
 										<p class="pricing__new-price">${new_price}</p>
-										<img src="${brend_img}" alt="brend-name" class="pricing__brend">
+										<img src="${brend_img}" alt="${brend}" class="pricing__brend">
 									</div>
 									<div class="details-box__buying buying">
 										<a href="#cart" class="buying__add popup-link" data-cart="${id}">В корзину</a>
 										<p class="buying__availability">Товар в наличии</p>
-										<img src="img/pages/item/icons/delivery.png" alt="delivery" class="buying__delivery">
+										<img src="img/pages/item/icons/delivery.png" alt="Доставка" class="buying__delivery">
 									</div>
 								</div>
 								<p class="details__description">${description}</p>

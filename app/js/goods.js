@@ -9,7 +9,7 @@ class Goods {
 			htmlCatalog += `
 					<div class="goods__offer goods-offer ${classes}" data-price="${new_price}" data-type="${path}">
 
-						<img src="${img}" alt="#" class="goods-offer__image">
+						<img src="${img}" alt="${type} ${name}" class="goods-offer__image">
 
 						<div class="goods-offer__hide hide-text">
 							<p class="hide-text__item search-good"><span class="hide-text__item_titles">Бренд:</span>

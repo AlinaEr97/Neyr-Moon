@@ -9,7 +9,7 @@ class Similar {
 			similarCatalog += `
 					<div class="goods__offer goods-offer similar__offer goods-offer_${classes}">
 
-							<img src="${img}" alt="#" class="goods-offer__image">
+							<img src="${img}" alt="${type} ${name}" class="goods-offer__image">
 
 							<div class="goods-offer__hide hide-text similar__hide-text">
 								<p class="hide-text__item similar__hide-item search-good"><span class="hide-text__item_titles similar__hide-item_titles">Бренд:</span>

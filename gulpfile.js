@@ -92,8 +92,8 @@ function min_item_sсripts () {
 	])
 
 	.pipe(concat('item.min.js'))
-	.pipe(dest('dist/js/item'))
 	.pipe(uglify())
+	.pipe(dest('dist/js/item'))
 	.pipe(browserSync.stream())
 }
 
@@ -129,8 +129,8 @@ function min_catalog_sсripts () {
 	])
 
 	.pipe(concat('catalog.min.js'))
-	.pipe(dest('dist/js/catalog'))
 	.pipe(uglify())
+	.pipe(dest('dist/js/catalog'))
 	.pipe(browserSync.stream())
 }
 

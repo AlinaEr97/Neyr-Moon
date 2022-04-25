@@ -103,7 +103,7 @@
 
 					<a href="signup.html" class="acc-string__item acc-string__registration">Регистрация</a>
 
-					<a href="#backcall" class="acc-string__item acc-string__back-call">Обратный звонок</a>
+					<a href="#backcall" class="acc-string__item acc-string__back-call popup-link">Обратный звонок</a>
 
 					<div class="acc-string__working-time">Пн-Вс: 9:00-21:00</div>
 
@@ -178,13 +178,13 @@
 						<div class="footer__title">Присоединяйтесь</div>
 						<div class="footer__massangers">
 							<a href="https://vk.com/" class="footer__networks">
-								<img src="img/footer/vk.svg" alt="vkontakte" class="footer__networks-img">
+								<img src="img/footer/vk.svg" alt="Neyr Monn в VK" class="footer__networks-img">
 							</a>
-							<a href="https://www.instagram.com/" class="footer__networks">
-								<img src="img/footer/insta.svg" alt="instagram" class="footer__networks-img">
+							<a href="https://ok.ru/" class="footer__networks">
+								<img src="img/footer/ok.svg" alt="Neyr Moon в Одноклассники" class="footer__networks-img">
 							</a>
-							<a href="https://ru-ru.facebook.com/" class="footer__networks">
-								<img src="img/footer/fb.svg" alt="facebook" class="footer__networks-img">
+							<a href="https://telegram.org/" class="footer__networks">
+								<img src="img/footer/telegram.svg" alt="Neyr Monn в Telegram" class="footer__networks-img">
 							</a>
 						</div>
 						<div class="footer__title">Мой кабинет</div>
@@ -211,7 +211,7 @@
 						<a href="#" class="footer__link">+7 (927) 700-81-45</a>
 						<a href="#" class="footer__link">+7 (800) 123-45-67</a>
 						<div class="footer__cards"></div>
-						<a href="#" class="footer__back-call">Заказать обратный звонок</a>
+						<a href="#backcall" class="footer__back-call popup-link">Заказать обратный звонок</a>
 					</div>
 
 				</div>
@@ -230,7 +230,7 @@
 							<input class="popup-signin__input" type="password" placeholder="Пароль" required>
 							<div class="popup-signin__button-group">
 								<button type="submit" class="popup-signin__button">Войти</button>
-								<input type="button" href="signup.html" class="popup-signin__button" value="Регистрация">
+								<a href="signup.html" class="popup-signin__button">Регистрация</a>
 							</div>
 						</form>
 					</div>
@@ -249,18 +249,33 @@
 			</div>
 			<!-- /.popup#cart -->
 
+			<div class="popup" id="backcall">
+				<div class="popup__wrapper">
+					<div class="popup__content popup-call">
+						<a href="#" class="popup__close close-popup">Х</a>
+						<h2 class="popup__title">Мы вам перезвоним!</h2>
+						<form class="popup-call__form">
+							<input class="popup-call__input" type="tel" placeholder="Номер телефона" required>
+							<button type="submit" class="popup-call__button popup-call__button_submit">Отправить</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- /.popup#backcall -->
+
 		</div>
 		<!-- /.wrapper -->
 
-		<script type="text/javascript">
+		<!-- GetButton.io widget -->
+		<script>
 			(function () {
 				var options = {
-					  vkontakte: "https://vk.com/", // VKontakte page name
-					  instagram: "https://www.instagram.com/ ", // Instagram username
-					  call_to_action: "", // Call to action
-					  button_color: "#129BF4", // Color of button
-					  position: "left", // Position may be 'right' or 'left'
-					  order: "vkontakte,instagram", // Order of buttons
+					telegram: "telegram", // Telegram bot username
+					vkontakte: "live", // VKontakte page name
+					call_to_action: "", // Call to action
+					button_color: "#129BF4", // Color of button
+					position: "left", // Position may be 'right' or 'left'
+					order: "telegram,vkontakte", // Order of buttons
 				};
 				var proto = document.location.protocol, host = "getbutton.io", url = proto + "//static." + host;
 				var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = url + '/widget-send-button/js/init.js';
@@ -269,9 +284,9 @@
 			})();
 		</script>
 		<!-- /GetButton.io widget -->
-		<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<script type="text/javascript" src="js/general.js"></script>
-		<script type="text/javascript" src="js/popup.js"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script src="js/general.js"></script>
+		<script src="js/popup.js"></script>
 		
 	</body>
 

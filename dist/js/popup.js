@@ -1,3 +1,5 @@
+// Настройка попапов
+
 const popupLinks = $('.popup-link');
 const body = document.querySelector('body');
 const lockPadding = $('.lock-padding');
