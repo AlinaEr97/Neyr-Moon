@@ -3,6 +3,9 @@
 $(function() {
 	$(".menu-burger").on("click", function() {
 		$(".menu").toggleClass('menu_active');
+		$(".menu-burger__line").each(function() {
+			$(this).toggleClass("menu-burger__line_active");
+		});
 	});
 });
 

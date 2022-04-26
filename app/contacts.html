@@ -275,11 +275,11 @@
 			</footer>
 			<!-- /.footer -->
 
-			<div class="popup" id="sign_in">
+			<article class="popup" id="sign_in">
 				<div class="popup__wrapper">
 					<div class="popup__content popup-signin">
 						<a href="#" class="popup__close close-popup">Х</a>
-						<h2 class="popup__title">Уже есть аккаунт? <br> Авторизуйтесь</h2>
+						<h1 class="popup__title">Уже есть аккаунт? <br> Авторизуйтесь</h1>
 						<form class="popup-signin__form">
 							<input class="popup-signin__input" type="tel" placeholder="Номер телефона" required>
 							<input class="popup-signin__input" type="password" placeholder="Пароль" required>
@@ -290,32 +290,35 @@
 						</form>
 					</div>
 				</div>
-			</div>
+			</article>
 			<!-- /.popup#sign_in -->
 
-			<div class="popup" id="cart">
+			<article class="popup" id="cart">
 				<div class="popup__wrapper">
 					<div class="popup__content popup-cart">
 						<a href="#" class="popup__close close-popup">Х</a>
-						<h2 class="popup__title">Выбранные товары</h2>
+						<h1 class="popup__title">Выбранные товары</h1>
 						<div class="popup-cart__buy popup-buy"></div>
+						<p class="popup-cart__summ">Общая сумма:</p>
+						<span class="popup-cart__result"></span>
+						<button type="submit" class="popup-cart__order">Перейти к оформлению</button>
 					</div>
 				</div>
-			</div>
+			</article>
 			<!-- /.popup#cart -->
 
-			<div class="popup" id="backcall">
+			<article class="popup" id="backcall">
 				<div class="popup__wrapper">
 					<div class="popup__content popup-call">
 						<a href="#" class="popup__close close-popup">Х</a>
-						<h2 class="popup__title">Мы вам перезвоним!</h2>
+						<h1 class="popup__title">Мы вам перезвоним!</h1>
 						<form class="popup-call__form">
 							<input class="popup-call__input" type="tel" placeholder="Номер телефона" required>
 							<button type="submit" class="popup-call__button popup-call__button_submit">Отправить</button>
 						</form>
 					</div>
 				</div>
-			</div>
+			</article>
 			<!-- /.popup#backcall -->
 
 		</div>

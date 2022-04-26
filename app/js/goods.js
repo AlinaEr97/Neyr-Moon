@@ -7,7 +7,7 @@ class Goods {
 		let htmlCatalog = '';
 		catalog.forEach(({id, path, classes, brend, material, img, type, name, old_price, new_price}) => {
 			htmlCatalog += `
-					<div class="goods__offer goods-offer ${classes}" data-price="${new_price}" data-type="${path}">
+					<article class="goods__offer goods-offer ${classes}" data-price="${new_price}" data-type="${path}">
 
 						<img src="${img}" alt="${type} ${name}" class="goods-offer__image">
 
@@ -33,7 +33,7 @@ class Goods {
 						</div>
 						<!-- /.goods-offer__container -->
 
-					</div>
+					</article>
 					<!-- /.goods-offer -->	
 			`;
 		});

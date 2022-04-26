@@ -10973,6 +10973,9 @@ $("#search").on("input", function () {
 $(function() {
 	$(".menu-burger").on("click", function() {
 		$(".menu").toggleClass('menu_active');
+		$(".menu-burger__line").each(function() {
+			$(this).toggleClass("menu-burger__line_active");
+		});
 	});
 });
 
@@ -11664,7 +11667,7 @@ class Item {
 
 				<div class="popup-item__box">
 				
-					<section class="card">
+					<article class="card">
 				
 						<div class="card__offer card-offer">
 
@@ -11705,7 +11708,7 @@ class Item {
 
 							<div class="card-offer__container details">
 							
-									<h2 class="details__title">${group} <br> ${type} "${name}"</h2>
+									<h1 class="details__title">${group} <br> ${type} "${name}"</h1>
 								<div class="details__feedback feedback">
 									<img src="img/pages/item/icons/star.png" alt="рейтинг товара" class="feedback__icon">
 									<img src="img/pages/item/icons/star.png" alt="рейтинг товара" class="feedback__icon">
@@ -11788,7 +11791,7 @@ class Item {
 
 						</div>
 
-					</section>
+					</article>
 					<!-- /.card -->
 
 					<section class="similar">

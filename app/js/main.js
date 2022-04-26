@@ -11533,7 +11533,7 @@ class Goods {
 		let htmlCatalog = '';
 		catalog.forEach(({id, path, classes, brend, material, img, type, name, old_price, new_price}) => {
 			htmlCatalog += `
-					<div class="goods__offer goods-offer ${classes}" data-price="${new_price}" data-type="${path}">
+					<article class="goods__offer goods-offer ${classes}" data-price="${new_price}" data-type="${path}">
 
 						<img src="${img}" alt="${type} ${name}" class="goods-offer__image">
 
@@ -11559,7 +11559,7 @@ class Goods {
 						</div>
 						<!-- /.goods-offer__container -->
 
-					</div>
+					</article>
 					<!-- /.goods-offer -->	
 			`;
 		});
@@ -11578,6 +11578,9 @@ goodsPage.render();
 $(function() {
 	$(".menu-burger").on("click", function() {
 		$(".menu").toggleClass('menu_active');
+		$(".menu-burger__line").each(function() {
+			$(this).toggleClass("menu-burger__line_active");
+		});
 	});
 });
 
@@ -12094,7 +12097,7 @@ class Item {
 
 				<div class="popup-item__box">
 				
-					<section class="card">
+					<article class="card">
 				
 						<div class="card__offer card-offer">
 
@@ -12135,7 +12138,7 @@ class Item {
 
 							<div class="card-offer__container details">
 							
-									<h2 class="details__title">${group} <br> ${type} "${name}"</h2>
+									<h1 class="details__title">${group} <br> ${type} "${name}"</h1>
 								<div class="details__feedback feedback">
 									<img src="img/pages/item/icons/star.png" alt="рейтинг товара" class="feedback__icon">
 									<img src="img/pages/item/icons/star.png" alt="рейтинг товара" class="feedback__icon">
@@ -12218,7 +12221,7 @@ class Item {
 
 						</div>
 
-					</section>
+					</article>
 					<!-- /.card -->
 
 					<section class="similar">
