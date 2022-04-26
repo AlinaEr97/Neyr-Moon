@@ -11387,7 +11387,7 @@ class Goods {
 		let htmlCatalog = '';
 		catalog.forEach(({id, path, classes, brend, material, img, type, name, old_price, new_price}) => {
 			htmlCatalog += `
-					<div class="goods__offer goods-offer ${classes}" data-price="${new_price}" data-type="${path}">
+					<article class="goods__offer goods-offer ${classes}" data-price="${new_price}" data-type="${path}">
 
 						<img src="${img}" alt="${type} ${name}" class="goods-offer__image">
 
@@ -11413,7 +11413,7 @@ class Goods {
 						</div>
 						<!-- /.goods-offer__container -->
 
-					</div>
+					</article>
 					<!-- /.goods-offer -->	
 			`;
 		});
@@ -11814,10 +11814,23 @@ $("#search").on("input", function () {
 
 // Показать-скрыть меню в мобильной версии
 
-$(function() {
-	$(".menu-burger").on("click", function() {
-		$(".menu").toggleClass('menu_active');
+let burger_button = $(".menu-burger");
+let menu = $(".menu");
+
+burger_button.on("click", function () {
+	menu.fadeToggle();
+	$(".menu-burger__line").each(function() {
+		$(this).toggleClass("menu-burger__line_active");
 	});
+});
+
+$(document).mouseup(function (e) {
+	if ( !burger_button.is(e.target) && burger_button.has(e.target).length === 0 && !menu.is(e.target) && menu.has(e.target).length === 0) {
+		menu.fadeOut();
+		$(".menu-burger__line").each(function() {
+			$(this).removeClass("menu-burger__line_active");
+		});
+	};
 });
 
 

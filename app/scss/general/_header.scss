@@ -34,12 +34,10 @@
 	background-color:#000206;
 	border-bottom-left-radius: 10%;
 	border-bottom-right-radius: 10%;
-	transform: translateY(100%);
-	opacity: 0;
+	transform: translateY(0%);
 
 	@media (max-width: 875px) {
 		padding: 10px 0;
-		display: block;
 	}
 	@media (max-width: 660px) {
 		top: 75px;
@@ -55,12 +53,6 @@
 	}
 	@media (max-width: 350px) {
 		top: 45px;
-	}
-
-	&_active {
-		transform: translateY(0%);
-		opacity: 1;
-		z-index: 99;
 	}
 
 	&__nav {

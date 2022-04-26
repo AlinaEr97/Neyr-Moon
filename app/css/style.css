@@ -147,13 +147,11 @@ body {
   background-color: #000206;
   border-bottom-left-radius: 10%;
   border-bottom-right-radius: 10%;
-  transform: translateY(100%);
-  opacity: 0;
+  transform: translateY(0%);
 }
 @media (max-width: 875px) {
   .menu {
     padding: 10px 0;
-    display: block;
   }
 }
 @media (max-width: 660px) {
@@ -180,11 +178,6 @@ body {
   .menu {
     top: 45px;
   }
-}
-.menu_active {
-  transform: translateY(0%);
-  opacity: 1;
-  z-index: 99;
 }
 .menu__nav {
   padding: 0 15px 0 60px;
