@@ -11397,7 +11397,7 @@ class Goods {
 							<p class="hide-text__item search-good"><span class="hide-text__item_titles">Материал:</span> 
 							<br>${material}</p>
 							<a class="hide-text__item_about" href="item.html#${id}">Подробнее >></a>
-							<a href="#cart" class="hide-text__item_add popup-link" data-cart="${id}"></a>
+							<a href="#cart" class="hide-text__item_add hide-text__item_add-pages popup-link" data-cart="${id}"></a>
 						</div>
 						<!-- /.hide-text -->
 
@@ -11407,8 +11407,8 @@ class Goods {
 								<p class="goods-offer__name search-good">${name}</p>
 							</div>
 							<div class="goods-offer__price">
-								<p class="goods-offer__old-price">&nbsp;${old_price}</p>
-								<p class="goods-offer__new-price">&nbsp;${new_price}</p>
+								<p class="goods-offer__old-price goods-offer__old-price_pages">&nbsp;${old_price}</p>
+								<p class="goods-offer__new-price goods-offer__new-price_pages">&nbsp;${new_price}</p>
 							</div>
 						</div>
 						<!-- /.goods-offer__container -->
@@ -11755,7 +11755,7 @@ $(function() {
 // Настройка строки поиска
 
 let search_wrapper = document.querySelector(".search-items");
-let searchItems = document.querySelectorAll(".search__item");
+let searchItems = document.querySelectorAll(".search-items__item");
 
 $("#search").on("input", function () {
 	$(search_wrapper).css("display", "flex");
@@ -11765,15 +11765,15 @@ $("#search").on("input", function () {
 			let htmlSearch = '';
 			catalog.forEach(({brend, material, type, name}) => {
 				htmlSearch += `
-					<li class="search__item">${brend}</li>
-					<li class="search__item">${material}</li>
-					<li class="search__item">${type}</li>
-					<li class="search__item">${name}</li>
+					<li class="search-items__item">${brend}</li>
+					<li class="search-items__item">${material}</li>
+					<li class="search-items__item">${type}</li>
+					<li class="search-items__item">${name}</li>
 				`
 			});
 			search_wrapper.innerHTML = htmlSearch;
 
-			let searchItems = document.querySelectorAll(".search__item");
+			let searchItems = document.querySelectorAll(".search-items__item");
 			if (val != '') {
 				searchItems.forEach(function(elem) {
 					if (elem.innerText.search(val) == -1) {

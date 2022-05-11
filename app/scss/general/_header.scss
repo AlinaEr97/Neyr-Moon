@@ -5,9 +5,13 @@
 	min-width: 300px;
 	position: fixed;
 	z-index: 10;
-	background: url('../img/header/header-bg.avif');
+	background: url('../../img/header/header-bg.avif');
 	overflow: hidden;
 	border-radius: 0 0 85% 85% / 30%;
+
+	&_pages {
+		background: url('../../../img/header/header-bg.avif');
+	}
 
 	&__block {
 		margin: auto;

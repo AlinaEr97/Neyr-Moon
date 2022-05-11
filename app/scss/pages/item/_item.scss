@@ -10,46 +10,6 @@
 	}
 }
 
-.search {
-
-	&_item {
-		margin: 50px 0 20px;
-		width: 100%;
-		align-items: stretch;
-	}
-
-	&__input {
-
-		&_item {
-			width: 100%;
-		}
-	}
-
-	&__button_item {
-		margin-left: -120px;
-
-		@media (max-width: 1400px) {
-			margin-left: -115px;
-		}
-		@media (max-width: 1200px) {
-			margin-left: -105px;
-		}
-		@media (max-width: 900px) {
-			margin-left: -100px;
-		}
-		@media (max-width: 770px) {
-			margin-left: -78px;
-		}
-		@media (max-width: 600px) {
-			margin-left: -62px;
-		}
-		@media (max-width: 450px) {
-			margin-left: -52px;
-		}
-	
-	}
-}
-
 .goods-list {
 	margin: 0 auto 30px;
 	padding: 5px 20px 0;
@@ -63,145 +23,6 @@
 	@media (max-width: 500px) {
 		margin: 0 20px 15px;
 		width: 60%;
-	}
-}
-
-.catalog {
-
-	&_item {
-		padding: 5px;
-		width: 25%;
-
-		@media (max-width: 880px) {
-			width: auto;
-		}
-	}
-
-	&__title {
-
-		&_item {
-			margin: 0 30px 0 0;
-			font-size: 20px;
-			font-weight: normal;
-			color: #000409;
-
-			@media (max-width: 1200px) {
-				font-size: 16px;
-			}
-			@media (max-width: 1000px) {
-				margin: 0 20px 0 0;
-			}
-			@media (max-width: 760px) {
-				font-size: 14px;
-			}
-			@media (max-width: 640px) {
-				width: 110px;
-			}
-			@media (max-width: 500px) {
-				padding-top: 1px;
-			}
-			@media (max-width: 450px) {
-				font-size: 13px;
-			}
-			@media (max-width: 380px) {
-				font-size: 12px;
-			}
-		}
-	}
-
-	&__arrow-item {
-		margin: 10px 0 0 -5px;
-		border: 7px solid transparent; 
-		border-top: 7px solid #000409;
-		transition: all 0.1s;
-
-		@media (max-width: 1200px) {
-			border: 5px solid transparent; 
-			border-top: 5px solid #000409;
-		}
-		@media (max-width: 760px) {
-			margin: 8px 0 0 -10px;
-			border: 5px solid transparent; 
-			border-top: 5px solid #000409;
-		}
-		@media (max-width: 450px) {
-			margin: 8px 0 0 -15px;
-		}
-		@media (max-width: 380px) {
-			margin: 8px 0 0 -25px;
-		}
-
-		&_active {
-			margin: 0 0 30px -5px;
-			border: 7px solid transparent; 
-			border-bottom: 7px solid #000409;
-
-			@media (max-width: 1200px) {
-				border: 5px solid transparent; 
-				border-bottom: 5px solid #000409;
-			}
-			@media (max-width: 760px) {
-				margin: 0 0 0 -10px;
-				border: 5px solid transparent; 
-				border-bottom: 5px solid #000409;
-			}
-			@media (max-width: 450px) {
-				margin: 0 0 0 -15px;
-			}
-			@media (max-width: 380px) {
-				margin: 0 0 0 -25px;
-			}
-		}
-	}
-
-	&__list-item {
-		margin-top: 0px;
-		padding: 10px;
-		display: none;
-		border-radius: 10px;
-		background: rgb(255, 254, 246);
-		box-shadow: 0 0 15px -2px rgba(222, 231, 121, 0.945);
-
-		
-		@media (max-width: 760px) {
-			margin-top: 15px;
-			padding: 5px;
-		}
-
-		&_active {
-			display: block;
-		}
-	}
-	
-	&__item {
-
-		&_item {
-			margin-bottom: 10px;
-			border: none;
-			&:last-child {
-				border: none;
-			}
-		}
-		
-	}
-
-	&__path {
-		padding: 5px 0;
-		font-size: 17px;
-		color: #000409;
-		&:hover {
-			color: rgb(231, 203, 77) !important;
-			text-shadow: 0 1px 0 rgba(37, 35, 35, 0.61);
-		}
-		@media (max-width: 1000px) {
-			font-size: 15px;
-		}
-		@media (max-width: 600px) {
-			font-size: 14px;
-		}
-		@media (max-width: 450px) {
-			font-size: 12px;
-		}
 	}
 }
 
@@ -1025,7 +846,7 @@
 			left: 60px;
 			width: 12px;
 			height: 12px;
-			background: transparent url('../img/goods/icons/ruble.png');
+			background: transparent url('../../../img/goods/icons/ruble.png');
 			background-size: cover;
 		}
 
@@ -1062,7 +883,7 @@
 			left: 85px;
 			width: 17px;
 			height: 17px;
-			background: transparent url('../img/goods/icons/ruble.png');
+			background: transparent url('../../../img/goods/icons/ruble.png');
 			background-size: cover;
 		}
 

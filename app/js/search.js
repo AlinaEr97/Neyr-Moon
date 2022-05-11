@@ -1,7 +1,7 @@
 // Настройка строки поиска
 
 let search_wrapper = document.querySelector(".search-items");
-let searchItems = document.querySelectorAll(".search__item");
+let searchItems = document.querySelectorAll(".search-items__item");
 
 $("#search").on("input", function () {
 	$(search_wrapper).css("display", "flex");
@@ -11,15 +11,15 @@ $("#search").on("input", function () {
 			let htmlSearch = '';
 			catalog.forEach(({brend, material, type, name}) => {
 				htmlSearch += `
-					<li class="search__item">${brend}</li>
-					<li class="search__item">${material}</li>
-					<li class="search__item">${type}</li>
-					<li class="search__item">${name}</li>
+					<li class="search-items__item">${brend}</li>
+					<li class="search-items__item">${material}</li>
+					<li class="search-items__item">${type}</li>
+					<li class="search-items__item">${name}</li>
 				`
 			});
 			search_wrapper.innerHTML = htmlSearch;
 
-			let searchItems = document.querySelectorAll(".search__item");
+			let searchItems = document.querySelectorAll(".search-items__item");
 			if (val != '') {
 				searchItems.forEach(function(elem) {
 					if (elem.innerText.search(val) == -1) {

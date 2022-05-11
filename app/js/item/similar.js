@@ -17,7 +17,7 @@ class Similar {
 								<p class="hide-text__item similar__hide-item search-good"><span class="hide-text__item_titles similar__hide-item_titles">Материал:</span> 
 								<br>${material}</p>
 								<a class="hide-text__item_about similar__hide-item_about" href="item.html#${id}" target="_blank">Подробнее >></a>
-								<a href="#cart" class="hide-text__item_add similar__hide-item_add popup-link" data-cart="${id}"></a>
+								<a href="#cart" class="hide-text__item_add hide-text__item_add-pages similar__hide-item_add popup-link" data-cart="${id}"></a>
 							</div>
 							<!-- /.hide-text -->
 
@@ -27,8 +27,8 @@ class Similar {
 									<p class="goods-offer__name similar__name search-good">${name}</p>
 								</div>
 								<div class="goods-offer__price">
-									<p class="goods-offer__old-price similar__old-price">&nbsp;${old_price}</p>
-									<p class="goods-offer__new-price similar__new-price">&nbsp;${new_price}</p>
+									<p class="goods-offer__old-price goods-offer__old-price_pages similar__old-price">&nbsp;${old_price}</p>
+									<p class="goods-offer__new-price goods-offer__new-price_pages similar__new-price">&nbsp;${new_price}</p>
 								</div>
 							</div>
 							<!-- /.goods-offer__container -->
