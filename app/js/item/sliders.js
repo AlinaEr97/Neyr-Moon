@@ -8,24 +8,10 @@ new Swiper (".card-slider", {
 	slidesPerView: 3,
 	breakpoints: {
 		300: {
-			spaceBetween: 90,
-		},
-		350: {
-			spaceBetween: 100,
-		},
-		450: {
-			spaceBetween: 100,
-		},
-		600: {
-			spaceBetween: 120,
-		},
-		750: {
-			spaceBetween: 140,
-		},
-		850: {
-			spaceBetween: 120,
+			slidesPerView: 1,
 		},
 		910: {
+			slidesPerView: 3,
 			spaceBetween: 110,
 		},
 		940: {
