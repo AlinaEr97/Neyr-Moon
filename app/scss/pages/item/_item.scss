@@ -29,9 +29,12 @@
 .filter {
 	padding: 5px;
 	width: 75%;
-	font-size: 20px;
+	font-size: 24px;
 	color: #000409;
 
+	@media (max-width: 1366px) {
+		font-size: 20px;
+	}
 	@media (max-width: 1200px) {
 		margin: 0 auto 5px;
 	}
@@ -81,18 +84,22 @@
 
 	&__link {
 		display: block;
-		width: 120px;
-		font-size: 17px;
+		width: 150px;
+		font-size: 22px;
 		text-shadow: 1px 1px 0 #fff;
 		cursor: pointer;
 
+		@media (max-width: 1366px) {
+			width: 120px;
+			font-size: 17px;
+		}
 		@media (max-width: 1200px) {
 			font-size: 15px;
 		}
 	}
 
 	&__link-button {
-		padding: 5px;
+		padding: 8px;
 		display: block;
 		color: #000409;
 		line-height: 1.4em;
@@ -104,6 +111,9 @@
 			transition: all 0s;
 		}
 
+		@media (max-width: 1366px) {
+			padding: 5px;
+		}
 		@media (max-width: 1200px) {
 			width: 100px;
 		}
@@ -236,7 +246,6 @@
 	width: 70%;
 	background-color: white;
 	
-
 	@media (max-width: 800px) {
 		padding: 20px 10px;
 	}
@@ -333,6 +342,7 @@
 	&__wrapper {
 		display: flex;
 		flex-wrap: wrap;
+		gap: 7px;
 	}
 
 	&__offer {
@@ -360,9 +370,18 @@
 
 	&__hide-text {
 		padding: 10px;
-		font-size: 14px;
-		height: calc(100% - 65px);
+		font-size: 18px;
+		height: calc(100% - 85px);
 
+		@media (max-width: 1400px) {
+			height: calc(100% - 75px);
+		}
+		@media (max-width: 1366px) {
+			height: calc(100% - 65px);
+		}
+		@media (max-width: 1400px) {
+			font-size: 14px;
+		}
 		@media (max-width: 1300px) {
 			font-size: 13px;
 		}
@@ -409,8 +428,10 @@
 	}
 
 	&__hide-item {
-		margin-bottom: 7px;
-
+		
+		@media (max-width: 1500px) {
+			margin-bottom: 5px;
+		}
 		@media (max-width: 1300px) {
 			margin-bottom: 5px;
 		}
@@ -435,8 +456,11 @@
 
 		&_about {
 			margin-bottom: 10px;
-			font-size: 14px;
+			font-size: 18px;
 
+			@media (max-width: 1400px) {
+				font-size: 14px;
+			}
 			@media (max-width: 1300px) {
 				margin-bottom: 7px;
 				font-size: 13px;
@@ -469,94 +493,81 @@
 		}
 
 		&_add {
-			width: 35px;
-			height: 35px;
-			background-size: 32px;
+			width: 50px;
+			height: 50px;
+			background-size: cover;
 			&:hover {
 				border: 2px solid rgb(230, 181, 20);
 			}
 			&:active {
-				background-size: 30px;
+				background-size: cover;
 				border: 3px solid rgb(230, 174, 20);
 			}
 
+			@media (max-width: 1400px) {
+				width: 35px;
+				height: 35px;
+			}
 			@media (max-width: 1300px) {
 				width: 32px;
 				height: 32px;
-				background-size: 29px;
 				&:hover {
 					border: 2px solid rgb(230, 181, 20);
 				}
 				&:active {
-					background-size: 27px;
 					border: 2px solid rgb(230, 174, 20);
 				}
 			}
 			@media (max-width: 1000px) {
 				width: 27px;
 				height: 27px;
-				background-size: 23px;
 				&:hover {
 					border: 1px solid rgb(230, 181, 20);
 				}
 				&:active {
-					background-size: 26px;
 					border: 1px solid rgb(230, 174, 20);
 				}
 			}
 			@media (max-width: 780px) {
 				width: 23px;
 				height: 23px;
-				background-size: 20px;
-				&:active {
-					background-size: 22px;
-				}
 			}
 			@media (max-width: 640px) {
 				width: 27px;
 				height: 27px;
-				background-size: 23px;
 				&:hover {
 					border: 1px solid rgb(230, 181, 20);
 				}
 				&:active {
-					background-size: 26px;
 					border: 1px solid rgb(230, 174, 20);
 				}
 			}
 			@media (max-width: 575px) {
 				width: 23px;
 				height: 23px;
-				background-size: 20px;
-				&:active {
-					background-size: 22px;
-				}
 			}
 			@media (max-width: 500px) {
 				width: 27px;
 				height: 27px;
-				background-size: 23px;
 				&:hover {
 					border: 1px solid rgb(230, 181, 20);
 				}
 				&:active {
-					background-size: 26px;
 					border: 1px solid rgb(230, 174, 20);
 				}
 			}
 			@media (max-width: 370px) {
 				width: 23px;
 				height: 23px;
-				background-size: 20px;
-				&:active {
-					background-size: 22px;
-				}
 			}
 		}
 
 		&_titles {
-			font-size: 14px;
+			font-size: 18px;
 
+			@media (max-width: 1400px) {
+				font-size: 14px;
+			}
 			@media (max-width: 1300px) {
 				font-size: 13px;
 			}
@@ -599,8 +610,11 @@
 	}
 
 	&__type {
-		font-size: 13px;
+		font-size: 17px;
 
+		@media (max-width: 1366px) {
+			font-size: 13px;
+		}
 		@media (max-width: 1200px) {
 			font-size: 12px;
 		}
@@ -622,8 +636,11 @@
 	}
 
 	&__name {
-		font-size: 15px;
+		font-size: 19px;
 
+		@media (max-width: 1366px) {
+			font-size: 15px;
+		}
 		@media (max-width: 1200px) {
 			font-size: 12px;
 		}
@@ -647,12 +664,21 @@
 	&__old-price {
 		margin-bottom: 1px;
 		padding-right: 15px;
-		font-size: 13px;
+		font-size: 19px;
 		&::after {
-			width: 13px;
-			height: 13px;
+			width: 15px;
+			height: 15px;
+			top: 0;
 		}
-
+		
+		@media (max-width: 1400px) {
+			font-size: 15px;
+			&::after {
+				width: 13px;
+				height: 13px;
+				top: 2px;
+			}
+		}
 		@media (max-width: 1200px) {
 			font-size: 12px;
 			&::after {
@@ -662,21 +688,27 @@
 		}
 		@media (max-width: 1100px) {
 			font-size: 10px;
+			&::after {
+				width: 8px;
+				height: 8px;
+				top: 1px;
+				right: 2px;
+			}
 		}
 		@media (max-width: 700px) {
 			padding-right: 10px;
 			font-size: 8px;
 			&::after {
-				width: 8px;
-				height: 8px;
+				width: 6px;
+				height: 6px;
 			}
 		}
 		@media (max-width: 500px) {
 			padding-right: 15px;
 			font-size: 12px;
 			&::after {
-				width: 11px;
-				height: 11px;
+				width: 10px;
+				height: 10px;
 			}
 		}
 		@media (max-width: 370px) {
@@ -691,12 +723,20 @@
 
 	&__new-price {
 		padding-right: 15px;
-		font-size: 15px;
+		font-size: 19px;
 		&::after {
-			width: 13px;
-			height: 13px;	
+			width: 15px;
+			height: 15px;	
 		}
 
+		@media (max-width: 1400px) {
+			font-size: 15px;
+			&::after {
+				width: 13px;
+				height: 13px;
+				top: 2px;
+			}
+		}
 		@media (max-width: 1200px) {
 			font-size: 13px;
 			&::after {
@@ -706,21 +746,27 @@
 		}
 		@media (max-width: 1100px) {
 			font-size: 10px;
+			&::after {
+				width: 8px;
+				height: 8px;
+				top: 1px;
+				right: 2px;
+			}
 		}
 		@media (max-width: 700px) {
 			padding-right: 10px;
 			font-size: 9px;
 			&::after {
-				width: 8px;
-				height: 8px;
+				width: 6px;
+				height: 6px;
 			}
 		}
 		@media (max-width: 500px) {
 			padding-right: 15px;
 			font-size: 13px;
 			&::after {
-				width: 11px;
-				height: 11px;	
+				width: 10px;
+				height: 10px;	
 			}
 		}
 		@media (max-width: 370px) {
@@ -744,10 +790,13 @@
 
 	&__title {
 		margin-bottom: 15px;
-		font-size: 26px;
+		font-size: 30px;
 		font-weight: bold;
 		color: #000409;
 
+		@media (max-width: 1366px) {
+			font-size: 26px;
+		}
 		@media (max-width: 1000px) {
 			margin-bottom: 10px;
 			font-size: 22px;
@@ -766,10 +815,13 @@
 
 	&__description {
 		text-align: justify;
-		font-size: 16px;
+		font-size: 20px;
 		text-indent: 25px;
 		line-height: 1.2;
 
+		@media (max-width: 1366px) {
+			font-size: 16px;
+		}
 		@media (max-width: 1200px) {
 			font-size: 15px;
 			line-height: 1;
@@ -809,11 +861,11 @@
 
 	&__link {
 		margin-left: 10px;
-		font-size: 12px;
+		font-size: 16px;
 		color: rgb(41, 40, 40);
 		text-decoration: underline;
 
-		@media (max-width: 800px) {
+		@media (max-width: 1366px) {
 			font-size: 12px;
 		}
 		@media (max-width: 500px) {
@@ -830,11 +882,10 @@
 	display: flex;
 	flex-direction: column;
 
-
 	&__old-price {
 		margin: 10px 0;
 		position: relative;
-		font-size: 14px;
+		font-size: 18px;
 		color: rgb(85, 82, 79);
 		text-indent: 25px;
 		text-decoration: line-through;
@@ -843,13 +894,22 @@
 			content: "";
 			position: absolute;
 			top: 2px;
-			left: 60px;
-			width: 12px;
-			height: 12px;
+			left: 67px;
+			width: 15px;
+			height: 15px;
 			background: transparent url('../../../img/goods/icons/ruble.png');
 			background-size: cover;
 		}
-
+		
+		@media (max-width: 1366px) {
+			font-size: 14px;
+			&::after {
+				top: 2px;
+				left: 60px;
+				width: 12px;
+				height: 12px;
+			}
+		}
 		@media (max-width: 800px) {
 			font-size: 12px;
 			&::after {
@@ -872,21 +932,30 @@
 	&__new-price {
 		margin-bottom: 30px;
 		position: relative;
-		font-size: 26px;
+		font-size: 30px;
 		font-weight: bold;
 		text-indent: 25px;
 		color: rgb(255, 123, 0);
 		&::after {
 			content: '';
 			position: absolute;
-			top: 5px;
-			left: 85px;
-			width: 17px;
-			height: 17px;
+			top: 7px;
+			left: 93px;
+			width: 19px;
+			height: 19px;
 			background: transparent url('../../../img/goods/icons/ruble.png');
 			background-size: cover;
 		}
 
+		@media (max-width: 1366px) {
+			font-size: 26px;
+			&::after {
+				top: 5px;
+				left: 85px;
+				width: 17px;
+				height: 17px;
+			}
+		}
 		@media (max-width: 800px) {
 			font-size: 22px;
 			&::after {
@@ -927,7 +996,7 @@
 		margin: 5px 0 15px;
 		padding: 5px 5px 7px 5px;
 		display: block;
-		font-size: 14px;
+		font-size: 18px;
 		text-align: center;
 		font-weight: bold;
 		color: white;
@@ -941,6 +1010,10 @@
 			padding: 3px 3px 5px 3px;
 			font-size: 13px;
 			border: 2px solid rgb(236, 236, 147);
+		}
+
+		@media (max-width: 1366px) {
+			font-size: 14px;
 		}
 		
 		@media (max-width: 1000px) {
@@ -980,9 +1053,12 @@
 
 	&__availability {
 		margin-bottom: 15px;
-		font-size: 14px;
+		font-size: 18px;
 		color: rgb(7, 104, 7);
 
+		@media (max-width: 1366px) {
+			font-size: 14px;
+		}
 		@media (max-width: 800px) {
 			font-size: 12px;
 		}
@@ -1015,8 +1091,11 @@
 
 	&__title {
 		margin-bottom: 20px;
-		font-size: 20px;
+		font-size: 24px;
 
+		@media (max-width: 1366px) {
+			font-size: 20px;
+		}
 		@media (max-width: 1300px) {
 			font-size: 18px;
 		}
@@ -1048,9 +1127,12 @@
 
 	&__text, &__info {
 		bottom: -5px; 
-		font-size: 16px;
+		font-size: 20px;
 		background-color: #FFF; 
 
+		@media (max-width: 1366px) {
+			font-size: 16px;
+		}
 		@media (max-width: 1300px) {
 			font-size: 15px;
 		}
@@ -1084,9 +1166,12 @@
 
 	&__title {
 		margin-bottom: 20px;
-		font-size: 20px;
+		font-size: 24px;
 		font-weight: bold;
 
+		@media (max-width: 1366px) {
+			font-size: 20px;
+		}
 		@media (max-width: 600px) {
 			margin-bottom: 10px;
 			font-size: 18px;
@@ -1097,8 +1182,11 @@
 	}
 
 	&__text {
-		font-size: 16px;
+		font-size: 20px;
 
+		@media (max-width: 1366px) {
+			font-size: 16px;
+		}
 		@media (max-width: 600px) {
 			font-size: 14px;
 		}

@@ -11,7 +11,7 @@ class Similar {
 
 							<img src="${img}" alt="${type} ${name}" class="goods-offer__image">
 
-							<div class="goods-offer__hide hide-text similar__hide-text">
+							<div class="hide-text similar__hide-text">
 								<p class="hide-text__item similar__hide-item search-good"><span class="hide-text__item_titles similar__hide-item_titles">Бренд:</span>
 								<br> ${brend}</p>
 								<p class="hide-text__item similar__hide-item search-good"><span class="hide-text__item_titles similar__hide-item_titles">Материал:</span> 

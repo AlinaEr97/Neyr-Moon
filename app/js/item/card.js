@@ -24,29 +24,29 @@ class Item {
 				
 					<article class="card">
 				
-						<div class="card__offer card-offer">
+						<div class="card-offer">
 
-							<div class="card-offer__pictures card-pictures">
+							<div class="card-pictures">
 
 								<img src="${img}" alt="${type} ${name}" class="card-pictures__image">
 							
 								<div class="card-slider swiper-container">
 
-									<div class="card-slider__wrapper swiper-wrapper">
+									<div class="swiper-wrapper card-slider__wrapper">
 
-										<div class="card-slider__slide swiper-slide">
+										<div class="swiper-slide card-slider__slide">
 											<div class="card-slider__item">
 												<img class="card-slider__image" src="${img1}" alt="${type} ${name}">
 											</div>
 										</div>
 
-										<div class="card-slider__slide swiper-slide">
+										<div class=" swiper-slide card-slider__slide">
 											<div class="card-slider__item">
 												<img class="card-slider__image" src="${img2}" alt="${type} ${name}">
 											</div>
 										</div>
 
-										<div class="card-slider__slide swiper-slide">
+										<div class="swiper-slide card-slider__slide">
 											<div class="card-slider__item">
 												<img class="card-slider__image" src="${img3}" alt="${type} ${name}">
 											</div>
@@ -61,7 +61,7 @@ class Item {
 							</div>
 							<!-- /.card-pictures -->
 
-							<div class="card-offer__container details">
+							<div class="details">
 							
 									<h1 class="details__title">${group} <br> ${type} "${name}"</h1>
 								<div class="details__feedback feedback">
@@ -72,13 +72,13 @@ class Item {
 									<img src="img/pages/item/icons/star.png" alt="рейтинг товара" class="feedback__icon">
 									<a href="#feedbacks" class="feedback__link">0.0 / 0 отзывов</a>
 								</div>
-								<div class="details__box details-box">
-									<div class="details-box__pricing pricing">
+								<div class="details-box">
+									<div class="pricing">
 										<p class="pricing__old-price">${old_price}</p>
 										<p class="pricing__new-price">${new_price}</p>
 										<img src="${brend_img}" alt="${brend}" class="pricing__brend">
 									</div>
-									<div class="details-box__buying buying">
+									<div class="buying">
 										<a href="#cart" class="buying__add popup-link" data-cart="${id}">В корзину</a>
 										<p class="buying__availability">Товар в наличии</p>
 										<img src="img/pages/item/icons/delivery.png" alt="Доставка" class="buying__delivery">
@@ -92,7 +92,7 @@ class Item {
 						</div>
 						<!-- /.card-offer -->
 
-						<div class="card__characteristics characteristics">
+						<div class="characteristics">
 
 							<h3 class="characteristics__title">Основные характеристики:</h3>
 

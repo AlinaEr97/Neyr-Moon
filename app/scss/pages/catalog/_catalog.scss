@@ -24,19 +24,24 @@
 	}
 
 	&__title {
+		font-size: 18px;
 		color: white;
-	}
-	@media (max-width: 600px) {
-		font-size: 12px;
-	}
-	@media (max-width: 400px) {
-		font-size: 11px;
+
+		@media (max-width: 1366px) {
+			font-size: 14px;
+		}
+		@media (max-width: 600px) {
+			font-size: 12px;
+		}
+		@media (max-width: 400px) {
+			font-size: 11px;
+		}
 	}
 
 	&__item {
 		margin: 20px 10px 0 10px;
 		padding: 10px;
-		font-size: 15px;
+		font-size: 19px;
 		color: white;
 		border-radius: 10px;
 		border: 1px solid #516f77;
@@ -51,6 +56,9 @@
 			box-shadow: 0 0 3px 2px #dad877;
 		}
 
+		@media (max-width: 1366px) {
+			font-size: 15px;
+		}
 		@media (max-width: 800px) {
 			margin: 10px 10px 0 10px;
 			padding: 5px;
@@ -113,8 +121,12 @@
 	}
 
 	&__title {
+		font-size: 18px;
 		color: white;
 
+		@media (max-width: 1366px) {
+			font-size: 14px;
+		}
 		@media (max-width: 600px) {
 			font-size: 12px;
 		}
@@ -126,7 +138,7 @@
 	&__item {
 		margin: 20px 10px 0 10px;
 		padding: 10px;
-		font-size: 15px;
+		font-size: 19px;
 		color: white;
 		border-radius: 10px;
 		border: 1px solid #516f77;
@@ -141,6 +153,9 @@
 			box-shadow: 0 0 3px 2px #dad877;
 		}
 
+		@media (max-width: 1366px) {
+			font-size: 15px;
+		}
 		@media (max-width: 800px) {
 			margin: 10px 10px 0 10px;
 			padding: 5px;
