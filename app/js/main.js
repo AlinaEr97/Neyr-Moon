@@ -11037,10 +11037,10 @@ const catalog = [
 		brend: 'Saltway',
 		brend_img: 'img/brends/brend1.jpg',
 		material: 'Дерево, пластик, гималайская соль',
-		img: 'img/goods/good1.avif',
-		img1: 'img/goods/good1-1.avif',
-		img2: 'img/goods/good1-2.avif',
-		img3: 'img/goods/good1.avif',
+		img: 'img/goods/good1.png',
+		img1: 'img/goods/good1-1.png',
+		img2: 'img/goods/good1-2.png',
+		img3: 'img/goods/good1.png',
 		group: 'Настольный светильник',
 		type: 'Солевая лампа',
 		name: 'Кристалл',
@@ -11063,10 +11063,10 @@ const catalog = [
 		brend_img: 'img/brends/brend2.jpg',
 		material: 'ABS-пластик, медь',
 		classes: 'distance usb table',
-		img: 'img/goods/good2.avif',
-		img1: 'img/goods/good2-1.avif',
-		img2: 'img/goods/good2-2.avif',
-		img3: 'img/goods/good2.avif',
+		img: 'img/goods/good2.png',
+		img1: 'img/goods/good2-1.png',
+		img2: 'img/goods/good2-2.png',
+		img3: 'img/goods/good2.png',
 		group: 'Настольный светильник',
 		type: 'Декоративный',
 		name: 'Дерево',
@@ -11089,10 +11089,10 @@ const catalog = [
 		brend_img: 'img/brends/brend3.jpg',
 		material: 'Пластик',
 		classes: 'baby threed distance usb table',
-		img: 'img/goods/good3.avif',
-		img1: 'img/goods/good3-1.avif',
-		img2: 'img/goods/good3-2.avif',
-		img3: 'img/goods/good3.avif',
+		img: 'img/goods/good3.png',
+		img1: 'img/goods/good3-1.png',
+		img2: 'img/goods/good3-2.png',
+		img3: 'img/goods/good3.png',
 		group: 'Настольный светильник',
 		type: '3D-ночник',
 		name: 'Луна',
@@ -11115,10 +11115,10 @@ const catalog = [
 		brend_img: 'img/brends/brend4.jpg',
 		material: 'ABS-пластик',
 		classes: 'projector usb table',
-		img: 'img/goods/good4.avif',
-		img1: 'img/goods/good4-1.avif',
-		img2: 'img/goods/good4-2.avif',
-		img3: 'img/goods/good4.avif',
+		img: 'img/goods/good4.png',
+		img1: 'img/goods/good4-1.png',
+		img2: 'img/goods/good4-2.png',
+		img3: 'img/goods/good4.png',
 		group: 'Настольный светильник',
 		type: 'Проектор',
 		name: 'Ночное небо',
@@ -11141,10 +11141,10 @@ const catalog = [
 		brend_img: 'img/brends/brend5.jpg',
 		material: 'ПВХ',
 		classes: 'portable table usb',
-		img: 'img/goods/good5.avif',
-		img1: 'img/goods/good5-1.avif',
-		img2: 'img/goods/good5-2.avif',
-		img3: 'img/goods/good5.avif',
+		img: 'img/goods/good5.png',
+		img1: 'img/goods/good5-1.png',
+		img2: 'img/goods/good5-2.png',
+		img3: 'img/goods/good5.png',
 		group: 'Настольный светильник',
 		type: 'Декоративный',
 		name: 'Фонарь',
@@ -11167,10 +11167,10 @@ const catalog = [
 		brend_img: 'img/brends/brend6.jpg',
 		material: 'Пластик, светодиоды',
 		classes: 'baby bra',
-		img: 'img/goods/good6.avif',
-		img1: 'img/goods/good6-1.avif',
-		img2: 'img/goods/good6-2.avif',
-		img3: 'img/goods/good6.avif',
+		img: 'img/goods/good6.png',
+		img1: 'img/goods/good6-1.png',
+		img2: 'img/goods/good6-2.png',
+		img3: 'img/goods/good6.png',
 		group: 'Бра',
 		type: 'Розеточный',
 		name: 'Бабочка',
@@ -11193,10 +11193,10 @@ const catalog = [
 		brend_img: 'img/brends/brend7.jpg',
 		material: 'Стекло, ABS-пластик',
 		classes: 'threed distance table',
-		img: 'img/goods/good7.avif',
-		img1: 'img/goods/good7-1.avif',
-		img2: 'img/goods/good7-2.avif',
-		img3: 'img/goods/good7.avif',
+		img: 'img/goods/good7.png',
+		img1: 'img/goods/good7-1.png',
+		img2: 'img/goods/good7-2.png',
+		img3: 'img/goods/good7.png',
 		group: 'Настольный светильник',
 		type: 'Декоративный',
 		name: 'Сфера',
@@ -11219,10 +11219,10 @@ const catalog = [
 		brend_img: 'img/brends/brend8.jpg',
 		material: 'Силикон; ABS-пластик',
 		classes: 'baby distance usb table',
-		img: 'img/goods/good8.avif',
-		img1: 'img/goods/good8-1.avif',
-		img2: 'img/goods/good8-2.avif',
-		img3: 'img/goods/good8.avif',
+		img: 'img/goods/good8.png',
+		img1: 'img/goods/good8-1.png',
+		img2: 'img/goods/good8-2.png',
+		img3: 'img/goods/good8.png',
 		group: 'Настольный светильник',
 		type: 'Детский',
 		name: 'Зайчик',
@@ -11245,10 +11245,10 @@ const catalog = [
 		brend_img: 'img/brends/brend9.jpg',
 		material: 'Акрил',
 		classes: 'baby neon distance table',
-		img: 'img/goods/good9.avif',
-		img1: 'img/goods/good9-1.avif',
-		img2: 'img/goods/good9-2.avif',
-		img3: 'img/goods/good9.avif',
+		img: 'img/goods/good9.png',
+		img1: 'img/goods/good9-1.png',
+		img2: 'img/goods/good9-2.png',
+		img3: 'img/goods/good9.png',
 		group: 'Настольный светильник',
 		type: 'Неоновый',
 		name: 'Ловец снов',
@@ -11271,10 +11271,10 @@ const catalog = [
 		brend_img: 'img/brends/brend10.jpg',
 		material: 'Дерево, текстиль',
 		classes: 'lamp table',
-		img: 'img/goods/good10.avif',
-		img1: 'img/goods/good10-1.avif',
-		img2: 'img/goods/good10-2.avif',
-		img3: 'img/goods/good10.avif',
+		img: 'img/goods/good10.png',
+		img1: 'img/goods/good10-1.png',
+		img2: 'img/goods/good10-2.png',
+		img3: 'img/goods/good10.png',
 		group: 'Настольный светильник',
 		type: 'Абажур',
 		name: 'Онтарио',
@@ -11297,10 +11297,10 @@ const catalog = [
 		brend_img: 'img/brends/brend11.jpg',
 		material: 'Пластик',
 		classes: 'candles',
-		img: 'img/goods/good11.avif',
-		img1: 'img/goods/good11-1.avif',
-		img2: 'img/goods/good11-2.avif',
-		img3: 'img/goods/good11.avif',
+		img: 'img/goods/good11.png',
+		img1: 'img/goods/good11-1.png',
+		img2: 'img/goods/good11-2.png',
+		img3: 'img/goods/good11.png',
 		group: 'Свечи',
 		type: 'Светодиодные',
 		name: 'Свечи',
@@ -11323,10 +11323,10 @@ const catalog = [
 		brend_img: 'img/brends/brend1.jpg',
 		material: 'Дерево, пластик, гималайская соль',
 		classes: 'salt table',
-		img: 'img/goods/good12.avif',
-		img1: 'img/goods/good12-1.avif',
-		img2: 'img/goods/good12-2.avif',
-		img3: 'img/goods/good12.avif',
+		img: 'img/goods/good12.png',
+		img1: 'img/goods/good12-1.png',
+		img2: 'img/goods/good12-2.png',
+		img3: 'img/goods/good12.png',
 		group: 'Настольный светильник',
 		type: 'Солевая лампа',
 		name: 'Угли',
@@ -11349,10 +11349,10 @@ const catalog = [
 		brend_img: 'img/brends/brend12.jpg',
 		material: 'Пластик',
 		classes: 'threed baby projector distance table',
-		img: 'img/goods/good13.avif',
-		img1: 'img/goods/good13-1.avif',
-		img2: 'img/goods/good13-2.avif',
-		img3: 'img/goods/good13.avif',
+		img: 'img/goods/good13.png',
+		img1: 'img/goods/good13-1.png',
+		img2: 'img/goods/good13-2.png',
+		img3: 'img/goods/good13.png',
 		group: 'Настольный светильник',
 		type: 'Проектор',
 		name: 'Новогодний',
@@ -11375,10 +11375,10 @@ const catalog = [
 		brend_img: 'img/brends/brend13.jpg',
 		material: 'Стекло',
 		classes: 'threed distance table',
-		img: 'img/goods/good14.avif',
-		img1: 'img/goods/good14-1.avif',
-		img2: 'img/goods/good14-2.avif',
-		img3: 'img/goods/good14.avif',
+		img: 'img/goods/good14.png',
+		img1: 'img/goods/good14-1.png',
+		img2: 'img/goods/good14-2.png',
+		img3: 'img/goods/good14.png',
 		group: 'Настольный светильник',
 		type: '3D-ночник',
 		name: 'Зеркальная ваза',
@@ -11401,10 +11401,10 @@ const catalog = [
 		brend_img: 'img/brends/brend14.jpg',
 		material: 'Гранулированный воск',
 		classes: 'candles',
-		img: 'img/goods/good15.avif',
-		img1: 'img/goods/good15-1.avif',
-		img2: 'img/goods/good15-2.avif',
-		img3: 'img/goods/good15.avif',
+		img: 'img/goods/good15.png',
+		img1: 'img/goods/good15-1.png',
+		img2: 'img/goods/good15-2.png',
+		img3: 'img/goods/good15.png',
 		group: 'Свечи',
 		type: 'Насыпные',
 		name: 'Свечи',
@@ -11427,10 +11427,10 @@ const catalog = [
 		brend_img: 'img/brends/brend15.jpg',
 		material: 'Стекло',
 		classes: 'threed lava table',
-		img: 'img/goods/good16.avif',
-		img1: 'img/goods/good16-1.avif',
-		img2: 'img/goods/good16-2.avif',
-		img3: 'img/goods/good16.avif',
+		img: 'img/goods/good16.png',
+		img1: 'img/goods/good16-1.png',
+		img2: 'img/goods/good16-2.png',
+		img3: 'img/goods/good16.png',
 		group: 'Настольный светильник',
 		type: 'Лава-лампа',
 		name: 'Сосулька',
@@ -11453,10 +11453,10 @@ const catalog = [
 		brend_img: 'img/brends/brend16.jpg',
 		material: 'Сплав алюминия',
 		classes: 'projector distance usb table',
-		img: 'img/goods/good17.avif',
-		img1: 'img/goods/good17-1.avif',
-		img2: 'img/goods/good17-2.avif',
-		img3: 'img/goods/good17.avif',
+		img: 'img/goods/good17.png',
+		img1: 'img/goods/good17-1.png',
+		img2: 'img/goods/good17-2.png',
+		img3: 'img/goods/good17.png',
 		group: 'Настольный светильник',
 		type: 'Проектор',
 		name: 'Закат',
@@ -11479,10 +11479,10 @@ const catalog = [
 		brend_img: 'img/brends/brend17.jpg',
 		material: 'Пластик',
 		classes: 'floor distance',
-		img: 'img/goods/good18.avif',
-		img1: 'img/goods/good18-1.avif',
-		img2: 'img/goods/good18-2.avif',
-		img3: 'img/goods/good18.avif',
+		img: 'img/goods/good18.png',
+		img1: 'img/goods/good18-1.png',
+		img2: 'img/goods/good18-2.png',
+		img3: 'img/goods/good18.png',
 		group: 'Напольный светильник',
 		type: 'Торшер',
 		name: 'Угловой',
@@ -11505,10 +11505,10 @@ const catalog = [
 		brend_img: 'img/brends/brend18.jpg',
 		material: 'Полимер',
 		classes: 'bra',
-		img: 'img/goods/good19.avif',
-		img1: 'img/goods/good19-1.avif',
-		img2: 'img/goods/good19-2.avif',
-		img3: 'img/goods/good19.avif',
+		img: 'img/goods/good19.png',
+		img1: 'img/goods/good19-1.png',
+		img2: 'img/goods/good19-2.png',
+		img3: 'img/goods/good19.png',
 		group: 'Светильник настенный',
 		type: 'Бра',
 		name: 'Капель',
@@ -12109,29 +12109,29 @@ class Item {
 				
 					<article class="card">
 				
-						<div class="card__offer card-offer">
+						<div class="card-offer">
 
-							<div class="card-offer__pictures card-pictures">
+							<div class="card-pictures">
 
 								<img src="${img}" alt="${type} ${name}" class="card-pictures__image">
 							
 								<div class="card-slider swiper-container">
 
-									<div class="card-slider__wrapper swiper-wrapper">
+									<div class="swiper-wrapper card-slider__wrapper">
 
-										<div class="card-slider__slide swiper-slide">
+										<div class="swiper-slide card-slider__slide">
 											<div class="card-slider__item">
 												<img class="card-slider__image" src="${img1}" alt="${type} ${name}">
 											</div>
 										</div>
 
-										<div class="card-slider__slide swiper-slide">
+										<div class=" swiper-slide card-slider__slide">
 											<div class="card-slider__item">
 												<img class="card-slider__image" src="${img2}" alt="${type} ${name}">
 											</div>
 										</div>
 
-										<div class="card-slider__slide swiper-slide">
+										<div class="swiper-slide card-slider__slide">
 											<div class="card-slider__item">
 												<img class="card-slider__image" src="${img3}" alt="${type} ${name}">
 											</div>
@@ -12146,7 +12146,7 @@ class Item {
 							</div>
 							<!-- /.card-pictures -->
 
-							<div class="card-offer__container details">
+							<div class="details">
 							
 									<h1 class="details__title">${group} <br> ${type} "${name}"</h1>
 								<div class="details__feedback feedback">
@@ -12157,13 +12157,13 @@ class Item {
 									<img src="img/pages/item/icons/star.png" alt="рейтинг товара" class="feedback__icon">
 									<a href="#feedbacks" class="feedback__link">0.0 / 0 отзывов</a>
 								</div>
-								<div class="details__box details-box">
-									<div class="details-box__pricing pricing">
+								<div class="details-box">
+									<div class="pricing">
 										<p class="pricing__old-price">${old_price}</p>
 										<p class="pricing__new-price">${new_price}</p>
 										<img src="${brend_img}" alt="${brend}" class="pricing__brend">
 									</div>
-									<div class="details-box__buying buying">
+									<div class="buying">
 										<a href="#cart" class="buying__add popup-link" data-cart="${id}">В корзину</a>
 										<p class="buying__availability">Товар в наличии</p>
 										<img src="img/pages/item/icons/delivery.png" alt="Доставка" class="buying__delivery">
@@ -12177,7 +12177,7 @@ class Item {
 						</div>
 						<!-- /.card-offer -->
 
-						<div class="card__characteristics characteristics">
+						<div class="characteristics">
 
 							<h3 class="characteristics__title">Основные характеристики:</h3>
 
